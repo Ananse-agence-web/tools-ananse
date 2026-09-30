@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{- $titre := cond .IsHome site.Title (printf "%s — %s" .Title site.Title) }}
+  {{- if eq .Kind "404" }}{{ $titre = printf "%s — %s" (T "introuvable") site.Title }}{{ end }}
   <title>{{ $titre }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ T "slogan" }}{{ end }}">
   <script>(()=>{const d=document.documentElement;d.classList.add("js");try{d.dataset.palette=localStorage.getItem("palette")||"terre";d.dataset.mode=localStorage.getItem("mode")||"auto"}catch(e){}})()</script>

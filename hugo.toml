@@ -24,7 +24,7 @@ enableRobotsTXT = true
   [languages.en]
     languageName = "English"
     languageCode = "en-GB"
-    title = "What you can do with a static site"
+    title = "What you can do with the static web"
     weight = 2
 
 [outputs]

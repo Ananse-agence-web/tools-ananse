@@ -121,7 +121,7 @@
     const ligne = (fr, en, val) => { if ((val || "").trim()) L.push(`${T(fr, en)} : ${val.trim()}`); };
     ligne("Nom", "Name", v.nom); ligne("Entreprise", "Business", v.entreprise); ligne("Activité", "Line of work", v.activite);
     ligne("Ville", "Town", v.ville); ligne("Téléphone", "Phone", v.telephone); ligne("Site actuel", "Current site", v.site);
-    L.push("", T("Merci et à bientôt,", "Thanks, speak soon,"), (v.nom || "").trim(), "", "—", T("Envoyé depuis « Ce qu'on peut faire avec le web statique »", "Sent from “What you can do with a static site”"), location.origin + (document.body.dataset.racine || "/"));
+    L.push("", T("Merci et à bientôt,", "Thanks, speak soon,"), (v.nom || "").trim(), "", "—", T("Envoyé depuis « Ce qu'on peut faire avec le web statique »", "Sent from “What you can do with the static web”"), location.origin + (document.body.dataset.racine || "/"));
     return L.join("\n");
   }
 

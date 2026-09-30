@@ -41,7 +41,7 @@ TEXTES = {
         "commentaire": "For our opening in June!", "nom": "Alex",
         "fin": "Ananse · We weave your web",
         "scenes": [
-            "Hello! Welcome to “What you can do with a static site”, the demo website by Ananse.",
+            "Hello! Welcome to “What you can do with the static web”, the demo website by Ananse.",
             "All our sites load in under a second, look perfect on a phone, and set no cookies.",
             "More than sixty features are ready to try, one per page: contact, social media, payments, bookings, and even games.",
             "For example, a prize wheel, to give your customers a discount.",

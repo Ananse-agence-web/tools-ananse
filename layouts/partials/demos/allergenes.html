@@ -8,6 +8,6 @@
 <p class="d-doux" data-compte></p>
 <ul class="d-grille" style="--min:220px;list-style:none;padding:0" data-plats>
   {{- range slice (slice "Quiche lorraine" "Quiche lorraine" "gluten lait oeuf viande") (slice "Salade niçoise" "Niçoise salad" "oeuf poisson") (slice "Risotto aux champignons" "Mushroom risotto" "lait") (slice "Poulet rôti, frites" "Roast chicken and chips" "viande") (slice "Curry de légumes" "Vegetable curry" "") (slice "Pavé de saumon" "Salmon fillet" "poisson lait") (slice "Tarte aux noix" "Walnut tart" "gluten lait oeuf noix") (slice "Salade de fruits" "Fruit salad" "") }}
-  <li class="d-carte" data-allergenes="{{ index . 2 }}"><strong>{{ index . (cond $en 1 0) }}</strong><br><span class="d-doux">{{ with index . 2 }}{{ . }}{{ else }}{{ cond $en "no major allergen" "aucun allergène majeur" }}{{ end }}</span></li>
+  <li class="d-carte" data-allergenes="{{ index . 2 }}"><strong>{{ index . (cond $en 1 0) }}</strong><br><span class="d-doux">{{ with index . 2 }}{{ replace . "oeuf" "œuf" }}{{ else }}{{ cond $en "no major allergen" "aucun allergène majeur" }}{{ end }}</span></li>
   {{- end }}
 </ul>
