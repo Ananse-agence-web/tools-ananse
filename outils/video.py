@@ -26,7 +26,7 @@ TEXTES = {
         "commentaire": "Pour l'ouverture en juin !", "nom": "Camille",
         "fin": "Ananse · On tisse votre web",
         "scenes": [
-            "Bonjour ! Bienvenue sur « Ce qu'on peut faire avec le static », le site de démonstration d'Ananse.",
+            "Bonjour ! Bienvenue sur « Ce qu'on peut faire avec le web statique », le site de démonstration d'Ananse.",
             "Chaque site que nous créons s'affiche en moins d'une seconde, est parfait sur téléphone, et ne dépose aucun cookie.",
             "Plus de soixante fonctions sont à essayer, une par page : contact, réseaux sociaux, paiement, réservation, et même des jeux.",
             "Par exemple, une roue de la chance, pour offrir une réduction à vos clients.",

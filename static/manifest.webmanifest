@@ -1,6 +1,6 @@
 {
-  "name": "Ce qu'on peut faire avec le static",
-  "short_name": "Le static",
+  "name": "Ce qu'on peut faire avec le web statique",
+  "short_name": "Web statique",
   "description": "Les démos d'Ananse : tout ce qu'un site rapide et sans souci peut faire.",
   "start_url": "./",
   "scope": "./",

@@ -1,4 +1,4 @@
-# Ce qu'on peut faire avec le static
+# Ce qu'on peut faire avec le web statique
 
 Site de démonstration d'Ananse : une fonction par page, en français et en anglais. Le visiteur coche ce qu'il veut, puis demande son devis par e-mail.
 

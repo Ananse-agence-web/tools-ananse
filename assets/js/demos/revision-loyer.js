@@ -38,7 +38,7 @@
     y = pdf.paragraphe(50, y, T("Je reste bien entendu à votre disposition pour toute question, et vous remercie de votre confiance.", "I remain at your disposal for any question, and thank you for your trust."), 495) + 6;
     y = pdf.paragraphe(50, y, T("Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.", "Yours sincerely,"), 495);
     pdf.texte(340, y + 30, v.bailleur, { gras: true });
-    pdf.paragraphe(50, 790, T("Document de démonstration créé par « Ce qu'on peut faire avec le static » (Ananse). Les indices sont des exemples : vérifiez les valeurs officielles sur insee.fr et les clauses de votre bail avant tout envoi.", "Demo document made by “What you can do with a static site” (Ananse). Indices are examples: check official values on insee.fr and your lease terms before sending."), 495, { taille: 8, couleur: "#C62828" });
+    pdf.paragraphe(50, 790, T("Document de démonstration créé par « Ce qu'on peut faire avec le web statique » (Ananse). Les indices sont des exemples : vérifiez les valeurs officielles sur insee.fr et les clauses de votre bail avant tout envoi.", "Demo document made by “What you can do with a static site” (Ananse). Indices are examples: check official values on insee.fr and your lease terms before sending."), 495, { taille: 8, couleur: "#C62828" });
     pdf.telecharger(T("courrier-revision-loyer.pdf", "rent-review-letter.pdf"));
   });
 })();

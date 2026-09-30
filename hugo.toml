@@ -1,5 +1,5 @@
 baseURL = "https://tools.ananse.fr/"
-title = "Ce qu'on peut faire avec le static"
+title = "Ce qu'on peut faire avec le web statique"
 defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
@@ -19,7 +19,7 @@ enableRobotsTXT = true
   [languages.fr]
     languageName = "Français"
     languageCode = "fr-FR"
-    title = "Ce qu'on peut faire avec le static"
+    title = "Ce qu'on peut faire avec le web statique"
     weight = 1
   [languages.en]
     languageName = "English"
