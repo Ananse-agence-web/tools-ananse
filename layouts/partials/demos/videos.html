@@ -1,0 +1,9 @@
+{{ $en := .en }}
+<div data-video="aqz-KE-bpKQ" style="max-width:720px">
+  <button type="button" class="d-clic d-degrade-3" style="color:#fff;aspect-ratio:16/9">
+    <span style="font-size:3.5rem">▶️</span>
+    <strong style="color:#fff">Big Buck Bunny</strong>
+    <span>{{ cond $en "Click to load the YouTube video*" "Cliquez pour charger la vidéo YouTube*" }}</span>
+  </button>
+</div>
+<p class="d-doux">{{ cond $en "Before the click: no connection to YouTube at all. After: the player loads in privacy-enhanced mode." "Avant le clic : aucune connexion à YouTube. Après : le lecteur se charge en mode « confidentialité renforcée »." }}</p>

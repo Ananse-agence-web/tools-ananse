@@ -1,0 +1,18 @@
+{{ $en := .en }}
+<div class="d-colonnes">
+  <ul data-carte-plats style="list-style:none;padding:0;margin:0;display:grid;gap:8px">
+    {{- range slice (slice "🍔" "Burger maison" "Homemade burger" 12) (slice "🌯" "Wrap poulet" "Chicken wrap" 9) (slice "🥗" "Salade César" "Caesar salad" 10) (slice "🍟" "Frites" "Chips" 4) (slice "🥤" "Limonade" "Lemonade" 3) }}
+    <li class="d-carte d-rangee" style="justify-content:space-between" data-nom="{{ index . (cond $en 2 1) }}" data-prix="{{ index . 3 }}">
+      <span>{{ index . 0 }} {{ index . (cond $en 2 1) }} · {{ index . 3 }} €</span>
+      <span class="d-rangee"><button type="button" class="bouton bouton--petit bouton--clair" data-moins>−</button><strong data-q>0</strong><button type="button" class="bouton bouton--petit" data-plus>+</button></span>
+    </li>
+    {{- end }}
+  </ul>
+  <div class="d-carte">
+    <label class="champ">{{ cond $en "Your name" "Votre prénom" }}<input data-prenom value="{{ cond $en "Alex" "Camille" }}"></label>
+    <label class="champ" style="margin-top:8px">{{ cond $en "Pick-up time" "Heure de retrait" }}<input type="time" data-retrait value="12:30"></label>
+    <p class="d-resultat" data-total>0 €</p>
+    <p><a class="bouton" style="--accent:#25D366;--sur-accent:#08361c" target="_blank" rel="noopener" data-envoyer>💬 {{ cond $en "Send on WhatsApp" "Envoyer sur WhatsApp" }}</a></p>
+    <pre class="d-doux" data-apercu-cmd style="white-space:pre-wrap;font-size:.85rem"></pre>
+  </div>
+</div>

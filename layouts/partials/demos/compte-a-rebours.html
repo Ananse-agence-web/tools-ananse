@@ -1,0 +1,12 @@
+{{ $en := .en }}
+<div style="text-align:center">
+  <h3 data-cible-titre>🎉 {{ cond $en "Grand opening in…" "Grande ouverture dans…" }}</h3>
+  <div class="cpt" data-cpt>
+    <div><strong data-u="j">0</strong><span>{{ cond $en "days" "jours" }}</span></div>
+    <div><strong data-u="h">0</strong><span>{{ cond $en "hours" "heures" }}</span></div>
+    <div><strong data-u="m">0</strong><span>{{ cond $en "min" "min" }}</span></div>
+    <div><strong data-u="s">0</strong><span>{{ cond $en "sec" "s" }}</span></div>
+  </div>
+  <label class="champ" style="max-width:260px;margin:14px auto 0">{{ cond $en "Change the date" "Changer la date" }}<input type="datetime-local" data-cible></label>
+</div>
+<style>.cpt{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.cpt div{background:var(--accent);color:var(--sur-accent);border-radius:14px;padding:12px 8px;min-width:78px;display:grid}.cpt strong{font:800 2.2rem/1 var(--titres)}.cpt span{font-size:.8rem;font-weight:600;opacity:.9}</style>

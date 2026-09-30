@@ -1,0 +1,6 @@
+{{ $en := .en }}
+<article class="d-social">
+  <div class="d-social__tete"><span class="d-avatar" style="background:#000">X</span><div><strong>{{ cond $en "Riverside Running Club" "Club de course des Berges" }}</strong> <span class="d-doux">@{{ cond $en "riverside_run" "course_berges" }}</span></div></div>
+  <p>{{ cond $en "Sunday's 10 km is ON ☀️ Meet at 9 am by the bridge. Bring water! #running" "Le 10 km de dimanche est maintenu ☀️ Rendez-vous à 9 h au pont. Pensez à l'eau ! #course" }}</p>
+  <div class="d-social__actions"><span>💬 3</span><span>🔁 12</span><span>❤️ 47</span></div>
+</article>

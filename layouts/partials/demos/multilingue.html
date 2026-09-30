@@ -1,0 +1,9 @@
+{{ $en := .en }}
+<div class="d-carte" data-langues style="max-width:560px">
+  <div class="d-onglets">
+    <button type="button" aria-pressed="true" data-l="fr">🇫🇷 FR</button><button type="button" data-l="en">🇬🇧 EN</button><button type="button" data-l="es">🇪🇸 ES</button><button type="button" data-l="de">🇩🇪 DE</button><button type="button" data-l="it">🇮🇹 IT</button>
+  </div>
+  <h3 data-t="titre">Bienvenue au Gîte des Oliviers</h3>
+  <p data-t="texte">Une maison de pierre au calme, piscine et vue sur les vignes. À 10 minutes de la mer.</p>
+</div>
+<p>{{ cond $en "This whole site exists in French and English: use the FR button at the top." "Tout ce site existe en français et en anglais : essayez le bouton EN en haut." }}</p>

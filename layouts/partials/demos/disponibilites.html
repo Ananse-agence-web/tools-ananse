@@ -1,0 +1,18 @@
+{{ $en := .en }}
+<div class="cal" data-cal>
+  <div class="cal__tete"><button type="button" class="bouton bouton--clair bouton--petit" data-mois="-1">‹</button><strong data-titre></strong><button type="button" class="bouton bouton--clair bouton--petit" data-mois="1">›</button></div>
+  <div class="cal__grille" data-grille></div>
+  <p class="d-rangee d-doux"><span><i class="cal__pastille"></i> {{ cond $en "Available" "Libre" }}</span><span><i class="cal__pastille cal__pastille--pris"></i> {{ cond $en "Booked" "Réservé" }}</span></p>
+</div>
+<style>
+.cal{max-width:420px}
+.cal__tete{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;text-transform:capitalize}
+.cal__grille{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.cal__grille span{padding:8px 0;border-radius:8px;font-size:.92rem}
+.cal__grille .j{background:color-mix(in srgb,var(--ok) 16%,var(--carte))}
+.cal__grille .pris{background:var(--fond-2);color:var(--doux);text-decoration:line-through}
+.cal__grille .passe{opacity:.35}
+.cal__grille .ent{font-weight:700;color:var(--doux);font-size:.8rem}
+.cal__pastille{display:inline-block;width:14px;height:14px;border-radius:4px;background:color-mix(in srgb,var(--ok) 30%,var(--carte));vertical-align:-2px}
+.cal__pastille--pris{background:var(--fond-2);border:1px solid var(--ligne)}
+</style>

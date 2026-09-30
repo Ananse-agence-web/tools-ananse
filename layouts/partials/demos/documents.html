@@ -1,0 +1,7 @@
+{{ $en := .en }}
+<ul class="docs" style="list-style:none;padding:0;margin:0;display:grid;gap:8px;max-width:520px">
+  <li><button type="button" class="d-carte docs__btn" data-doc="menu">📄 <span><strong>{{ cond $en "Our menu" "Notre carte" }}</strong><br><span class="d-doux">PDF · 1 page</span></span> <span>⬇</span></button></li>
+  <li><button type="button" class="d-carte docs__btn" data-doc="tarifs">📄 <span><strong>{{ cond $en "2026 price list" "Tarifs 2026" }}</strong><br><span class="d-doux">PDF · 1 page</span></span> <span>⬇</span></button></li>
+  <li><button type="button" class="d-carte docs__btn" data-doc="reglement">📄 <span><strong>{{ cond $en "Club rules" "Règlement du club" }}</strong><br><span class="d-doux">PDF · 1 page</span></span> <span>⬇</span></button></li>
+</ul>
+<style>.docs__btn{width:100%;display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;text-align:left;cursor:pointer;font-size:1.3rem}.docs__btn strong{font-size:1rem}</style>

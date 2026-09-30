@@ -1,0 +1,7 @@
+{{ $en := .en }}
+<div class="d-rangee">
+  <a class="bouton" href="tel:+33600000000" data-demo-tel>📞 {{ cond $en "Call us" "Nous appeler" }}</a>
+  <a class="bouton" style="--accent:#25D366;--sur-accent:#08361c" target="_blank" rel="noopener" href="https://wa.me/?text={{ cond $en "Hello, I would like to book a table for tonight." "Bonjour, je voudrais réserver une table pour ce soir." }}">💬 WhatsApp</a>
+  <a class="bouton bouton--clair" href="sms:?&amp;body={{ cond $en "Hello" "Bonjour" }}">✉️ SMS</a>
+</div>
+<p class="d-doux">{{ cond $en "WhatsApp opens with a message already written (here without a number; on your site it goes straight to you). The call button dials your number." "WhatsApp s'ouvre avec un message déjà écrit (ici sans numéro ; sur votre site, il arrive directement chez vous). Le bouton d'appel compose votre numéro." }}</p>

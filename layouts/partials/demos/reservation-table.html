@@ -1,0 +1,13 @@
+{{ $en := .en }}
+<div style="max-width:520px">
+  <form class="formulaire" data-demo-form>
+    <div class="d-colonnes" style="gap:12px">
+      <label>{{ cond $en "Date" "Date" }}<input type="date" required data-date-min></label>
+      <label>{{ cond $en "Time" "Heure" }}<select>{{ range slice "12:00" "12:30" "13:00" "19:30" "20:00" "20:30" "21:00" }}<option>{{ . }}</option>{{ end }}</select></label>
+    </div>
+    <label>{{ cond $en "Guests" "Couverts" }}<input type="number" min="1" max="12" value="2"></label>
+    <label>{{ cond $en "Name" "Nom" }}<input required></label>
+    <p><button class="bouton" type="submit">🍽️ {{ cond $en "Book" "Réserver" }}</button></p>
+  </form>
+  <p class="d-message" data-demo-ok hidden>✅ {{ cond $en "Request received! On your site, it would go to TheFork, Zenchef or your inbox, and the customer would get a confirmation." "Demande reçue ! Sur votre site, elle partirait vers TheFork, Zenchef ou votre boîte e-mail, et le client recevrait une confirmation." }}</p>
+</div>

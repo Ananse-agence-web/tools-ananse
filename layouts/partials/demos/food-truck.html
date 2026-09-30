@@ -1,0 +1,6 @@
+{{ $en := .en }}
+<div class="d-colonnes">
+  <ul class="ft" data-planning style="list-style:none;padding:0;margin:0;display:grid;gap:6px"></ul>
+  <div data-ft-carte><button type="button" class="d-clic" style="aspect-ratio:4/3"><span style="font-size:3rem">🚚</span><strong>{{ cond $en "Click a day to see the spot on the map*" "Cliquez sur un jour pour voir l'emplacement sur la carte*" }}</strong></button></div>
+</div>
+<style>.ft li button{width:100%;text-align:left;display:grid;grid-template-columns:minmax(0,110px) minmax(0,1fr);gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--ligne);background:var(--fond);cursor:pointer}.ft li.auj button{border:2px solid var(--accent);background:var(--accent-doux)}.ft strong{text-transform:capitalize}@media (max-width:480px){.ft li button{grid-template-columns:1fr}}</style>

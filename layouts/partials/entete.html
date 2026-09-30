@@ -1,0 +1,39 @@
+<header class="entete">
+  <div class="conteneur entete__barre">
+    <a class="logo" href="{{ site.Home.RelPermalink }}">
+      <span class="logo__rond" aria-hidden="true">✦</span>
+      <span class="logo__texte">{{ site.Title }}</span>
+    </a>
+    <nav class="nav" aria-label="Menu">
+      <button type="button" class="nav__recherche" data-ouvrir-recherche aria-label="{{ T "rechercher" }}" title="{{ T "rechercher" }} ( / )">🔍</button>
+      <a href="{{ site.Home.RelPermalink }}#demos">{{ T "touteslesdemos" }}</a>
+      <a href="{{ "metiers/" | relLangURL }}">{{ T "parmetier" }}</a>
+      <a class="nav__ananse" href="{{ site.Params.ananse }}">{{ T "siteananse" }}</a>
+      <a class="nav__devis" href="{{ with site.GetPage "/devis" }}{{ .RelPermalink }}{{ end }}">🧺 {{ T "mondevis" }} <span class="pastille" data-compteur>0</span></a>
+      <details class="theme">
+        <summary aria-label="{{ T "theme" }}" title="{{ T "theme" }}">🎨</summary>
+        <div class="theme__panneau">
+          <p class="theme__titre">{{ T "theme" }}</p>
+          <div class="theme__palettes">
+            {{- range slice (dict "id" "terre" "fr" "Terre" "en" "Earth") (dict "id" "ocean" "fr" "Océan" "en" "Ocean") (dict "id" "foret" "fr" "Forêt" "en" "Forest") (dict "id" "prune" "fr" "Prune" "en" "Plum") (dict "id" "ardoise" "fr" "Ardoise" "en" "Slate") }}
+            <button type="button" class="pastille-couleur pastille-couleur--{{ .id }}" data-palette-choix="{{ .id }}" data-nom="{{ index . site.Language.Lang }}"><span></span>{{ index . site.Language.Lang }}</button>
+            {{- end }}
+          </div>
+          <p class="theme__titre">{{ T "mode" }}</p>
+          <div class="theme__modes">
+            <button type="button" data-mode-choix="auto">{{ T "auto" }}</button>
+            <button type="button" data-mode-choix="clair">☀️ {{ T "clair" }}</button>
+            <button type="button" data-mode-choix="sombre">🌙 {{ T "sombre" }}</button>
+          </div>
+        </div>
+      </details>
+      {{- range .Translations }}
+      <a class="nav__langue" href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}" title="{{ .Language.LanguageName }}">{{ .Language.Lang | upper }}</a>
+      {{- else }}
+      {{- range site.Home.Translations }}
+      <a class="nav__langue" href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" title="{{ .Language.LanguageName }}">{{ .Language.Lang | upper }}</a>
+      {{- end }}
+      {{- end }}
+    </nav>
+  </div>
+</header>

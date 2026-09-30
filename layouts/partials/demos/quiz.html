@@ -1,0 +1,8 @@
+{{ $en := .en }}
+<div class="quiz d-carte" data-quiz style="max-width:560px">
+  <p class="d-doux" data-progres></p>
+  <h3 data-question></h3>
+  <div data-reponses style="display:grid;gap:8px"></div>
+  <p data-bilan hidden></p>
+</div>
+<style>.quiz [data-reponses] button{text-align:left;padding:10px 14px;border-radius:10px;border:1px solid var(--ligne);background:var(--carte);cursor:pointer}.quiz .bon{background:color-mix(in srgb,var(--ok) 25%,var(--carte));border-color:var(--ok)}.quiz .faux{background:color-mix(in srgb,#d9534f 22%,var(--carte))}</style>

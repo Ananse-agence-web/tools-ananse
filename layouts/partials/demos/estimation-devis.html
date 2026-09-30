@@ -1,0 +1,17 @@
+{{ $en := .en }}
+<div class="d-colonnes" data-est>
+  <div class="formulaire">
+    <p class="d-doux" style="margin:0">{{ cond $en "Example: a painter and decorator" "Exemple : un artisan peintre" }}</p>
+    <label>{{ cond $en "Rooms to paint" "Pièces à peindre" }} : <strong data-v-pieces></strong><input type="range" min="1" max="8" value="3" data-x="pieces"></label>
+    <label>{{ cond $en "Ceiling height" "Hauteur sous plafond" }}<select data-x="hauteur"><option value="1">{{ cond $en "Standard (2.5 m)" "Standard (2,50 m)" }}</option><option value="1.25">{{ cond $en "High (3 m +)" "Haute (3 m et +)" }}</option></select></label>
+    <label class="d-case"><input type="checkbox" data-x="plafonds"> {{ cond $en "Ceilings too (+30%)" "Plafonds aussi (+30 %)" }}</label>
+    <label class="d-case"><input type="checkbox" data-x="enduit"> {{ cond $en "Wall repairs (+€120 / room)" "Rebouchage et enduit (+120 € / pièce)" }}</label>
+    <label class="d-case"><input type="checkbox" data-x="urgent"> {{ cond $en "Within 2 weeks (+10%)" "Sous 15 jours (+10 %)" }}</label>
+  </div>
+  <div class="d-carte">
+    <p class="d-doux" style="margin:0">{{ cond $en "Indicative price" "Prix indicatif" }}</p>
+    <p class="d-resultat" data-prix-est></p>
+    <p class="d-doux">{{ cond $en "Made-up prices for the demo." "Prix fictifs pour la démo." }}</p>
+    <button type="button" class="bouton" data-toast="{{ cond $en "The request would reach you with all the options ticked" "La demande vous arriverait avec toutes les options cochées" }}">{{ cond $en "Ask for this quote" "Demander ce devis" }}</button>
+  </div>
+</div>

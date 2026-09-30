@@ -1,0 +1,3 @@
+{{- /* Données d'une fonction (data/fonctions.json) à partir de sa page. Renvoie un dict. */ -}}
+{{- $f := index (where site.Data.fonctions "id" .Params.fonction) 0 -}}
+{{- return $f -}}

@@ -1,0 +1,15 @@
+{{ $en := .en }}
+<div data-carte data-lat="48.8584" data-lon="2.2945">
+  <div class="d-onglets" role="group">
+    <button type="button" aria-pressed="true" data-fournisseur="osm">OpenStreetMap</button>
+    <button type="button" aria-pressed="false" data-fournisseur="google">Google Maps*</button>
+  </div>
+  <button type="button" class="d-clic" data-charger style="aspect-ratio:16/9;max-width:760px">
+    <span style="font-size:3rem">🗺️</span>
+    <strong>{{ cond $en "Click to show the map" "Cliquez pour afficher la carte" }}</strong>
+    <span class="d-doux">{{ cond $en "Eiffel Tower, Paris (example)" "Tour Eiffel, Paris (exemple)" }}</span>
+  </button>
+  <p class="d-rangee" style="margin-top:12px">
+    <a class="bouton bouton--petit" data-itineraire target="_blank" rel="noopener">🧭 {{ cond $en "Directions" "Itinéraire" }}</a>
+  </p>
+</div>

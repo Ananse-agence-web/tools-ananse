@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{- $demos := where site.RegularPages "Section" "demos" }}
+{{- $lang := site.Language.Lang }}
+<section class="hero">
+  <div class="conteneur hero__grille">
+    <div>
+      <p class="surtitre">Ananse · {{ len $demos }} {{ T "demos" }}</p>
+      <h1>{{ site.Title }}</h1>
+      <p class="hero__slogan">{{ T "slogan" }}</p>
+      <p class="hero__intro">{{ T "intro" }}</p>
+      <button type="button" class="barre-recherche" data-ouvrir-recherche><span aria-hidden="true">🔍</span><span class="barre-recherche__texte">{{ T "recherche_aide" }}</span><kbd>/</kbd></button>
+      <p class="suggestions">{{ range (cond (eq site.Language.Lang "en") (slice "booking" "payment" "map" "games" "PDF" "restaurant" "video") (slice "réservation" "paiement" "carte" "jeux" "PDF" "resto" "vidéo")) }}<button type="button" class="d-puce" data-ouvrir-recherche data-q="{{ . }}">{{ . }}</button>{{ end }}</p>
+      <p class="boutons">
+        <a class="bouton" href="#demos">{{ T "commencer" }} ↓</a>
+        <a class="bouton bouton--clair" href="{{ with site.GetPage "/devis" }}{{ .RelPermalink }}{{ end }}">🧺 {{ T "mondevis" }}</a>
+        <a class="bouton bouton--clair" href="{{ with site.GetPage "/demos/video-presentation" }}{{ .RelPermalink }}{{ end }}">▶ {{ T "video" }}</a>
+      </p>
+      <p class="chrono" data-chrono data-modele="{{ T "chargement" (dict "T" "§") }}" hidden></p>
+    </div>
+    <div class="hero__mascotte" aria-hidden="true">{{ partial "mascotte.html" (dict "id" "hero" "pose" "salut" "classe" "") }}</div>
+  </div>
+</section>
+
+<section class="conteneur etapes" aria-labelledby="h-etapes">
+  <h2 id="h-etapes" class="visuellement-cache">{{ T "etapes_titre" }}</h2>
+  <ol>
+    <li><span>1</span><strong>{{ T "etape1" }}</strong> {{ T "etape1_d" }}</li>
+    <li><span>2</span><strong>{{ T "etape2" }}</strong> {{ T "etape2_d" }}</li>
+    <li><span>3</span><strong>{{ T "etape3" }}</strong> {{ T "etape3_d" }}</li>
+  </ol>
+</section>
+
+<section class="conteneur metiers" aria-labelledby="h-metiers">
+  <h2 id="h-metiers">{{ T "metiers_titre" }}</h2>
+  <ul class="puces-metiers">
+    {{- range site.Data.metiers }}
+    {{- with site.GetPage (printf "/metiers/%s" .id) }}
+    <li><a href="{{ .RelPermalink }}"><span aria-hidden="true">{{ (index (where site.Data.metiers "id" .Data.Term) 0).emoji }}</span> {{ .Title }} <small>{{ len .Pages }}</small></a></li>
+    {{- end }}
+    {{- end }}
+  </ul>
+</section>
+
+<section class="bases" aria-labelledby="h-bases">
+  <div class="conteneur">
+    <h2 id="h-bases">{{ T "bases_titre" }}</h2>
+    <p class="section__intro">{{ T "bases_intro" }}</p>
+    <ul class="bases__grille">
+      {{- range slice (slice "⚡" "b_rapide") (slice "🖼️" "b_photos") (slice "📱" "b_mobile") (slice "🌙" "b_sombre") (slice "📲" "b_appli") (slice "🍪" "b_cookies") (slice "🔒" "b_securite") (slice "🔍" "b_google") }}
+      <li><span class="bases__emoji" aria-hidden="true">{{ index . 0 }}</span><strong>{{ T (index . 1) }}</strong><span>{{ T (printf "%s_d" (index . 1)) }}</span></li>
+      {{- end }}
+    </ul>
+    <p class="bases__installer" data-installer hidden><button type="button" class="bouton bouton--clair">📲 {{ T "installer" }}</button></p>
+  </div>
+</section>
+
+<div class="conteneur" id="demos">
+  {{ partial "grille.html" $demos }}
+</div>
+{{ end }}

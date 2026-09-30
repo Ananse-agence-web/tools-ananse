@@ -1,0 +1,7 @@
+{{ $en := .en }}
+<ol class="frise">
+  {{- range slice (slice "2012" "🌱" "La création" "The beginning" "Deux amis ouvrent un petit atelier dans un garage." "Two friends open a tiny workshop in a garage.") (slice "2015" "👩‍🔧" "Premier salarié" "First employee" "Julie rejoint l'aventure. Elle est toujours là !" "Julie joins the adventure. She's still here!") (slice "2019" "🏭" "Le nouvel atelier" "The new workshop" "300 m² en centre-ville, avec une boutique." "300 m² in the town centre, with a shop.") (slice "2023" "🏆" "Un prix régional" "A regional award" "Prix de l'artisanat pour notre savoir-faire." "Craft award for our know-how.") (slice "2026" "🌍" "Le site web" "The website" "Rapide, beau et sans souci, évidemment." "Fast, beautiful and worry-free, of course.") }}
+  <li><span class="frise__annee">{{ index . 0 }}</span><div class="d-carte"><strong>{{ index . 1 }} {{ index . (cond $en 3 2) }}</strong><p style="margin:4px 0 0">{{ index . (cond $en 5 4) }}</p></div></li>
+  {{- end }}
+</ol>
+<style>.frise{list-style:none;padding:0 0 0 28px;margin:0;border-left:3px solid var(--accent);display:grid;gap:14px;max-width:620px}.frise li{position:relative}.frise li::before{content:"";position:absolute;left:-37px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--accent);border:3px solid var(--carte)}.frise__annee{font:800 1.1rem var(--titres);color:var(--accent)}</style>

@@ -1,0 +1,12 @@
+{{ $en := .en }}
+<div class="d-colonnes">
+  <div class="d-carte">
+    <p class="d-doux">{{ cond $en "Example on a bakery site:" "Exemple sur un site de boulangerie :" }}</p>
+    <h3>🥖 {{ cond $en "A question? A cake to order?" "Une question ? Un gâteau à commander ?" }}</h3>
+    <p><a class="bouton" href="mailto:{{ site.Params.email }}?subject={{ cond $en "Test from the demo" "Test depuis la démo" }}&amp;body={{ cond $en "Hello, I am testing the email button." "Bonjour, je teste le bouton e-mail." }}">✉️ {{ cond $en "Email us" "Écrivez-nous" }}</a></p>
+  </div>
+  <div>
+    <p>{{ cond $en "Click the button: your email app opens with the subject and a first line already written. Go ahead, it really reaches us!" "Cliquez sur le bouton : votre messagerie s'ouvre avec l'objet et une première phrase déjà écrits. Essayez, ça arrive vraiment chez nous !" }}</p>
+    <p><button type="button" class="bouton bouton--clair bouton--petit" data-copier-adresse="{{ site.Params.email }}">📋 {{ cond $en "Copy the address" "Copier l'adresse" }}</button></p>
+  </div>
+</div>

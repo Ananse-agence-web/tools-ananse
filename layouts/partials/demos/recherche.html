@@ -1,0 +1,11 @@
+{{ $en := .en }}
+<label class="champ" style="max-width:520px">{{ cond $en "Search this site" "Rechercher dans ce site" }}
+  <input type="search" data-recherche placeholder="{{ cond $en "e.g. map, payment, game…" "ex. carte, paiement, jeu…" }}" autocomplete="off">
+</label>
+<p class="d-doux" data-nb></p>
+<ul data-resultats style="padding-left:18px"></ul>
+<ul hidden data-index>
+  {{- range (where site.RegularPages "Section" "demos").ByWeight }}
+  <li data-url="{{ .RelPermalink }}" data-titre="{{ .Title }}" data-texte="{{ .Description }} {{ index (index (index (where site.Data.fonctions "id" .Params.fonction) 0) site.Language.Lang) "texte" }} {{ (index (where site.Data.fonctions "id" .Params.fonction) 0).services }}"></li>
+  {{- end }}
+</ul>

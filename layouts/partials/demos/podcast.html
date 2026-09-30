@@ -1,0 +1,15 @@
+{{ $en := .en }}
+<div class="lecteur d-carte" data-lecteur>
+  <div class="d-image d-degrade-5" style="aspect-ratio:1;width:96px;font-size:2.4rem">🎙️</div>
+  <div style="flex:1;min-width:0">
+    <p class="d-doux" style="margin:0">{{ cond $en "Episode 12" "Épisode 12" }}</p>
+    <strong>{{ cond $en "A little tune from the workshop" "Une petite mélodie de l'atelier" }}</strong>
+    <div class="d-rangee" style="margin-top:8px;flex-wrap:nowrap">
+      <button type="button" class="lecteur__play" data-play aria-label="Lecture">▶</button>
+      <div class="d-barre" style="flex:1"><span data-progres style="width:0"></span></div>
+      <span class="d-doux" data-temps>0:00 / 0:16</span>
+    </div>
+  </div>
+</div>
+<p class="d-doux">{{ cond $en "The sound is created by your browser for this demo. On your site: your real episodes." "Le son est créé par votre navigateur pour la démo. Sur votre site : vos vrais épisodes." }}</p>
+<style>.lecteur{display:flex;gap:16px;align-items:center;max-width:560px}.lecteur__play{width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:var(--sur-accent);font-size:1.1rem;cursor:pointer;flex:none}</style>

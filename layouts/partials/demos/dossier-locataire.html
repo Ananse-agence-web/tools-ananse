@@ -1,0 +1,10 @@
+{{ $en := .en }}
+<p class="d-rangee"><strong data-dl-progres></strong> <span class="d-barre" style="flex:1;min-width:120px"><span data-dl-barre style="width:0"></span></span></p>
+<div class="d-grille" style="--min:240px" data-dl>
+  {{- range slice (slice "🪪 Identité" "🪪 Identity" (slice (slice "Carte d'identité ou passeport" "ID card or passport"))) (slice "🏠 Domicile actuel" "🏠 Current home" (slice (slice "3 dernières quittances de loyer" "Last 3 rent receipts") (slice "ou attestation d'hébergement" "or proof of lodging"))) (slice "💼 Activité" "💼 Work" (slice (slice "Contrat de travail ou attestation employeur" "Employment contract or employer letter") (slice "ou carte d'étudiant" "or student card"))) (slice "💶 Ressources" "💶 Income" (slice (slice "3 derniers bulletins de salaire" "Last 3 payslips") (slice "Dernier avis d'imposition" "Latest tax notice"))) (slice "🤝 Garant" "🤝 Guarantor" (slice (slice "Mêmes pièces que le locataire" "Same documents as the tenant") (slice "ou attestation Visale" "or Visale certificate"))) }}
+  <div class="d-carte"><strong>{{ index . (cond $en 1 0) }}</strong>
+    {{- range index . 2 }}<label class="d-case" style="margin-top:8px"><input type="checkbox" value="{{ index . 0 }}"> {{ index . (cond $en 1 0) }}</label>{{ end }}
+  </div>
+  {{- end }}
+</div>
+<p class="d-doux">{{ cond $en "Based on the list of documents a French landlord is allowed to ask for." "D'après la liste des pièces qu'un bailleur a le droit de demander." }}</p>

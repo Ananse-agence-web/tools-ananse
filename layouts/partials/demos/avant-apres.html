@@ -1,0 +1,19 @@
+{{ $en := .en }}
+<div class="aa" data-aa style="--pos:50%">
+  <div class="aa__vue aa__apres"><span>🏡</span><em>{{ cond $en "After" "Après" }}</em></div>
+  <div class="aa__vue aa__avant"><span>🏚️</span><em>{{ cond $en "Before" "Avant" }}</em></div>
+  <div class="aa__trait" aria-hidden="true"><span>⇆</span></div>
+  <input type="range" min="0" max="100" value="50" aria-label="{{ cond $en "Before / after" "Avant / après" }}">
+</div>
+<style>
+.aa{position:relative;max-width:760px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;user-select:none}
+.aa__vue{position:absolute;inset:0;display:grid;place-items:center;font-size:7rem}
+.aa__vue em{position:absolute;top:12px;font:700 .95rem var(--corps);font-style:normal;background:rgb(0 0 0 / .45);color:#fff;padding:4px 12px;border-radius:99px}
+.aa__apres{background:linear-gradient(180deg,#7cc6f2 0 55%,#6cc16a 55%)}
+.aa__apres em{right:12px}
+.aa__avant{background:repeating-linear-gradient(35deg,#8d8677 0 18px,#7d7668 18px 36px);filter:grayscale(.6);clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.aa__avant em{left:12px}
+.aa__trait{position:absolute;top:0;bottom:0;left:var(--pos);width:4px;margin-left:-2px;background:#fff;pointer-events:none}
+.aa__trait span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;color:#222;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:900;box-shadow:0 2px 10px rgb(0 0 0 / .3)}
+.aa input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+</style>

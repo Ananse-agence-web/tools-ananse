@@ -1,0 +1,13 @@
+{{ $en := .en }}
+<div style="max-width:520px">
+  <form class="formulaire d-carte" data-membres>
+    <p>🔒 {{ cond $en "Members only. Demo password:" "Réservé aux membres. Mot de passe de démo :" }} <code>{{ cond $en "members" "membres" }}</code></p>
+    <label>{{ cond $en "Password" "Mot de passe" }}<input type="password" autocomplete="off" data-mdp></label>
+    <p><button class="bouton" type="submit">{{ cond $en "Enter" "Entrer" }}</button></p>
+  </form>
+  <div class="d-carte" data-prive hidden>
+    <h3>👋 {{ cond $en "Welcome, member!" "Bienvenue, membre !" }}</h3>
+    <ul><li>📄 {{ cond $en "Minutes of the last meeting" "Compte rendu de la dernière réunion" }}</li><li>📒 {{ cond $en "Members' directory" "Annuaire des membres" }}</li><li>📅 {{ cond $en "Internal planning" "Planning interne" }}</li></ul>
+  </div>
+  <p class="d-doux">{{ cond $en "On your site, the pages are encrypted (StatiCrypt) or protected upstream (Cloudflare Access): without the password, the content can't be read at all." "Sur votre site, les pages sont chiffrées (StatiCrypt) ou protégées en amont (Cloudflare Access) : sans le mot de passe, le contenu est illisible." }}</p>
+</div>

@@ -1,0 +1,15 @@
+{{ $en := .en }}
+<div class="d-colonnes" data-estim>
+  <div class="formulaire">
+    <label>{{ cond $en "Type" "Type" }}<select data-e="type"><option value="1">{{ cond $en "Flat" "Appartement" }}</option><option value="1.08">{{ cond $en "House" "Maison" }}</option></select></label>
+    <label>{{ cond $en "Area" "Secteur" }}<select data-e="secteur"><option value="4200">{{ cond $en "Town centre" "Centre-ville" }}</option><option value="3400" selected>{{ cond $en "Residential district" "Quartier résidentiel" }}</option><option value="2700">{{ cond $en "Outskirts" "Périphérie" }}</option><option value="1900">{{ cond $en "Countryside" "Campagne" }}</option></select></label>
+    <label>{{ cond $en "Living area (m²)" "Surface (m²)" }}<input type="number" data-e="surface" value="75"></label>
+    <label>{{ cond $en "Condition" "État" }}<select data-e="etat"><option value="1.1">{{ cond $en "Renovated" "Rénové" }}</option><option value="1" selected>{{ cond $en "Good" "Bon état" }}</option><option value="0.85">{{ cond $en "Needs work" "Travaux à prévoir" }}</option></select></label>
+  </div>
+  <div class="d-carte">
+    <p class="d-doux" style="margin:0">{{ cond $en "First estimate" "Première estimation" }}</p>
+    <p class="d-resultat" data-fourchette></p>
+    <p class="d-doux">{{ cond $en "Made-up prices per m², for the demo. On your site: your own local figures." "Prix au m² fictifs, pour la démo. Sur votre site : vos propres chiffres locaux." }}</p>
+    <button type="button" class="bouton" data-toast="{{ cond $en "Here the owner leaves their contact details and you call back to refine" "Ici, le propriétaire laisse ses coordonnées et vous rappelez pour affiner" }}">📞 {{ cond $en "Get a precise valuation" "Être rappelé pour une estimation précise" }}</button>
+  </div>
+</div>

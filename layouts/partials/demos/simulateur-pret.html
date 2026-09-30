@@ -1,0 +1,16 @@
+{{ $en := .en }}
+<div class="d-colonnes" data-pret>
+  <div class="formulaire">
+    <label>{{ cond $en "Property price (€)" "Prix du bien (€)" }}<input type="number" data-p="prix" value="250000" step="1000"></label>
+    <label>{{ cond $en "Deposit (€)" "Apport (€)" }}<input type="number" data-p="apport" value="30000" step="1000"></label>
+    <label>{{ cond $en "Interest rate (%)" "Taux d'intérêt (%)" }}<input type="number" data-p="taux" value="3.4" step="0.05"></label>
+    <label>{{ cond $en "Duration (years)" "Durée (années)" }}<input type="range" data-p="duree" min="10" max="25" value="20"> <span data-duree></span></label>
+    <label>{{ cond $en "Property" "Bien" }}<select data-p="neuf"><option value="0">{{ cond $en "Existing (≈ 7.5% fees)" "Ancien (≈ 7,5 % de frais)" }}</option><option value="1">{{ cond $en "New build (≈ 2.5% fees)" "Neuf (≈ 2,5 % de frais)" }}</option></select></label>
+  </div>
+  <div class="d-carte">
+    <p class="d-doux" style="margin:0">{{ cond $en "Monthly payment" "Mensualité" }}</p>
+    <p class="d-resultat" data-mensualite></p>
+    <table class="d-table" data-detail></table>
+    <p class="d-doux">{{ cond $en "Indicative estimate, excluding insurance." "Estimation indicative, hors assurance." }}</p>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+{{ $en := .en }}
+<p>{{ cond $en "Share this page:" "Partagez cette page :" }}</p>
+<div class="d-rangee" data-partage>
+  <a class="bouton bouton--petit" style="--accent:#1877F2;--sur-accent:#fff" data-reseau="facebook" target="_blank" rel="noopener">Facebook</a>
+  <a class="bouton bouton--petit" style="--accent:#111;--sur-accent:#fff" data-reseau="x" target="_blank" rel="noopener">X</a>
+  <a class="bouton bouton--petit" style="--accent:#0A66C2;--sur-accent:#fff" data-reseau="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="bouton bouton--petit" style="--accent:#25D366;--sur-accent:#08361c" data-reseau="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="bouton bouton--petit bouton--clair" data-reseau="email">✉️ E-mail</a>
+  <button type="button" class="bouton bouton--petit bouton--clair" data-copier-lien>🔗 {{ cond $en "Copy link" "Copier le lien" }}</button>
+  <button type="button" class="bouton bouton--petit bouton--clair" data-partage-natif hidden>📤 {{ cond $en "More…" "Plus…" }}</button>
+</div>

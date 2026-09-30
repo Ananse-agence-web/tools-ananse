@@ -1,0 +1,6 @@
+{{ $en := .en }}
+<div class="d-carte" style="max-width:520px" data-sondage>
+  <h3>🗳️ {{ cond $en "When should we hold the club party?" "Quelle date pour la fête du club ?" }}</h3>
+  <div data-options style="display:grid;gap:8px"></div>
+  <p><button type="button" class="bouton" data-voter>{{ cond $en "Vote" "Voter" }}</button></p>
+</div>

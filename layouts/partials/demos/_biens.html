@@ -1,0 +1,19 @@
+{{- /* Biens immobiliers fictifs, partagés par les démos annonces et favoris. Paramètre : en (bool). */ -}}
+{{- $en := .en }}
+<ul class="biens" data-biens>
+  {{- range $i, $b := slice (slice "b1" "🏢" "appartement" "Toulouse" 189000 45 2) (slice "b2" "🏡" "maison" "Colomiers" 329000 110 5) (slice "b3" "🏢" "appartement" "Toulouse" 265000 68 3) (slice "b4" "🏡" "maison" "Blagnac" 415000 135 6) (slice "b5" "🏢" "appartement" "Blagnac" 149000 32 1) (slice "b6" "🏡" "maison" "Toulouse" 545000 150 6) (slice "b7" "🏢" "appartement" "Colomiers" 172000 55 3) (slice "b8" "🏡" "maison" "Colomiers" 279000 92 4) }}
+  <li class="bien d-carte" data-id="{{ index $b 0 }}" data-type="{{ index $b 2 }}" data-ville="{{ index $b 3 }}" data-prix="{{ index $b 4 }}" data-surface="{{ index $b 5 }}">
+    <div class="d-image d-degrade-{{ add (mod $i 6) 1 }}" style="aspect-ratio:16/10;font-size:2.6rem">{{ index $b 1 }}</div>
+    <button type="button" class="bien__coeur" data-coeur aria-label="{{ cond $en "Favourite" "Favori" }}" aria-pressed="false">♡</button>
+    <strong>{{ lang.FormatNumber 0 (index $b 4) }} €</strong>
+    <span>{{ if eq (index $b 2) "maison" }}{{ cond $en "House" "Maison" }}{{ else }}{{ cond $en "Flat" "Appartement" }}{{ end }} · {{ index $b 6 }} {{ cond $en "rooms" "pièces" }} · {{ index $b 5 }} m²</span>
+    <span class="d-doux">📍 {{ index $b 3 }}</span>
+  </li>
+  {{- end }}
+</ul>
+<style>
+.biens{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.bien{position:relative;display:grid;gap:4px}
+.bien__coeur{position:absolute;top:22px;right:22px;width:40px;height:40px;border-radius:50%;border:0;background:rgb(255 255 255 / .92);color:#d93c7a;font-size:1.4rem;cursor:pointer;line-height:1}
+.bien__coeur[aria-pressed="true"]{background:#d93c7a;color:#fff}
+</style>

@@ -1,0 +1,9 @@
+{{ $en := .en }}
+<div class="d-social" style="max-width:520px">
+  <div class="d-social__tete"><span class="d-avatar" style="background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)">📷</span><div><strong>@{{ cond $en "your_business" "votre_commerce" }}</strong><br><span class="d-doux">{{ cond $en "Latest posts" "Dernières publications" }}</span></div></div>
+  <div class="d-grille" style="--min:120px;gap:6px">
+    {{- range $i, $e := slice "🥐" "🍰" "☕" "🥖" "🧁" "🍓" }}
+    <button type="button" class="d-image d-degrade-{{ add $i 1 }}" style="border:0;cursor:pointer;aspect-ratio:1" data-toast="{{ cond $en "Would open the post on Instagram" "Ouvrirait la publication sur Instagram" }}">{{ $e }}</button>
+    {{- end }}
+  </div>
+</div>

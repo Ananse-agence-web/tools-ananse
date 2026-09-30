@@ -1,0 +1,14 @@
+{{- /* Démos regroupées par catégorie. Paramètre : collection de pages. */ -}}
+{{- $pages := . -}}
+{{- $lang := site.Language.Lang -}}
+{{- range site.Data.categories }}
+  {{- $c := . }}
+  {{- with where $pages "Params.cat" $c.id }}
+  <section class="categorie" aria-labelledby="h-{{ $c.id }}">
+    <h2 class="categorie__titre" id="h-{{ $c.id }}"><span class="categorie__emoji" aria-hidden="true">{{ $c.emoji }}</span> {{ index $c $lang }} <span class="categorie__nb">{{ len . }}</span></h2>
+    <div class="grille">
+      {{- range .ByWeight }}{{ partial "carte.html" . }}{{ end }}
+    </div>
+  </section>
+  {{- end }}
+{{- end }}

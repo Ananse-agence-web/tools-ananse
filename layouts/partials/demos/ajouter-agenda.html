@@ -1,0 +1,8 @@
+{{ $en := .en }}
+<div class="d-carte" style="max-width:560px" data-evenement>
+  <p class="d-doux" style="margin:0" data-date></p>
+  <h3 style="margin:4px 0">🍷 {{ cond $en "Wine-tasting evening" "Soirée dégustation" }}</h3>
+  <p style="margin:0 0 12px">{{ cond $en "7 pm – 10 pm · 8 Market Square" "19 h – 22 h · 8 place du Marché" }}</p>
+  <div data-boutons></div>
+</div>
+<p class="d-doux">{{ cond $en "Try it: the event really lands in your calendar (you can delete it afterwards)." "Essayez : l'événement arrive vraiment dans votre agenda (vous pourrez le supprimer ensuite)." }}</p>

@@ -1,0 +1,11 @@
+{{ $en := .en }}
+<div class="faq">
+  {{- range slice (slice "Faut-il réserver ?" "Do I need to book?" "Conseillé le week-end, pas obligatoire en semaine." "Recommended at weekends, not needed on weekdays.") (slice "Avez-vous un parking ?" "Is there parking?" "Oui, 12 places gratuites derrière le bâtiment." "Yes, 12 free spaces behind the building.") (slice "Acceptez-vous les chèques ?" "Do you take cheques?" "Nous acceptons carte, espèces et chèques-vacances." "We take cards, cash and holiday vouchers.") (slice "Les chiens sont-ils acceptés ?" "Are dogs allowed?" "Bien sûr, en terrasse comme à l'intérieur." "Of course, on the terrace and inside.") }}
+  <details><summary>{{ index . (cond $en 1 0) }}</summary><p>{{ index . (cond $en 3 2) }}</p></details>
+  {{- end }}
+</div>
+<style>
+.faq details{border:1px solid var(--ligne);border-radius:12px;background:var(--fond);margin-bottom:8px}
+.faq summary{padding:12px 16px;cursor:pointer;font-weight:650;color:var(--encre)}
+.faq p{margin:0;padding:0 16px 14px}
+</style>

@@ -1,0 +1,14 @@
+{{ $en := .en }}
+<form class="formulaire" data-devis-pdf style="max-width:620px">
+  <label>{{ cond $en "Customer name" "Nom du client" }}<input name="client" value="{{ cond $en "Jane Martin" "Marie Martin" }}"></label>
+  <table class="d-table" data-lignes>
+    <thead><tr><th>{{ cond $en "Service" "Prestation" }}</th><th style="width:80px">{{ cond $en "Qty" "Qté" }}</th><th style="width:110px">{{ cond $en "Unit price" "Prix unit." }}</th></tr></thead>
+    <tbody>
+      <tr><td><input value="{{ cond $en "Kitchen painting" "Peinture cuisine" }}"></td><td><input type="number" min="0" value="1"></td><td><input type="number" min="0" value="850"></td></tr>
+      <tr><td><input value="{{ cond $en "Tile laying (m²)" "Pose de carrelage (m²)" }}"></td><td><input type="number" min="0" value="12"></td><td><input type="number" min="0" value="45"></td></tr>
+      <tr><td><input value="{{ cond $en "Travel" "Déplacement" }}"></td><td><input type="number" min="0" value="1"></td><td><input type="number" min="0" value="40"></td></tr>
+    </tbody>
+  </table>
+  <p class="d-resultat" data-total></p>
+  <p><button class="bouton" type="submit">⬇ {{ cond $en "Download the PDF quote" "Télécharger le devis PDF" }}</button></p>
+</form>

@@ -1,0 +1,10 @@
+{{ $en := .en }}
+<form class="formulaire" data-bon style="max-width:560px">
+  <div class="d-colonnes" style="gap:12px">
+    <label>{{ cond $en "From" "De la part de" }}<input name="de" value="{{ cond $en "Tom" "Thomas" }}"></label>
+    <label>{{ cond $en "For" "Pour" }}<input name="pour" value="{{ cond $en "Grandma" "Mamie" }}"></label>
+  </div>
+  <label>{{ cond $en "Amount" "Montant" }}<select name="montant"><option>30</option><option selected>50</option><option>80</option><option>100</option></select></label>
+  <label>{{ cond $en "Message" "Message" }}<textarea name="message" rows="2">{{ cond $en "Happy birthday! Enjoy a lovely dinner." "Joyeux anniversaire ! Offre-toi un bon dîner." }}</textarea></label>
+  <p><button class="bouton" type="submit">🎁 {{ cond $en "Create the voucher (PDF)" "Créer le bon cadeau (PDF)" }}</button></p>
+</form>

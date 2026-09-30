@@ -1,0 +1,14 @@
+{{ $en := .en }}
+<div class="d-colonnes">
+  <div class="formulaire">
+    <label>{{ cond $en "Purchase price (€)" "Prix d'achat (€)" }}<input type="number" data-r="prix" value="150000"></label>
+    <label>{{ cond $en "Fees and works (€)" "Frais et travaux (€)" }}<input type="number" data-r="frais" value="18000"></label>
+    <label>{{ cond $en "Monthly rent excl. charges (€)" "Loyer mensuel hors charges (€)" }}<input type="number" data-r="loyer" value="720"></label>
+    <label>{{ cond $en "Yearly costs: tax, insurance, repairs (€)" "Charges annuelles : taxe foncière, assurance, entretien (€)" }}<input type="number" data-r="charges" value="1600"></label>
+  </div>
+  <div class="d-carte">
+    <p class="d-doux" style="margin:0">{{ cond $en "Gross yield" "Rendement brut" }}</p><p class="d-resultat" data-brut></p>
+    <p class="d-doux" style="margin:0">{{ cond $en "Net yield" "Rendement net" }}</p><p class="d-resultat" data-net></p>
+    <p class="d-doux" data-cash></p>
+  </div>
+</div>

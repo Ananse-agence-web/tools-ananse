@@ -1,0 +1,27 @@
+{{ $en := .en }}
+<div class="d-colonnes">
+  <div style="text-align:center">
+    <h3>🎡 {{ cond $en "Prize wheel" "La roue" }}</h3>
+    <div class="roue"><div class="roue__disque" data-roue></div><div class="roue__fleche">▼</div></div>
+    <p><button type="button" class="bouton" data-tourner>{{ cond $en "Spin!" "Tourner !" }}</button></p>
+    <p class="d-message" data-gain-roue hidden></p>
+  </div>
+  <div style="text-align:center">
+    <h3>🎟️ {{ cond $en "Scratch card" "Le ticket à gratter" }}</h3>
+    <div class="ticket">
+      <div class="ticket__dessous"><strong>{{ cond $en "−10% off" "−10 %" }}</strong><span>{{ cond $en "Code: HELLO10" "Code : BIENVENUE10" }}</span></div>
+      <canvas width="300" height="150" data-ticket></canvas>
+    </div>
+    <p class="d-doux">{{ cond $en "Scratch with your mouse or finger" "Grattez avec la souris ou le doigt" }}</p>
+  </div>
+</div>
+<style>
+.roue{position:relative;width:260px;height:260px;margin:0 auto 12px}
+.roue__disque{width:100%;height:100%;border-radius:50%;background:conic-gradient(#e4572e 0 60deg,#f3a712 0 120deg,#29335c 0 180deg,#669bbc 0 240deg,#a8c686 0 300deg,#db3a8b 0 360deg);transition:transform 4s cubic-bezier(.17,.67,.2,1);box-shadow:var(--ombre);position:relative}
+.roue__disque span{position:absolute;left:50%;top:50%;transform-origin:0 0;color:#fff;font-weight:800;font-size:.85rem;white-space:nowrap}
+.roue__fleche{position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:1.8rem;color:var(--encre)}
+.ticket{position:relative;width:300px;height:150px;margin:0 auto;border-radius:14px;overflow:hidden}
+.ticket__dessous{position:absolute;inset:0;display:grid;place-content:center;background:linear-gradient(135deg,#ffe29a,#ffa99f);color:#3b1d12}
+.ticket__dessous strong{font-size:2.4rem}
+.ticket canvas{position:absolute;inset:0;cursor:crosshair}
+</style>

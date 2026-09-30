@@ -1,0 +1,29 @@
+{{ $en := .en }}
+<div class="d-colonnes">
+  <div class="formulaire">
+    <label>{{ cond $en "Current rent excl. charges (€)" "Loyer actuel hors charges (€)" }}<input type="number" data-i="loyer" value="650" step="0.01"></label>
+    <label>{{ cond $en "Index in the lease (reference quarter)" "Indice du bail (trimestre de référence)" }}<input type="number" data-i="ancien" value="145.17" step="0.01"></label>
+    <label>{{ cond $en "Same quarter, one year later" "Même trimestre, un an après" }}<input type="number" data-i="nouveau" value="146.68" step="0.01"></label>
+    <p class="note">{{ cond $en "Example values: always check the official figures on insee.fr." "Valeurs d'exemple : vérifiez toujours les indices officiels sur insee.fr." }}</p>
+  </div>
+  <div class="d-carte">
+    <p class="d-doux" style="margin:0">{{ cond $en "New rent" "Nouveau loyer" }}</p>
+    <p class="d-resultat" data-nouveau-loyer></p>
+    <p class="d-doux" data-hausse></p>
+  </div>
+</div>
+<details class="d-carte" style="margin-top:16px" open>
+  <summary style="cursor:pointer;font-weight:700;color:var(--encre)">📄 {{ cond $en "Letter for the tenant (PDF)" "Courrier pour le locataire (PDF)" }}</summary>
+  <form class="formulaire" data-courrier style="margin-top:12px">
+    <div class="d-colonnes" style="gap:12px">
+      <label>{{ cond $en "Landlord" "Bailleur" }}<input name="bailleur" value="Jean Dupont"></label>
+      <label>{{ cond $en "Tenant" "Locataire" }}<input name="locataire" value="Léa Martin"></label>
+    </div>
+    <label>{{ cond $en "Property address" "Adresse du logement" }}<input name="adresse" value="{{ cond $en "3 Rose Street, Apt 12, Toulouse" "3 rue des Roses, appt 12, 31000 Toulouse" }}"></label>
+    <div class="d-colonnes" style="gap:12px">
+      <label>{{ cond $en "Effective date" "Date d'effet" }}<input name="effet" type="date" data-date-effet></label>
+      <label>{{ cond $en "Reference quarter" "Trimestre de référence" }}<input name="trimestre" value="{{ cond $en "Q2" "2e trimestre" }}"></label>
+    </div>
+    <p><button class="bouton" type="submit">⬇ {{ cond $en "Download the letter" "Télécharger le courrier" }}</button></p>
+  </form>
+</details>

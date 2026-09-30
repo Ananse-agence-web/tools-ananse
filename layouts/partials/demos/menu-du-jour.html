@@ -1,0 +1,27 @@
+{{ $en := .en }}
+<div class="d-colonnes">
+  <div>
+    <p class="d-doux">📊 {{ cond $en "Your Google Sheets table (simulated): edit a cell…" "Votre tableau Google Sheets (simulé) : modifiez une case…" }}</p>
+    <table class="d-table tableur" data-tableur>
+      <thead><tr><th></th><th>A · {{ cond $en "Dish" "Plat" }}</th><th>B · {{ cond $en "Price" "Prix" }}</th></tr></thead>
+      <tbody>
+        <tr><th>1</th><td><input value="{{ cond $en "Leek and potato soup" "Velouté poireaux-pommes de terre" }}"></td><td><input value="6"></td></tr>
+        <tr><th>2</th><td><input value="{{ cond $en "Beef bourguignon" "Bœuf bourguignon" }}"></td><td><input value="14"></td></tr>
+        <tr><th>3</th><td><input value="{{ cond $en "Apple crumble" "Crumble aux pommes" }}"></td><td><input value="5"></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="d-carte menu-ardoise">
+    <p class="menu-ardoise__titre">{{ cond $en "Today's menu" "Menu du jour" }}</p>
+    <p class="d-doux" data-date style="text-align:center;color:#ddd"></p>
+    <ul data-menu></ul>
+  </div>
+</div>
+<style>
+.tableur input{border-radius:0 !important;padding:6px 8px !important;background:var(--carte) !important}
+.tableur th{background:var(--fond-2);font-size:.8rem;color:var(--doux);text-align:center}
+.menu-ardoise{background:#2b2f2a;color:#f3f0e6;border-color:#2b2f2a;font-family:"Segoe Print","Comic Sans MS",cursive}
+.menu-ardoise__titre{font-size:1.6rem;text-align:center;margin:0}
+.menu-ardoise ul{list-style:none;padding:0}
+.menu-ardoise li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed #666}
+</style>

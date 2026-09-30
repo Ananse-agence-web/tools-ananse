@@ -1,0 +1,17 @@
+{{ $en := .en }}
+<div class="d-colonnes" style="grid-template-columns:1fr 1.4fr">
+  <div class="d-carte">
+    <p class="d-doux" style="margin:0">{{ cond $en "Example" "Exemple" }}</p>
+    <h3>🎁 {{ cond $en "Deposit for a booking" "Acompte de réservation" }}</h3>
+    <div class="d-onglets" data-montants>
+      <button type="button" aria-pressed="true" data-m="30">30 €</button><button type="button" data-m="50">50 €</button><button type="button" data-m="100">100 €</button>
+    </div>
+  </div>
+  <div class="d-grille" style="--min:170px">
+    <div class="d-carte"><strong style="color:#635BFF;font-size:1.2rem">stripe</strong><p class="d-doux">{{ cond $en "Card, Apple Pay, Google Pay" "Carte, Apple Pay, Google Pay" }}</p><button type="button" class="bouton bouton--petit" style="--accent:#635BFF;--sur-accent:#fff" data-payer="Stripe">{{ cond $en "Pay" "Payer" }} <span data-somme>30 €</span></button></div>
+    <div class="d-carte"><strong style="color:#003087;font-size:1.2rem">Pay<span style="color:#009CDE">Pal</span></strong><p class="d-doux">{{ cond $en "PayPal account or card" "Compte PayPal ou carte" }}</p><button type="button" class="bouton bouton--petit" style="--accent:#FFC439;--sur-accent:#003087" data-payer="PayPal">PayPal <span data-somme>30 €</span></button></div>
+    <div class="d-carte"><strong style="font-size:1.2rem">SumUp</strong><p class="d-doux">{{ cond $en "Simple payment link" "Lien de paiement simple" }}</p><button type="button" class="bouton bouton--petit" style="--accent:#1a1a1a;--sur-accent:#fff" data-payer="SumUp">{{ cond $en "Pay" "Payer" }} <span data-somme>30 €</span></button></div>
+  </div>
+</div>
+<p class="d-message" data-paye hidden></p>
+<p class="d-doux">{{ cond $en "No card details are ever typed on your site: the visitor pays on the provider's secure page, then comes back." "Aucune donnée bancaire n'est saisie sur votre site : le visiteur paie sur la page sécurisée du prestataire, puis revient." }}</p>

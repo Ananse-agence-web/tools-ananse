@@ -1,0 +1,18 @@
+{{ $en := .en }}
+<div class="d-grille" style="--min:140px;margin-bottom:16px">
+  {{- range slice (slice "1 284" "Visiteurs (30 j)" "Visitors (30 d)" "+12 %") (slice "3 910" "Pages vues" "Page views" "+8 %") (slice "1 min 48" "Temps moyen" "Avg. time" "+5 %") (slice "62 %" "Sur mobile" "On mobile" "") }}
+  <div class="d-carte"><div class="d-doux">{{ index . (cond $en 2 1) }}</div><div class="d-resultat">{{ index . 0 }}</div>{{ with index . 3 }}<small style="color:var(--ok);font-weight:700">{{ . }}</small>{{ end }}</div>
+  {{- end }}
+</div>
+<div class="d-colonnes">
+  <div><h3>{{ cond $en "Top pages" "Pages les plus vues" }}</h3>
+    {{- range slice (slice "/" 100) (slice "/menu" 72) (slice "/contact" 41) (slice "/galerie" 28) }}
+    <div class="d-rangee" style="justify-content:space-between;margin-top:6px"><code>{{ index . 0 }}</code><span>{{ index . 1 }} %</span></div><div class="d-barre"><span style="width:{{ index . 1 }}%"></span></div>
+    {{- end }}
+  </div>
+  <div><h3>{{ cond $en "Where they come from" "D'où ils viennent" }}</h3>
+    {{- range slice (slice "Google" 54) (slice "Instagram" 21) (slice (cond $en "Direct" "Accès direct") 17) (slice "Facebook" 8) }}
+    <div class="d-rangee" style="justify-content:space-between;margin-top:6px"><span>{{ index . 0 }}</span><span>{{ index . 1 }} %</span></div><div class="d-barre"><span style="width:{{ index . 1 }}%;background:var(--accent-2)"></span></div>
+    {{- end }}
+  </div>
+</div>

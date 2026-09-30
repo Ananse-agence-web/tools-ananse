@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="conteneur page page--centree">
+  <div class="hero__mascotte hero__mascotte--petite" aria-hidden="true">{{ partial "mascotte.html" (dict "id" "p404" "pose" "loupe" "classe" "") }}</div>
+  <h1>{{ T "introuvable" }}</h1>
+  <p><a class="bouton" href="{{ site.Home.RelPermalink }}">{{ T "retour" }}</a></p>
+</div>
+{{ end }}

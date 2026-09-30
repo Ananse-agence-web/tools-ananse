@@ -1,0 +1,15 @@
+{{ $en := .en }}
+<div class="d-rangee" style="margin-bottom:14px">
+  <span class="d-resultat" style="margin:0">4,8</span>
+  <span style="color:#f5b400;font-size:1.4rem">★★★★★</span>
+  <span class="d-doux">{{ cond $en "127 Google reviews" "127 avis Google" }}</span>
+</div>
+<div class="d-grille" style="--min:220px">
+  {{- range slice (slice "Sophie L." "Accueil adorable et plats délicieux. On reviendra !" "Lovely welcome and delicious food. We'll be back!" "5") (slice "Karim B." "Travail soigné, rapide, et le prix annoncé a été respecté." "Neat, fast work, and the quoted price was honoured." "5") (slice "Julie M." "Très bon rapport qualité-prix. Un peu d'attente le samedi." "Great value. A bit of a wait on Saturdays." "4") }}
+  <figure class="d-carte" style="margin:0">
+    <div style="color:#f5b400">{{ strings.Repeat (int (index . 3)) "★" }}<span style="opacity:.3">{{ strings.Repeat (sub 5 (int (index . 3))) "★" }}</span></div>
+    <blockquote style="margin:8px 0">« {{ index . (cond $en 2 1) }} »</blockquote>
+    <figcaption class="d-doux">— {{ index . 0 }}</figcaption>
+  </figure>
+  {{- end }}
+</div>

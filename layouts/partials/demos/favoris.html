@@ -1,0 +1,3 @@
+{{ $en := .en }}
+<p class="d-rangee"><button type="button" class="d-puce" aria-pressed="false" data-voir-favoris>♥ {{ cond $en "My favourites" "Mes favoris" }} (<span data-nb-favoris>0</span>)</button> <span class="d-doux">{{ cond $en "Tap the hearts, then reload the page: they're still there." "Touchez les cœurs, puis rechargez la page : ils sont toujours là." }}</span></p>
+{{ partial "demos/_biens.html" . }}

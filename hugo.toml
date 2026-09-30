@@ -1,0 +1,31 @@
+baseURL = "https://tools.ananse.fr/"
+title = "Ce qu'on peut faire avec le static"
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+
+[taxonomies]
+  metier = "metiers"
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[params]
+  # Adresse officielle qui reçoit les demandes de devis
+  email = "Ananse.Agence.Web@gmail.com"
+  ananse = "https://ananse.fr/"
+
+[languages]
+  [languages.fr]
+    languageName = "Français"
+    languageCode = "fr-FR"
+    title = "Ce qu'on peut faire avec le static"
+    weight = 1
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-GB"
+    title = "What you can do with a static site"
+    weight = 2
+
+[outputs]
+  home = ["HTML", "JSON"]

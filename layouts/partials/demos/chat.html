@@ -1,0 +1,23 @@
+{{ $en := .en }}
+<div class="chat-zone">
+  <p class="d-doux">{{ cond $en "Look at the bottom right of this box 👇" "Regardez en bas à droite de ce cadre 👇" }}</p>
+  <div class="chat" data-chat hidden>
+    <div class="chat__tete">💬 {{ cond $en "We're here!" "On est là !" }}<button type="button" data-chat-fermer aria-label="{{ cond $en "Close" "Fermer" }}">✕</button></div>
+    <div class="chat__fil" data-fil><p class="chat__msg">{{ cond $en "Hello 👋 How can we help?" "Bonjour 👋 Comment pouvons-nous vous aider ?" }}</p></div>
+    <form data-chat-form><input placeholder="{{ cond $en "Your message…" "Votre message…" }}" aria-label="Message"><button type="submit">➤</button></form>
+  </div>
+  <button type="button" class="chat__bulle" data-chat-ouvrir aria-label="Chat">💬</button>
+</div>
+<style>
+.chat-zone{position:relative;min-height:380px}
+.chat__bulle{position:absolute;right:0;bottom:0;width:60px;height:60px;border-radius:50%;border:0;background:var(--accent);font-size:1.6rem;cursor:pointer;box-shadow:var(--ombre)}
+.chat{position:absolute;right:0;bottom:74px;width:min(100%,320px);background:var(--carte);border:1px solid var(--ligne);border-radius:16px;box-shadow:var(--ombre);overflow:hidden;display:flex;flex-direction:column}
+.chat__tete{background:var(--accent);color:var(--sur-accent);padding:10px 14px;font-weight:700;display:flex;justify-content:space-between}
+.chat__tete button{background:none;border:0;color:inherit;cursor:pointer}
+.chat__fil{padding:12px;display:flex;flex-direction:column;gap:8px;max-height:200px;overflow:auto}
+.chat__msg{margin:0;padding:8px 12px;border-radius:14px;background:var(--fond-2);max-width:85%}
+.chat__msg--moi{align-self:flex-end;background:var(--accent-doux)}
+.chat form{display:flex;border-top:1px solid var(--ligne)}
+.chat form input{border:0 !important;border-radius:0 !important}
+.chat form button{border:0;background:none;padding:0 14px;cursor:pointer;color:var(--accent);font-size:1.2rem}
+</style>

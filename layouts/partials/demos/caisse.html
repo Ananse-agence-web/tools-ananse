@@ -1,0 +1,47 @@
+{{ $en := .en }}
+<div class="caisse">
+  <div>
+    <div class="caisse__produits" data-produits-caisse>
+      {{- range slice (slice "🍔" "Burger" "Burger" 12) (slice "🍕" "Pizza" "Pizza" 11) (slice "🥗" "Salade" "Salad" 9.5) (slice "🍟" "Frites" "Chips" 3.5) (slice "🥤" "Soda" "Soda" 2.5) (slice "☕" "Café" "Coffee" 1.8) (slice "🍰" "Dessert" "Dessert" 5) (slice "🍺" "Bière" "Beer" 5.5) }}
+      <button type="button" data-nom="{{ index . 0 }} {{ index . (cond $en 2 1) }}" data-prix="{{ index . 3 }}"><span>{{ index . 0 }}</span>{{ index . (cond $en 2 1) }}<small>{{ lang.FormatNumber 2 (index . 3) }} €</small></button>
+      {{- end }}
+    </div>
+    <p class="d-doux">{{ cond $en "Works offline, on a tablet or phone. Card payments can go through SumUp or Stripe Terminal." "Fonctionne sans réseau, sur tablette ou téléphone. La carte peut passer par un terminal SumUp ou Stripe." }}</p>
+  </div>
+  <div class="d-carte caisse__ticket">
+    <p class="caisse__entete">🧾 {{ cond $en "Ticket" "Ticket" }} <span data-no-ticket></span></p>
+    <ul data-lignes-caisse></ul>
+    <p class="caisse__total"><span>{{ cond $en "Total" "Total" }}</span><strong data-total-caisse>0,00 €</strong></p>
+    <div class="d-rangee">
+      <button type="button" class="bouton bouton--petit" data-payer-caisse="especes">💶 {{ cond $en "Cash" "Espèces" }}</button>
+      <button type="button" class="bouton bouton--petit" data-payer-caisse="carte">💳 {{ cond $en "Card" "Carte" }}</button>
+      <button type="button" class="bouton bouton--petit bouton--clair" data-annuler-caisse>✕ {{ cond $en "Clear" "Annuler" }}</button>
+    </div>
+    <div data-especes hidden style="margin-top:10px">
+      <label class="champ">{{ cond $en "Amount given (€)" "Somme reçue (€)" }}<input type="number" step="0.1" data-recu></label>
+      <div class="d-rangee" style="margin-top:6px">{{ range slice 5 10 20 50 }}<button type="button" class="d-puce" data-billet="{{ . }}">{{ . }} €</button>{{ end }}</div>
+      <p class="d-resultat" data-rendu></p>
+      <button type="button" class="bouton bouton--petit" data-valider-especes>✔ {{ cond $en "Confirm" "Valider" }}</button>
+    </div>
+    <p class="d-message" data-ok-caisse hidden></p>
+  </div>
+</div>
+<div class="d-carte" style="margin-top:14px">
+  <p class="d-rangee" style="justify-content:space-between;margin:0"><strong>📊 {{ cond $en "Today" "Aujourd'hui" }}</strong><button type="button" class="lien-bouton" data-raz-caisse>{{ cond $en "Reset the day" "Remettre la journée à zéro" }}</button></p>
+  <p style="margin:6px 0 0" data-journee></p>
+</div>
+<style>
+.caisse{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+.caisse > *{min-width:0}
+@media (max-width:760px){.caisse{grid-template-columns:1fr}}
+.caisse__produits{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px}
+.caisse__produits button{display:grid;gap:2px;justify-items:center;padding:12px 6px;border-radius:14px;border:1px solid var(--ligne);background:var(--fond);cursor:pointer;font-weight:650;color:var(--encre)}
+.caisse__produits button:active{transform:scale(.96);background:var(--accent-doux)}
+.caisse__produits span{font-size:2rem}
+.caisse__produits small{color:var(--doux);font-weight:500}
+.caisse__entete{margin:0 0 6px;font-weight:700}
+.caisse__ticket ul{list-style:none;padding:0;margin:0;min-height:90px;font-family:ui-monospace,Consolas,monospace;font-size:.92rem}
+.caisse__ticket li{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-bottom:1px dashed var(--ligne)}
+.caisse__ticket li button{background:none;border:0;color:var(--doux);cursor:pointer}
+.caisse__total{display:flex;justify-content:space-between;font-size:1.3rem;margin:10px 0}
+</style>

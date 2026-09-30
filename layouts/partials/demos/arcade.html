@@ -1,0 +1,7 @@
+{{ $en := .en }}
+<div style="max-width:480px;margin:0 auto;text-align:center">
+  <p class="d-rangee" style="justify-content:center"><strong>{{ cond $en "Score" "Score" }} : <span data-score>0</span></strong> · ⏱ <span data-temps>30</span> s · 🏆 <span data-record>0</span></p>
+  <canvas width="480" height="360" data-jeu style="width:100%;border-radius:14px;background:linear-gradient(#bfe3ff,#fff4d6)"></canvas>
+  <p><button type="button" class="bouton" data-jouer>▶ {{ cond $en "Play" "Jouer" }}</button></p>
+  <p class="d-doux">{{ cond $en "Catch the treats with our little spider, avoid the chillies! Mouse, finger or arrow keys." "Attrapez les gourmandises avec notre petite araignée, évitez les piments ! Souris, doigt ou flèches du clavier." }}</p>
+</div>

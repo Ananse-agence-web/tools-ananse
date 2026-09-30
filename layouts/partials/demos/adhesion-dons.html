@@ -1,0 +1,17 @@
+{{ $en := .en }}
+<div class="d-carte" style="max-width:560px">
+  <div class="d-onglets" data-onglets-asso>
+    <button type="button" aria-pressed="true" data-o="adhesion">🎫 {{ cond $en "Join" "Adhérer" }}</button>
+    <button type="button" data-o="don">💝 {{ cond $en "Donate" "Faire un don" }}</button>
+  </div>
+  <div data-panneau="adhesion">
+    <label class="d-case"><input type="radio" name="formule" value="20" checked> {{ cond $en "Individual membership — €20 / year" "Adhésion individuelle — 20 € / an" }}</label>
+    <label class="d-case"><input type="radio" name="formule" value="35"> {{ cond $en "Family membership — €35 / year" "Adhésion famille — 35 € / an" }}</label>
+  </div>
+  <div data-panneau="don" hidden>
+    <div class="d-onglets" data-dons>{{ range slice 10 20 50 100 }}<button type="button" data-d="{{ . }}" {{ if eq . 20 }}aria-pressed="true"{{ end }}>{{ . }} €</button>{{ end }}</div>
+    <p class="d-doux" data-reduction></p>
+  </div>
+  <p><button type="button" class="bouton" style="--accent:#49D38A;--sur-accent:#0b2e1c" data-asso-payer>{{ cond $en "Continue with HelloAsso" "Continuer avec HelloAsso" }}</button></p>
+  <p class="d-message" data-asso-ok hidden></p>
+</div>

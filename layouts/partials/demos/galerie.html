@@ -1,0 +1,23 @@
+{{ $en := .en }}
+<div class="d-grille" style="--min:150px" data-galerie>
+  {{- range $i, $e := slice (slice "🍝" "Pâtes fraîches" "Fresh pasta") (slice "🏡" "La terrasse" "The terrace") (slice "🎂" "Gâteau d'anniversaire" "Birthday cake") (slice "🌿" "Le jardin" "The garden") (slice "🛋️" "Le salon" "The living room") (slice "🎨" "L'atelier" "The workshop") }}
+  <button type="button" class="d-image d-degrade-{{ add $i 1 }}" style="border:0;cursor:zoom-in" data-legende="{{ index $e (cond $en 2 1) }}">{{ index $e 0 }}</button>
+  {{- end }}
+</div>
+<p class="d-doux">{{ cond $en "Click a photo. Then use the arrows, your keyboard, or swipe on a phone." "Cliquez sur une photo. Ensuite : les flèches, le clavier, ou le doigt sur téléphone." }}</p>
+<dialog class="lightbox" data-lightbox>
+  <div class="lightbox__image d-image" data-grande></div>
+  <p class="lightbox__legende" data-legende-grande></p>
+  <button type="button" class="lightbox__btn lightbox__prec" data-prec aria-label="{{ cond $en "Previous" "Précédente" }}">‹</button>
+  <button type="button" class="lightbox__btn lightbox__suiv" data-suiv aria-label="{{ cond $en "Next" "Suivante" }}">›</button>
+  <button type="button" class="lightbox__btn lightbox__fermer" data-fermer aria-label="{{ cond $en "Close" "Fermer" }}">✕</button>
+</dialog>
+<style>
+.lightbox{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100vw;height:100vh;}
+.lightbox::backdrop{background:rgb(0 0 0 / .88)}
+.lightbox[open]{display:grid;place-items:center;align-content:center;gap:12px}
+.lightbox__image{width:min(88vw,900px);font-size:9rem}
+.lightbox__legende{color:#fff;margin:0;font-weight:600}
+.lightbox__btn{position:fixed;top:50%;transform:translateY(-50%);background:rgb(255 255 255 / .15);color:#fff;border:0;width:52px;height:52px;border-radius:50%;font-size:2rem;cursor:pointer}
+.lightbox__prec{left:14px}.lightbox__suiv{right:14px}.lightbox__fermer{top:34px;right:14px;font-size:1.3rem}
+</style>

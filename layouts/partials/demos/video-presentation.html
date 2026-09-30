@@ -1,0 +1,11 @@
+{{ $en := .en }}
+{{ $l := cond $en "en" "fr" }}
+<figure style="margin:0">
+  <video class="video-pres" controls preload="none" playsinline poster="{{ printf "video/presentation-%s.jpg" $l | relURL }}">
+    <source src="{{ printf "video/presentation-%s.mp4" $l | relURL }}" type="video/mp4">
+    <track kind="subtitles" srclang="{{ $l }}" label="{{ cond $en "English" "Français" }}" src="{{ printf "video/presentation-%s.vtt" $l | relURL }}" default>
+  </video>
+  <figcaption class="d-doux">{{ cond $en "This video was made automatically: the site's navigation is recorded, then an AI voice comments on it. Subtitles included." "Cette vidéo a été fabriquée automatiquement : la navigation dans le site est enregistrée, puis une voix de synthèse (IA) la commente. Sous-titres inclus." }}</figcaption>
+</figure>
+<p class="d-rangee"><a class="bouton bouton--petit bouton--clair" href="{{ printf "video/presentation-%s.mp4" $l | relURL }}" download>⬇ {{ cond $en "Download the video (MP4)" "Télécharger la vidéo (MP4)" }}</a></p>
+<style>.video-pres{width:100%;max-width:960px;aspect-ratio:16/9;border-radius:14px;background:#000;display:block}</style>

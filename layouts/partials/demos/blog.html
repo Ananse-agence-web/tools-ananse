@@ -1,0 +1,11 @@
+{{ $en := .en }}
+<div class="d-grille" style="--min:220px">
+  {{- range $i, $a := slice (slice "🌱" "12/09" "Notre potager a 1 an" "Our veg garden turns one" "Tomates, courgettes et herbes : tout ce que nous cuisinons vient désormais de 200 m." "Tomatoes, courgettes and herbs: everything we cook now comes from 200 m away.") (slice "🎉" "03/09" "La rentrée des ateliers" "Workshops are back" "Poterie le mardi, aquarelle le jeudi. Inscriptions ouvertes !" "Pottery on Tuesdays, watercolour on Thursdays. Sign-ups open!") (slice "💡" "21/08" "5 conseils pour votre jardin" "5 tips for your garden" "Arroser le soir, pailler, et laisser un coin sauvage pour les abeilles." "Water in the evening, mulch, and leave a wild corner for the bees.") }}
+  <article class="d-carte">
+    <div class="d-image d-degrade-{{ add $i 3 }}" style="aspect-ratio:16/9;font-size:2.4rem">{{ index $a 0 }}</div>
+    <p class="d-doux" style="margin:8px 0 2px">{{ index $a 1 }}</p>
+    <h3 style="margin:0 0 6px">{{ index $a (cond $en 3 2) }}</h3>
+    <details><summary style="cursor:pointer;color:var(--accent);font-weight:600">{{ cond $en "Read" "Lire" }}</summary><p>{{ index $a (cond $en 5 4) }}</p></details>
+  </article>
+  {{- end }}
+</div>

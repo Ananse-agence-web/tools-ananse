@@ -1,0 +1,7 @@
+{{ $en := .en }}
+<article class="d-social">
+  <div class="d-social__tete"><span class="d-avatar" style="background:#1877F2">f</span><div><strong>{{ cond $en "Chez Mado Restaurant" "Restaurant Chez Mado" }}</strong><br><span class="d-doux">{{ cond $en "2 hours ago · 🌍" "Il y a 2 h · 🌍" }}</span></div></div>
+  <p>{{ cond $en "🎉 New menu this week! Homemade lasagne and lemon tart. Open until 10 pm on Friday." "🎉 Nouvelle carte cette semaine ! Lasagnes maison et tarte au citron. Ouvert jusqu'à 22 h vendredi." }}</p>
+  <div class="d-image d-degrade-4">🍋</div>
+  <div class="d-social__actions"><span>👍 128</span><span>💬 14</span><span>↗️ {{ cond $en "Share" "Partager" }}</span></div>
+</article>

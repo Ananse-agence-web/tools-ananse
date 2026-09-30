@@ -1,0 +1,12 @@
+{{ $en := .en }}
+<div class="d-colonnes" style="align-items:center">
+  <div>
+    <label class="champ">{{ cond $en "Address to open" "Adresse à ouvrir" }}<input data-qr-texte></label>
+    <p class="d-rangee" style="margin-top:12px">
+      <button type="button" class="bouton bouton--petit" data-qr-telecharger>⬇ {{ cond $en "Download (SVG, prints sharp)" "Télécharger (SVG, net à l'impression)" }}</button>
+    </p>
+    <p class="d-doux">{{ cond $en "Scan it with your phone: it opens this site." "Scannez-le avec votre téléphone : il ouvre ce site." }}</p>
+  </div>
+  <div class="qr" data-qr></div>
+</div>
+<style>.qr{background:#fff;padding:14px;border-radius:14px;width:min(100%,260px);justify-self:center}.qr svg{display:block;width:100%;height:auto}</style>

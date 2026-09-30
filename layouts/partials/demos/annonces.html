@@ -1,0 +1,9 @@
+{{ $en := .en }}
+<div class="d-rangee" style="margin-bottom:14px" data-filtres-biens>
+  <label class="champ">{{ cond $en "Type" "Type" }}<select data-f="type"><option value="">{{ cond $en "All" "Tous" }}</option><option value="appartement">{{ cond $en "Flat" "Appartement" }}</option><option value="maison">{{ cond $en "House" "Maison" }}</option></select></label>
+  <label class="champ">{{ cond $en "Town" "Ville" }}<select data-f="ville"><option value="">{{ cond $en "All" "Toutes" }}</option><option>Toulouse</option><option>Blagnac</option><option>Colomiers</option></select></label>
+  <label class="champ">{{ cond $en "Max price" "Prix max" }} : <span data-v="prix"></span><input type="range" data-f="prix" min="150000" max="550000" step="10000" value="550000"></label>
+  <label class="champ">{{ cond $en "Min size" "Surface min" }} : <span data-v="surface"></span><input type="range" data-f="surface" min="30" max="150" step="5" value="30"></label>
+</div>
+<p class="d-doux" data-nb-biens></p>
+{{ partial "demos/_biens.html" . }}

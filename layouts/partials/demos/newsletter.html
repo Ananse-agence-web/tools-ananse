@@ -1,0 +1,10 @@
+{{ $en := .en }}
+<div class="d-carte" style="max-width:520px">
+  <form class="formulaire" data-demo-form>
+    <h3>💌 {{ cond $en "Get our news once a month" "Recevez nos nouvelles une fois par mois" }}</h3>
+    <label>{{ cond $en "Your email" "Votre e-mail" }}<input type="email" required></label>
+    <label class="d-case"><input type="checkbox" required> {{ cond $en "I agree to receive the newsletter (unsubscribe in one click)." "J'accepte de recevoir la lettre (désinscription en un clic)." }}</label>
+    <p><button class="bouton" type="submit">{{ cond $en "Subscribe" "Je m'inscris" }}</button></p>
+  </form>
+  <p class="d-message" data-demo-ok hidden>✅ {{ cond $en "Almost done! On your site, a confirmation email would be sent by Brevo or Mailchimp." "C'est presque fini ! Sur votre site, un e-mail de confirmation partirait via Brevo ou Mailchimp." }}</p>
+</div>

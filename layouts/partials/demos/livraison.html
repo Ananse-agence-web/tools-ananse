@@ -1,0 +1,6 @@
+{{ $en := .en }}
+<div class="d-rangee">
+  <a class="bouton" href="#" style="--accent:#06C167;--sur-accent:#04240f" data-toast="{{ cond $en "Would open your Uber Eats page" "Ouvrirait votre page Uber Eats" }}">🛵 {{ cond $en "Order on Uber Eats" "Commander sur Uber Eats" }}</a>
+  <a class="bouton" href="#" style="--accent:#00CCBC;--sur-accent:#00302c" data-toast="{{ cond $en "Would open your Deliveroo page" "Ouvrirait votre page Deliveroo" }}">🦘 {{ cond $en "Order on Deliveroo" "Commander sur Deliveroo" }}</a>
+</div>
+<p>{{ cond $en "Or order direct, with no commission for the restaurant:" "Ou commandez en direct, sans commission pour le restaurant :" }} <a href="{{ with site.GetPage "/demos/a-emporter" }}{{ .RelPermalink }}{{ end }}">{{ cond $en "takeaway ordering" "la commande à emporter" }} →</a></p>

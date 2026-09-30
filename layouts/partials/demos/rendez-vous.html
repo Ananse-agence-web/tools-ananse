@@ -1,0 +1,9 @@
+{{ $en := .en }}
+<div data-rdv>
+  <p><strong>{{ cond $en "1. Pick a day" "1. Choisissez un jour" }}</strong></p>
+  <div class="d-onglets" data-jours></div>
+  <p><strong>{{ cond $en "2. Pick a time" "2. Choisissez une heure" }}</strong></p>
+  <div class="d-onglets" data-heures></div>
+  <p><button class="bouton" type="button" data-reserver disabled>{{ cond $en "Book this slot" "Réserver ce créneau" }}</button></p>
+  <p class="d-message" data-ok hidden></p>
+</div>

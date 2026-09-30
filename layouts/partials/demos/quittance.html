@@ -1,0 +1,14 @@
+{{ $en := .en }}
+<form class="formulaire" data-quittance style="max-width:620px">
+  <div class="d-colonnes" style="gap:12px">
+    <label>{{ cond $en "Landlord" "Bailleur" }}<input name="bailleur" value="Jean Dupont"></label>
+    <label>{{ cond $en "Tenant" "Locataire" }}<input name="locataire" value="Léa Martin"></label>
+  </div>
+  <label>{{ cond $en "Property address" "Adresse du logement" }}<input name="adresse" value="{{ cond $en "3 Rose Street, Apt 12, Toulouse" "3 rue des Roses, appt 12, 31000 Toulouse" }}"></label>
+  <div class="d-colonnes" style="gap:12px">
+    <label>{{ cond $en "Rent (€)" "Loyer (€)" }}<input name="loyer" type="number" value="650" step="0.01"></label>
+    <label>{{ cond $en "Charges (€)" "Charges (€)" }}<input name="charges" type="number" value="50" step="0.01"></label>
+  </div>
+  <label>{{ cond $en "Month" "Mois" }}<input name="mois" type="month" data-mois-courant></label>
+  <p class="boutons"><button class="bouton" type="submit">⬇ {{ cond $en "Download the receipt" "Télécharger la quittance" }}</button> <a class="bouton bouton--clair" href="https://quittance.ananse.fr/" target="_blank" rel="noopener">{{ cond $en "Our full app" "Notre appli complète" }} ↗</a></p>
+</form>

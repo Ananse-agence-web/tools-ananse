@@ -1,0 +1,6 @@
+{{ $en := .en }}
+<button type="button" class="d-clic d-degrade-2" style="color:#fff;max-width:640px;aspect-ratio:16/9" data-simule="{{ cond $en "Here the Facebook player would load, only after this click." "Ici, le lecteur Facebook se chargerait, seulement après ce clic." }}">
+  <span style="font-size:3.5rem">▶️</span>
+  <strong style="color:#fff">{{ cond $en "Behind the scenes: our workshop" "Les coulisses de notre atelier" }}</strong>
+  <span>{{ cond $en "Click to load the Facebook video*" "Cliquez pour charger la vidéo Facebook*" }}</span>
+</button>

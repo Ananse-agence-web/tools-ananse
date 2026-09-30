@@ -1,0 +1,11 @@
+{{ $en := .en }}
+<p class="d-rangee"><strong data-coups>0</strong> {{ cond $en "moves" "coups" }} · <span data-paires>0</span>/6 {{ cond $en "pairs" "paires" }} <button type="button" class="bouton bouton--petit bouton--clair" data-rejouer>↻ {{ cond $en "Restart" "Recommencer" }}</button></p>
+<div class="memory" data-memory></div>
+<p class="d-message" data-gagne hidden></p>
+<style>
+.memory{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:420px}
+.memory button{aspect-ratio:1;border-radius:12px;border:0;font-size:2.2rem;cursor:pointer;background:var(--accent);color:transparent;transition:transform .25s,background .25s}
+.memory button.vu,.memory button.ok{background:var(--fond-2);color:inherit;transform:rotateY(180deg)}
+.memory button.ok{background:color-mix(in srgb,var(--ok) 25%,var(--carte))}
+.memory button span{display:inline-block;transform:rotateY(180deg)}
+</style>

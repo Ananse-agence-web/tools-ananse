@@ -1,0 +1,13 @@
+{{ $en := .en }}
+<p><strong>{{ cond $en "I avoid:" "J'évite :" }}</strong></p>
+<div class="d-rangee" data-filtres style="margin-bottom:14px">
+  {{- range slice (slice "gluten" "🌾 Gluten" "🌾 Gluten") (slice "lait" "🥛 Lait" "🥛 Milk") (slice "oeuf" "🥚 Œufs" "🥚 Eggs") (slice "noix" "🥜 Fruits à coque" "🥜 Nuts") (slice "poisson" "🐟 Poisson" "🐟 Fish") (slice "viande" "🥩 Viande (végé)" "🥩 Meat (veggie)") }}
+  <label class="d-case d-puce"><input type="checkbox" value="{{ index . 0 }}"> {{ index . (cond $en 2 1) }}</label>
+  {{- end }}
+</div>
+<p class="d-doux" data-compte></p>
+<ul class="d-grille" style="--min:220px;list-style:none;padding:0" data-plats>
+  {{- range slice (slice "Quiche lorraine" "Quiche lorraine" "gluten lait oeuf viande") (slice "Salade niçoise" "Niçoise salad" "oeuf poisson") (slice "Risotto aux champignons" "Mushroom risotto" "lait") (slice "Poulet rôti, frites" "Roast chicken and chips" "viande") (slice "Curry de légumes" "Vegetable curry" "") (slice "Pavé de saumon" "Salmon fillet" "poisson lait") (slice "Tarte aux noix" "Walnut tart" "gluten lait oeuf noix") (slice "Salade de fruits" "Fruit salad" "") }}
+  <li class="d-carte" data-allergenes="{{ index . 2 }}"><strong>{{ index . (cond $en 1 0) }}</strong><br><span class="d-doux">{{ with index . 2 }}{{ . }}{{ else }}{{ cond $en "no major allergen" "aucun allergène majeur" }}{{ end }}</span></li>
+  {{- end }}
+</ul>

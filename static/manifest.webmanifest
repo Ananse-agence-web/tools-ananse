@@ -1,0 +1,15 @@
+{
+  "name": "Ce qu'on peut faire avec le static",
+  "short_name": "Le static",
+  "description": "Les démos d'Ananse : tout ce qu'un site rapide et sans souci peut faire.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FBF6EE",
+  "theme_color": "#B8452C",
+  "icons": [
+    { "src": "icons/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icone-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

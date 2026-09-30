@@ -1,0 +1,14 @@
+{{ $en := .en }}
+<div class="d-colonnes">
+  <div>
+    <p class="statut" data-statut></p>
+    <table class="d-table" data-horaires></table>
+  </div>
+  <div class="d-carte">
+    <p><strong>{{ cond $en "Test another moment" "Tester un autre moment" }}</strong></p>
+    <label class="champ">{{ cond $en "Day" "Jour" }}<select data-jour></select></label>
+    <label class="champ" style="margin-top:8px">{{ cond $en "Time" "Heure" }}<input type="time" data-heure></label>
+    <p><button type="button" class="lien-bouton" data-maintenant>{{ cond $en "Back to now" "Revenir à maintenant" }}</button></p>
+  </div>
+</div>
+<style>.statut{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:1.15rem;padding:8px 16px;border-radius:999px;margin-top:0}.statut.ouvert{background:color-mix(in srgb,var(--ok) 20%,var(--carte));color:var(--ok)}.statut.ferme{background:color-mix(in srgb,#d9534f 18%,var(--carte));color:#d9534f}.d-table tr.auj{font-weight:700;color:var(--accent)}</style>

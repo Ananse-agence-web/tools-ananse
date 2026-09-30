@@ -1,0 +1,4 @@
+{{ $en := .en }}
+<label class="champ" style="max-width:320px">{{ cond $en "Your first name" "Votre prénom" }}<input data-benevole value="{{ cond $en "Sam" "Nadia" }}"></label>
+<table class="d-table" data-missions style="margin-top:12px"></table>
+<style>[data-missions] td:last-child{text-align:right}[data-missions] .noms{font-size:.85rem;color:var(--doux)}</style>

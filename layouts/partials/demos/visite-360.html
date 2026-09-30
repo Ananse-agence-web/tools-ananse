@@ -1,0 +1,20 @@
+{{ $en := .en }}
+<div data-v360 data-pano="{{ "img/magasin-360.jpg" | relURL }}" data-js="{{ "libs/pannellum/pannellum.js" | relURL }}" data-css="{{ "libs/pannellum/pannellum.css" | relURL }}">
+  <div class="d-onglets" role="group">
+    <button type="button" aria-pressed="true" data-source="photo">📷 {{ cond $en "Real 360° photo" "Vraie photo 360°" }}</button>
+    <button type="button" aria-pressed="false" data-source="google">🗺️ Google Street View*</button>
+  </div>
+  <div class="v360" data-zone>
+    <button type="button" class="v360__lancer" data-lancer style="background-image:url({{ "img/magasin-360-apercu.jpg" | relURL }})">
+      <span>🔄 {{ cond $en "Start the 360° tour" "Lancer la visite 360°" }}</span>
+    </button>
+  </div>
+  <p class="d-doux" data-legende-photo>{{ cond $en "Drag to look all around, pinch or scroll to zoom. Photo: Eliseevsky store, Moscow (1901 interior) — Artem Svetlov, CC BY 2.0, via Wikimedia Commons." "Faites glisser pour regarder tout autour, pincez ou molette pour zoomer. Photo : épicerie Elisseïev, Moscou (décor de 1901) — Artem Svetlov, CC BY 2.0, via Wikimedia Commons." }}</p>
+  <p class="d-doux" data-legende-google hidden>{{ cond $en "Inside the Galeries Lafayette, Paris, on Google Street View. If your shop has Google 360° photos, we can show them the same way." "À l'intérieur des Galeries Lafayette, à Paris, sur Google Street View. Si votre commerce a des photos 360° sur Google, on les affiche de la même façon." }}</p>
+</div>
+<style>
+.v360{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/9;max-height:520px;width:100%;background:#111}
+.v360 > div, .v360 iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.v360__lancer{position:absolute;inset:0;border:0;cursor:pointer;background-size:cover;background-position:center;display:grid;place-items:center}
+.v360__lancer span{background:rgb(0 0 0 / .6);color:#fff;padding:12px 22px;border-radius:999px;font-weight:700;font-size:1.1rem}
+</style>

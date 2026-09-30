@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang }}" data-palette="terre" data-mode="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- $titre := cond .IsHome site.Title (printf "%s — %s" .Title site.Title) }}
+  <title>{{ $titre }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ T "slogan" }}{{ end }}">
+  <script>(()=>{const d=document.documentElement;d.classList.add("js");try{d.dataset.palette=localStorage.getItem("palette")||"terre";d.dataset.mode=localStorage.getItem("mode")||"auto"}catch(e){}})()</script>
+  {{- $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <meta name="theme-color" content="#FBF6EE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1A1514" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="{{ $titre }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ T "slogan" }}{{ end }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{- range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+  {{- end }}
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ "icons/icone-192.png" | relURL }}">
+  <link rel="manifest" href="{{ "manifest.webmanifest" | relURL }}">
+</head>
+<body data-racine="{{ "" | relURL }}" data-email="{{ site.Params.email }}" data-index="{{ "index.json" | relLangURL }}">
+  <a class="evitement" href="#contenu">{{ T "allercontenu" }}</a>
+  {{ partial "entete.html" . }}
+  <main id="contenu">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "pied.html" . }}
+  {{- $js := slice (resources.Get "js/main.js") (resources.Get "js/recherche.js") | resources.Concat "js/site.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  {{- block "scripts" . }}{{ end }}
+</body>
+</html>

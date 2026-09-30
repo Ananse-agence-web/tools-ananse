@@ -1,0 +1,18 @@
+{{ $en := .en }}
+<div class="d-colonnes">
+  <div class="d-carte" style="background:var(--fond-2)">
+    <p class="d-doux" style="margin-top:0">✏️ {{ cond $en "Your editing screen (simulated)" "Votre écran de modification (simulé)" }}</p>
+    <div class="formulaire">
+      <label>{{ cond $en "Title" "Titre" }}<input data-cms="titre" value="{{ cond $en "Welcome to the Blue Salon" "Bienvenue au Salon Bleu" }}"></label>
+      <label>{{ cond $en "Text" "Texte" }}<textarea data-cms="texte" rows="3">{{ cond $en "Hairdresser in the town centre since 2010. With or without an appointment." "Coiffeur en centre-ville depuis 2010. Avec ou sans rendez-vous." }}</textarea></label>
+      <label>{{ cond $en "Photo" "Photo" }}<select data-cms="photo"><option value="💇">💇</option><option value="✂️">✂️</option><option value="🌸">🌸</option></select></label>
+      <p><button type="button" class="bouton" data-toast="{{ cond $en "Published! The site updates within a minute." "Publié ! Le site se met à jour en une minute." }}">{{ cond $en "Publish" "Publier" }}</button></p>
+    </div>
+  </div>
+  <div class="d-carte">
+    <p class="d-doux" style="margin-top:0">👀 {{ cond $en "Your site" "Votre site" }}</p>
+    <div class="d-image d-degrade-2" style="aspect-ratio:16/9" data-apercu-photo>💇</div>
+    <h3 data-apercu-titre style="margin-top:12px"></h3>
+    <p data-apercu-texte></p>
+  </div>
+</div>

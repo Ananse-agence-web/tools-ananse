@@ -1,0 +1,61 @@
+{{ define "main" }}
+{{- $f := partial "fonction.html" . }}
+{{- $lang := site.Language.Lang }}
+{{- $en := eq $lang "en" }}
+{{- $id := $f.id }}
+{{- $c := index (where site.Data.categories "id" $f.cat) 0 }}
+<article class="conteneur page fiche" data-fonction="{{ $id }}">
+  <p class="fil"><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a> › <a href="{{ site.Home.RelPermalink }}#h-{{ $c.id }}">{{ $c.emoji }} {{ index $c $lang }}</a></p>
+  <h1>{{ .Title }}{{ if $f.cookies }}<span class="etoile">*</span>{{ end }}</h1>
+  <p class="fiche__accroche">{{ .Description }}</p>
+
+  <ul class="fiche__infos">
+    <li class="badge badge--{{ $f.demo }}">{{ if eq $f.demo "reelle" }}✅ {{ T "demo_reelle" }}{{ else }}🎭 {{ T "demo_simulee" }}{{ end }}</li>
+    {{- with $f.services }}<li class="badge">🔌 {{ T "avec" }} : {{ . }}{{ if $f.cookies }}*{{ end }}</li>{{ end }}
+  </ul>
+
+  <section class="demo" aria-label="{{ T "demo" }}">
+    <p class="demo__etiquette">{{ T "demo" }}{{ if eq $f.demo "simulee" }} · <span>{{ T "demo_simulee_d" }}</span>{{ end }}</p>
+    {{- $tpl := printf "demos/%s.html" $id }}
+    {{- if templates.Exists (printf "partials/%s" $tpl) }}
+    {{ partial $tpl (dict "en" $en "page" . "f" $f) }}
+    {{- end }}
+  </section>
+
+  <p class="fiche__texte">{{ index (index $f $lang) "texte" }}</p>
+  {{- if $f.cookies }}<p class="fiche__tiers">{{ T "tiers" }}</p>{{ end }}
+
+  <p class="fiche__ideal">{{ T "ideal" }} :
+    {{- range $i, $m := .Params.metiers }}{{ with site.GetPage (printf "/metiers/%s" $m) }} <a class="puce" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ end }}
+  </p>
+
+  <section class="souhait" aria-label="{{ T "jeveux_long" }}">
+    <label class="choix"><input type="checkbox" data-choix="{{ $id }}"> <span>{{ T "jeveux_long" }}</span></label>
+    <label class="souhait__commentaire">
+      <span>{{ T "commentaire" }}</span>
+      <textarea rows="3" data-commentaire="{{ $id }}" placeholder="{{ T "commentaire_aide" }}"></textarea>
+    </label>
+    <a class="bouton bouton--clair souhait__devis" href="{{ with site.GetPage "/devis" }}{{ .RelPermalink }}{{ end }}">🧺 {{ T "mondevis" }} (<span data-compteur>0</span>)</a>
+  </section>
+
+  {{- $liste := (where site.RegularPages "Section" "demos").ByWeight }}
+  {{- $prec := false }}{{ $suiv := false }}{{ $trouve := false }}
+  {{- range $liste }}{{ if $trouve }}{{ if not $suiv }}{{ $suiv = . }}{{ end }}{{ else if eq .RelPermalink $.RelPermalink }}{{ $trouve = true }}{{ else }}{{ $prec = . }}{{ end }}{{ end }}
+  <nav class="suite" aria-label="{{ T "precedent" }} / {{ T "suivant" }}">
+    {{ with $prec }}<a href="{{ .RelPermalink }}"><small>← {{ T "precedent" }}</small>{{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    {{ with $suiv }}<a class="suite__suiv" href="{{ .RelPermalink }}"><small>{{ T "suivant" }} →</small>{{ .Title }}</a>{{ end }}
+  </nav>
+</article>
+{{ end }}
+
+{{ define "scripts" }}
+{{- $f := partial "fonction.html" . }}
+{{- $libs := dict "pdf" (slice "documents" "pdf" "quittance" "bon-cadeau" "revision-loyer") "qrcode" (slice "qr-code") "agenda" (slice "ajouter-agenda" "evenements") }}
+{{- $res := slice (resources.Get "js/libs/commun.js") }}
+{{- range $nom, $ids := $libs }}{{ if in $ids $f.id }}{{ $res = $res | append (resources.Get (printf "js/libs/%s.js" $nom)) }}{{ end }}{{ end }}
+{{- with resources.Get (printf "js/demos/%s.js" $f.id) }}{{ $res = $res | append . }}{{ end }}
+{{- with $res }}
+{{- $js := . | resources.Concat (printf "js/demo-%s.js" $f.id) | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{- end }}
+{{ end }}

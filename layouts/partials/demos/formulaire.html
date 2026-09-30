@@ -1,0 +1,10 @@
+{{ $en := .en }}
+<div style="max-width:520px">
+  <form class="formulaire" data-demo-form>
+    <label>{{ cond $en "Your name" "Votre nom" }}<input name="nom" required></label>
+    <label>{{ cond $en "Your email" "Votre e-mail" }}<input name="email" type="email" required></label>
+    <label>{{ cond $en "Your message" "Votre message" }}<textarea name="message" rows="3" required></textarea></label>
+    <p><button class="bouton" type="submit">{{ cond $en "Send" "Envoyer" }}</button></p>
+  </form>
+  <p class="d-message" data-demo-ok hidden>✅ {{ cond $en "Thanks! On your site, this message would now be in your inbox. (Demo: nothing was sent.)" "Merci ! Sur votre site, ce message serait maintenant dans votre boîte e-mail. (Démo : rien n'a été envoyé.)" }}</p>
+</div>
