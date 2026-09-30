@@ -13,7 +13,7 @@ enableRobotsTXT = true
 [params]
   # Adresse officielle qui reçoit les demandes de devis
   email = "Ananse.Agence.Web@gmail.com"
-  ananse = "https://ananse.fr/"
+  ananse = "https://www.ananse.fr/"
 
 [languages]
   [languages.fr]
