@@ -1,7 +1,34 @@
-[
-  { "id": "restaurant",  "emoji": "🍔", "fr": "Restaurants et food trucks",           "en": "Restaurants & food trucks" },
-  { "id": "commerce",    "emoji": "🛍️", "fr": "Commerces, artisans et indépendants",  "en": "Shops, craftspeople & freelancers" },
-  { "id": "immobilier",  "emoji": "🏢", "fr": "Agences immobilières",                 "en": "Estate agencies" },
-  { "id": "bailleur",    "emoji": "🔑", "fr": "Propriétaires bailleurs",              "en": "Landlords" },
-  { "id": "association", "emoji": "🤝", "fr": "Associations et clubs",                "en": "Non-profits & clubs" }
-]
+{
+  "metiers": [
+    {
+      "id": "restaurant",
+      "emoji": "🍔",
+      "fr": "Restaurants et food trucks",
+      "en": "Restaurants & food trucks"
+    },
+    {
+      "id": "commerce",
+      "emoji": "🛍️",
+      "fr": "Commerces, artisans et indépendants",
+      "en": "Shops, craftspeople & freelancers"
+    },
+    {
+      "id": "immobilier",
+      "emoji": "🏢",
+      "fr": "Agences immobilières",
+      "en": "Estate agencies"
+    },
+    {
+      "id": "bailleur",
+      "emoji": "🔑",
+      "fr": "Propriétaires bailleurs",
+      "en": "Landlords"
+    },
+    {
+      "id": "association",
+      "emoji": "🤝",
+      "fr": "Associations et clubs",
+      "en": "Non-profits & clubs"
+    }
+  ]
+}

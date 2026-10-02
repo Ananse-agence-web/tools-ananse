@@ -6,6 +6,6 @@
 <ul data-resultats style="padding-left:18px"></ul>
 <ul hidden data-index>
   {{- range (where site.RegularPages "Section" "demos").ByWeight }}
-  <li data-url="{{ .RelPermalink }}" data-titre="{{ .Title }}" data-texte="{{ .Description }} {{ index (index (index (where site.Data.fonctions "id" .Params.fonction) 0) site.Language.Lang) "texte" }} {{ (index (where site.Data.fonctions "id" .Params.fonction) 0).services }}"></li>
+  <li data-url="{{ .RelPermalink }}" data-titre="{{ .Title }}" data-texte="{{ .Description }} {{ index (index (index (where site.Data.fonctions.fonctions "id" .Params.fonction) 0) site.Language.Lang) "texte" }} {{ (index (where site.Data.fonctions.fonctions "id" .Params.fonction) 0).services }}"></li>
   {{- end }}
 </ul>

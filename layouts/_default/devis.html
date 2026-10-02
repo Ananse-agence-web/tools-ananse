@@ -6,7 +6,7 @@
 
   <ul hidden data-catalogue>
     {{- range (where site.RegularPages "Section" "demos").ByWeight }}
-    {{- $c := index (where site.Data.categories "id" .Params.cat) 0 }}
+    {{- $c := index (where site.Data.categories.categories "id" .Params.cat) 0 }}
     <li data-id="{{ .Params.fonction }}" data-titre="{{ .Title }}" data-cat="{{ index $c $lang }}" data-emoji="{{ $c.emoji }}" data-url="{{ .RelPermalink }}"></li>
     {{- end }}
   </ul>
@@ -26,7 +26,7 @@
         <label>{{ T "entreprise" }}<input name="entreprise" autocomplete="organization"></label>
         <label>{{ T "activite" }}
           <select name="activite">
-            {{- range site.Data.metiers }}<option>{{ index . $lang }}</option>{{ end }}
+            {{- range site.Data.metiers.metiers }}<option>{{ index . $lang }}</option>{{ end }}
             <option>{{ T "autre" }}</option>
           </select>
         </label>
@@ -48,7 +48,7 @@
           <button class="bouton" type="submit">✉️ {{ T "envoyer" }}</button>
           <button class="bouton bouton--clair" type="button" data-copier data-ok="{{ T "copie" }}">📋 {{ T "copier" }}</button>
         </p>
-        <p class="note">{{ T "envoi_note" }} <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>.</p>
+        <p class="note">{{ T "envoi_note" }} <a href="mailto:{{ site.Data.infos.email }}">{{ site.Data.infos.email }}</a>.</p>
       </form>
       <details class="apercu">
         <summary>{{ T "apercu" }}</summary>

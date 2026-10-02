@@ -1,0 +1,314 @@
+# Decap CMS — https://tools.ananse.fr/admin/
+# Chaque enregistrement crée un commit sur main : Cloudflare republie le site en 1 à 2 minutes.
+backend:
+  name: github
+  repo: Ananse-agence-web/tools-ananse
+  branch: main
+  base_url: https://www.ananse.fr
+  auth_endpoint: api/auth
+
+locale: fr
+site_url: https://tools.ananse.fr
+display_url: https://tools.ananse.fr
+logo_url: https://tools.ananse.fr/favicon.svg
+
+media_folder: static/img
+public_folder: /img
+
+i18n:
+  structure: multiple_files
+  locales: [fr, en]
+  default_locale: fr
+
+collections:
+  - name: demos
+    label: "Démos (titres et accroches)"
+    label_singular: démo
+    folder: content/demos
+    i18n: true
+    create: false
+    delete: false
+    editor: { preview: false }
+    sortable_fields: [weight, title]
+    summary: "{{weight}}. {{title}}"
+    fields:
+      - { name: title, label: Titre, widget: string, i18n: true }
+      - { name: description, label: Accroche, widget: text, i18n: true, required: false }
+      - { name: slug, widget: hidden, i18n: duplicate, required: false }
+      - { name: fonction, widget: hidden, i18n: duplicate, required: false }
+      - { name: cat, widget: hidden, i18n: duplicate, required: false }
+      - { name: cookies, widget: hidden, i18n: duplicate, required: false }
+      - { name: weight, label: "Ordre d'affichage", widget: number, i18n: duplicate, required: false }
+      - { name: metiers, widget: hidden, i18n: duplicate, required: false }
+
+  - name: donnees
+    label: "Fiches, catégories, métiers"
+    editor: { preview: false }
+    files:
+      - name: fonctions
+        label: "Fiches des démos (texte détaillé, services)"
+        file: data/fonctions.json
+        fields:
+          - name: fonctions
+            label: Fonctions
+            widget: list
+            allow_add: false
+            summary: "{{id}} — {{fr.titre}}"
+            fields:
+              - { name: id, label: Identifiant, widget: string }
+              - { name: cat, label: Catégorie, widget: select, options: [contact, reseaux, valeur, contenu, agenda, vendre, resto, asso, immo, bailleur, outils, jeux] }
+              - { name: metiers, label: "Métiers", widget: select, multiple: true, options: [tous, restaurant, commerce, immobilier, bailleur, association] }
+              - { name: services, label: "Services utilisés", widget: string, required: false }
+              - { name: cookies, label: "Dépose des cookies tiers", widget: boolean, default: false }
+              - { name: demo, label: Démo, widget: select, options: [{ label: "Réelle", value: reelle }, { label: "Simulée", value: simulee }] }
+              - name: fr
+                label: Français
+                widget: object
+                fields:
+                  - { name: titre, label: "Titre (sert aux nouvelles démos)", widget: string }
+                  - { name: accroche, label: "Accroche (sert aux nouvelles démos)", widget: string }
+                  - { name: texte, label: "Texte détaillé", widget: text }
+              - name: en
+                label: English
+                widget: object
+                fields:
+                  - { name: titre, label: "Title (used for new demos)", widget: string }
+                  - { name: accroche, label: "Hook (used for new demos)", widget: string }
+                  - { name: texte, label: "Detailed text", widget: text }
+      - name: categories
+        label: Catégories
+        file: data/categories.json
+        fields:
+          - name: categories
+            label: Catégories
+            widget: list
+            allow_add: false
+            summary: "{{emoji}} {{fr}}"
+            fields:
+              - { name: id, label: Identifiant, widget: string }
+              - { name: emoji, label: Emoji, widget: string }
+              - { name: fr, label: Français, widget: string }
+              - { name: en, label: English, widget: string }
+      - name: metiers
+        label: Métiers
+        file: data/metiers.json
+        fields:
+          - name: metiers
+            label: Métiers
+            widget: list
+            allow_add: false
+            summary: "{{emoji}} {{fr}}"
+            fields:
+              - { name: id, label: Identifiant, widget: string }
+              - { name: emoji, label: Emoji, widget: string }
+              - { name: fr, label: Français, widget: string }
+              - { name: en, label: English, widget: string }
+
+  - name: textes
+    label: "Textes du site et infos"
+    editor: { preview: false }
+    files:
+      - name: infos
+        label: "Coordonnées (e-mail des devis…)"
+        file: data/infos.yaml
+        fields:
+          - { name: email, label: "E-mail qui reçoit les demandes de devis", widget: string }
+          - { name: telephone, label: Téléphone, widget: string, required: false }
+          - { name: siret, label: SIRET, widget: string, required: false }
+      - name: fr
+        label: "Textes de l'interface — français"
+        file: i18n/fr.toml
+        format: toml
+        fields:
+          - { name: "slogan", label: "slogan — Un site rapide, beau et sans souci… et tout ce qu'il peut fa…", widget: text, required: false }
+          - { name: "intro", label: "intro — Parcourez les démos, cochez ce que vous voulez pour votre si…", widget: text, required: false }
+          - { name: "commencer", label: "commencer — Voir les démos", widget: string, required: false }
+          - { name: "mondevis", label: "mondevis — Mon devis", widget: string, required: false }
+          - { name: "demos", label: "demos — démos", widget: string, required: false }
+          - { name: "parmetier", label: "parmetier — Par métier", widget: string, required: false }
+          - { name: "touteslesdemos", label: "touteslesdemos — Toutes les démos", widget: string, required: false }
+          - { name: "theme", label: "theme — Couleurs", widget: string, required: false }
+          - { name: "mode", label: "mode — Mode", widget: string, required: false }
+          - { name: "auto", label: "auto — Auto (comme l'appareil)", widget: string, required: false }
+          - { name: "clair", label: "clair — Clair", widget: string, required: false }
+          - { name: "sombre", label: "sombre — Sombre", widget: string, required: false }
+          - { name: "allercontenu", label: "allercontenu — Aller au contenu", widget: string, required: false }
+          - { name: "bases_titre", label: "bases_titre — Inclus dans tous nos sites", widget: string, required: false }
+          - { name: "bases_intro", label: "bases_intro — Pas besoin de cocher : c'est la base, et ce site en est la p…", widget: string, required: false }
+          - { name: "b_rapide", label: "b_rapide — S'affiche en moins d'une seconde", widget: string, required: false }
+          - { name: "b_rapide_d", label: "b_rapide_d — Pas de base de données à interroger : les pages sont prêtes …", widget: text, required: false }
+          - { name: "b_mobile", label: "b_mobile — Parfait sur téléphone", widget: string, required: false }
+          - { name: "b_mobile_d", label: "b_mobile_d — La mise en page s'adapte à toutes les tailles d'écran.", widget: string, required: false }
+          - { name: "b_sombre", label: "b_sombre — Mode sombre et couleurs", widget: string, required: false }
+          - { name: "b_sombre_d", label: "b_sombre_d — Suit tout seul le réglage clair ou sombre du téléphone ou de…", widget: text, required: false }
+          - { name: "b_appli", label: "b_appli — S'installe comme une appli", widget: string, required: false }
+          - { name: "b_appli_d", label: "b_appli_d — Et reste consultable sans réseau une fois visité.", widget: string, required: false }
+          - { name: "b_cookies", label: "b_cookies — Aucun cookie*", widget: string, required: false }
+          - { name: "b_cookies_d", label: "b_cookies_d — Donc pas de bandeau à cliquer pour vos visiteurs.", widget: string, required: false }
+          - { name: "b_securite", label: "b_securite — Presque impossible à pirater", widget: string, required: false }
+          - { name: "b_securite_d", label: "b_securite_d — Pas de serveur ni de mot de passe d'administration à attaque…", widget: string, required: false }
+          - { name: "b_google", label: "b_google — Bien visible sur Google", widget: string, required: false }
+          - { name: "b_google_d", label: "b_google_d — Titres, descriptions, plan du site : tout est prêt pour le r…", widget: text, required: false }
+          - { name: "b_photos", label: "b_photos — Photos chargées au fil de la lecture", widget: string, required: false }
+          - { name: "b_photos_d", label: "b_photos_d — Les images n'arrivent que quand on défile jusqu'à elles.", widget: string, required: false }
+          - { name: "etoile", label: "etoile — * Sauf si on utilise un outil qui se connecte à un site tier…", widget: text, required: false }
+          - { name: "chargement", label: "chargement — Cette page s'est affichée en {{ .T }} s", widget: string, required: false }
+          - { name: "etapes_titre", label: "etapes_titre — Comment ça marche ?", widget: string, required: false }
+          - { name: "etape1", label: "etape1 — Parcourez", widget: string, required: false }
+          - { name: "etape1_d", label: "etape1_d — Une fonction par page, avec une démo à essayer.", widget: string, required: false }
+          - { name: "etape2", label: "etape2 — Cochez", widget: string, required: false }
+          - { name: "etape2_d", label: "etape2_d — « Je veux ça » sur ce qui vous plaît, avec un commentaire si…", widget: string, required: false }
+          - { name: "etape3", label: "etape3 — Demandez votre devis", widget: string, required: false }
+          - { name: "etape3_d", label: "etape3_d — Un e-mail tout prêt, avec votre liste, part vers nous.", widget: string, required: false }
+          - { name: "metiers_titre", label: "metiers_titre — Vous êtes…", widget: string, required: false }
+          - { name: "voir", label: "voir — Voir", widget: string, required: false }
+          - { name: "jeveux", label: "jeveux — Je veux ça", widget: string, required: false }
+          - { name: "jeveux_long", label: "jeveux_long — Je veux ça pour mon site", widget: string, required: false }
+          - { name: "commentaire", label: "commentaire — Commentaire ou question (facultatif)", widget: string, required: false }
+          - { name: "commentaire_aide", label: "commentaire_aide — Une précision, une question, le nom de vos comptes (ex. @mon…", widget: text, required: false }
+          - { name: "ideal", label: "ideal — Idéal pour", widget: string, required: false }
+          - { name: "avec", label: "avec — Avec", widget: string, required: false }
+          - { name: "demo_reelle", label: "demo_reelle — Démo réelle", widget: string, required: false }
+          - { name: "demo_simulee", label: "demo_simulee — Démo simulée", widget: string, required: false }
+          - { name: "demo_simulee_d", label: "demo_simulee_d — Sur votre site, elle serait branchée sur le vrai service.", widget: string, required: false }
+          - { name: "tiers", label: "tiers — * Cet outil se connecte à un site tiers qui peut déposer des…", widget: text, required: false }
+          - { name: "precedent", label: "precedent — Précédent", widget: string, required: false }
+          - { name: "suivant", label: "suivant — Suivant", widget: string, required: false }
+          - { name: "demo", label: "demo — Démo", widget: string, required: false }
+          - { name: "devis_intro", label: "devis_intro — Voici les fonctions que vous avez cochées. Ajoutez vos coord…", widget: text, required: false }
+          - { name: "devis_vide", label: "devis_vide — Vous n'avez encore rien coché. Parcourez les démos et clique…", widget: text, required: false }
+          - { name: "devis_liste", label: "devis_liste — Fonctions choisies", widget: string, required: false }
+          - { name: "devis_coord", label: "devis_coord — Vos coordonnées", widget: string, required: false }
+          - { name: "nom", label: "nom — Nom et prénom", widget: string, required: false }
+          - { name: "entreprise", label: "entreprise — Entreprise ou association", widget: string, required: false }
+          - { name: "activite", label: "activite — Activité", widget: string, required: false }
+          - { name: "autre", label: "autre — Autre", widget: string, required: false }
+          - { name: "ville", label: "ville — Ville", widget: string, required: false }
+          - { name: "telephone", label: "telephone — Téléphone (facultatif)", widget: string, required: false }
+          - { name: "siteactuel", label: "siteactuel — Site actuel (facultatif)", widget: string, required: false }
+          - { name: "message", label: "message — Votre projet en quelques mots (facultatif)", widget: string, required: false }
+          - { name: "envoyer", label: "envoyer — Demander mon devis", widget: string, required: false }
+          - { name: "copier", label: "copier — Copier le texte", widget: string, required: false }
+          - { name: "copie", label: "copie — Texte copié ✔", widget: string, required: false }
+          - { name: "apercu", label: "apercu — Aperçu de l'e-mail", widget: string, required: false }
+          - { name: "retirer", label: "retirer — Retirer", widget: string, required: false }
+          - { name: "toutvider", label: "toutvider — Tout retirer", widget: string, required: false }
+          - { name: "envoi_note", label: "envoi_note — Si votre messagerie ne s'ouvre pas, copiez le texte et envoy…", widget: string, required: false }
+          - { name: "pied", label: "pied — Un site de démonstration", widget: string, required: false }
+          - { name: "pied_ananse", label: "pied_ananse — Ananse fabrique des sites rapides, beaux et sans souci.", widget: string, required: false }
+          - { name: "aucuncookie", label: "aucuncookie — Ce site ne dépose aucun cookie.", widget: string, required: false }
+          - { name: "introuvable", label: "introuvable — Page introuvable", widget: string, required: false }
+          - { name: "retour", label: "retour — Retour à l'accueil", widget: string, required: false }
+          - { name: "langue", label: "langue — English", widget: string, required: false }
+          - { name: "cocher_toutes", label: "cocher_toutes — fonctions dans cette catégorie", widget: string, required: false }
+          - { name: "installer", label: "installer — Installer le site", widget: string, required: false }
+          - { name: "video", label: "video — La vidéo (1 min)", widget: string, required: false }
+          - { name: "rechercher", label: "rechercher — Rechercher une fonction", widget: string, required: false }
+          - { name: "recherche_aide", label: "recherche_aide — Que voulez-vous sur votre site ? ex. réservation, carte, jeu…", widget: text, required: false }
+          - { name: "facultatif", label: "facultatif — facultatif", widget: string, required: false }
+          - { name: "charte", label: "charte — Charte graphique (couleurs, polices, style)", widget: string, required: false }
+          - { name: "charte_reprendre", label: "charte_reprendre — Reprendre celle de mon site actuel", widget: string, required: false }
+          - { name: "charte_nouvelle", label: "charte_nouvelle — Me proposer une nouvelle charte", widget: string, required: false }
+          - { name: "logo", label: "logo — Logo", widget: string, required: false }
+          - { name: "logo_reprendre", label: "logo_reprendre — Reprendre mon logo actuel", widget: string, required: false }
+          - { name: "logo_nouveau", label: "logo_nouveau — Me proposer un nouveau logo", widget: string, required: false }
+          - { name: "siteananse", label: "siteananse — Le site Ananse", widget: string, required: false }
+
+      - name: en
+        label: "Textes de l'interface — anglais"
+        file: i18n/en.toml
+        format: toml
+        fields:
+          - { name: "slogan", label: "slogan — A fast, beautiful, worry-free website… and everything it can…", widget: text, required: false }
+          - { name: "intro", label: "intro — Browse the demos, tick what you want for your site, and ask …", widget: text, required: false }
+          - { name: "commencer", label: "commencer — See the demos", widget: string, required: false }
+          - { name: "mondevis", label: "mondevis — My quote", widget: string, required: false }
+          - { name: "demos", label: "demos — demos", widget: string, required: false }
+          - { name: "parmetier", label: "parmetier — By trade", widget: string, required: false }
+          - { name: "touteslesdemos", label: "touteslesdemos — All demos", widget: string, required: false }
+          - { name: "theme", label: "theme — Colours", widget: string, required: false }
+          - { name: "mode", label: "mode — Mode", widget: string, required: false }
+          - { name: "auto", label: "auto — Auto (like your device)", widget: string, required: false }
+          - { name: "clair", label: "clair — Light", widget: string, required: false }
+          - { name: "sombre", label: "sombre — Dark", widget: string, required: false }
+          - { name: "allercontenu", label: "allercontenu — Skip to content", widget: string, required: false }
+          - { name: "bases_titre", label: "bases_titre — Included in all our sites", widget: string, required: false }
+          - { name: "bases_intro", label: "bases_intro — No need to tick these: they come as standard, and this site …", widget: string, required: false }
+          - { name: "b_rapide", label: "b_rapide — Loads in under a second", widget: string, required: false }
+          - { name: "b_rapide_d", label: "b_rapide_d — No database to query: pages are ready in advance.", widget: string, required: false }
+          - { name: "b_mobile", label: "b_mobile — Perfect on phones", widget: string, required: false }
+          - { name: "b_mobile_d", label: "b_mobile_d — The layout adapts to every screen size.", widget: string, required: false }
+          - { name: "b_sombre", label: "b_sombre — Dark mode and colours", widget: string, required: false }
+          - { name: "b_sombre_d", label: "b_sombre_d — Follows the light or dark setting of your phone or computer …", widget: text, required: false }
+          - { name: "b_appli", label: "b_appli — Installs like an app", widget: string, required: false }
+          - { name: "b_appli_d", label: "b_appli_d — And stays readable offline once visited.", widget: string, required: false }
+          - { name: "b_cookies", label: "b_cookies — No cookies*", widget: string, required: false }
+          - { name: "b_cookies_d", label: "b_cookies_d — So no banner for your visitors to click.", widget: string, required: false }
+          - { name: "b_securite", label: "b_securite — Nearly impossible to hack", widget: string, required: false }
+          - { name: "b_securite_d", label: "b_securite_d — No server or admin password to attack.", widget: string, required: false }
+          - { name: "b_google", label: "b_google — Easy to find on Google", widget: string, required: false }
+          - { name: "b_google_d", label: "b_google_d — Titles, descriptions, sitemap: all set for search engines.", widget: string, required: false }
+          - { name: "b_photos", label: "b_photos — Photos load as you scroll", widget: string, required: false }
+          - { name: "b_photos_d", label: "b_photos_d — Images only arrive when you scroll to them.", widget: string, required: false }
+          - { name: "etoile", label: "etoile — * Unless we use a tool that connects to a third-party site (…", widget: text, required: false }
+          - { name: "chargement", label: "chargement — This page loaded in {{ .T }} s", widget: string, required: false }
+          - { name: "etapes_titre", label: "etapes_titre — How does it work?", widget: string, required: false }
+          - { name: "etape1", label: "etape1 — Browse", widget: string, required: false }
+          - { name: "etape1_d", label: "etape1_d — One feature per page, with a demo to try.", widget: string, required: false }
+          - { name: "etape2", label: "etape2 — Tick", widget: string, required: false }
+          - { name: "etape2_d", label: "etape2_d — “I want this” on what you like, with a comment if needed.", widget: string, required: false }
+          - { name: "etape3", label: "etape3 — Ask for your quote", widget: string, required: false }
+          - { name: "etape3_d", label: "etape3_d — A ready-made email with your list comes to us.", widget: string, required: false }
+          - { name: "metiers_titre", label: "metiers_titre — You are…", widget: string, required: false }
+          - { name: "voir", label: "voir — See", widget: string, required: false }
+          - { name: "jeveux", label: "jeveux — I want this", widget: string, required: false }
+          - { name: "jeveux_long", label: "jeveux_long — I want this for my site", widget: string, required: false }
+          - { name: "commentaire", label: "commentaire — Comment or question (optional)", widget: string, required: false }
+          - { name: "commentaire_aide", label: "commentaire_aide — A detail, a question, your account names (e.g. @myrestaurant…", widget: text, required: false }
+          - { name: "ideal", label: "ideal — Ideal for", widget: string, required: false }
+          - { name: "avec", label: "avec — With", widget: string, required: false }
+          - { name: "demo_reelle", label: "demo_reelle — Real demo", widget: string, required: false }
+          - { name: "demo_simulee", label: "demo_simulee — Simulated demo", widget: string, required: false }
+          - { name: "demo_simulee_d", label: "demo_simulee_d — On your site, it would be plugged into the real service.", widget: string, required: false }
+          - { name: "tiers", label: "tiers — * This tool connects to a third-party site that may set cook…", widget: text, required: false }
+          - { name: "precedent", label: "precedent — Previous", widget: string, required: false }
+          - { name: "suivant", label: "suivant — Next", widget: string, required: false }
+          - { name: "demo", label: "demo — Demo", widget: string, required: false }
+          - { name: "devis_intro", label: "devis_intro — Here are the features you ticked. Add your details, then sen…", widget: text, required: false }
+          - { name: "devis_vide", label: "devis_vide — You haven't ticked anything yet. Browse the demos and click …", widget: text, required: false }
+          - { name: "devis_liste", label: "devis_liste — Chosen features", widget: string, required: false }
+          - { name: "devis_coord", label: "devis_coord — Your details", widget: string, required: false }
+          - { name: "nom", label: "nom — Full name", widget: string, required: false }
+          - { name: "entreprise", label: "entreprise — Business or organisation", widget: string, required: false }
+          - { name: "activite", label: "activite — Line of work", widget: string, required: false }
+          - { name: "autre", label: "autre — Other", widget: string, required: false }
+          - { name: "ville", label: "ville — Town", widget: string, required: false }
+          - { name: "telephone", label: "telephone — Phone (optional)", widget: string, required: false }
+          - { name: "siteactuel", label: "siteactuel — Current website (optional)", widget: string, required: false }
+          - { name: "message", label: "message — Your project in a few words (optional)", widget: string, required: false }
+          - { name: "envoyer", label: "envoyer — Ask for my quote", widget: string, required: false }
+          - { name: "copier", label: "copier — Copy the text", widget: string, required: false }
+          - { name: "copie", label: "copie — Text copied ✔", widget: string, required: false }
+          - { name: "apercu", label: "apercu — Email preview", widget: string, required: false }
+          - { name: "retirer", label: "retirer — Remove", widget: string, required: false }
+          - { name: "toutvider", label: "toutvider — Remove all", widget: string, required: false }
+          - { name: "envoi_note", label: "envoi_note — If your email app doesn't open, copy the text and send it to", widget: string, required: false }
+          - { name: "pied", label: "pied — A demo website", widget: string, required: false }
+          - { name: "pied_ananse", label: "pied_ananse — Ananse builds fast, beautiful, worry-free websites.", widget: string, required: false }
+          - { name: "aucuncookie", label: "aucuncookie — This site sets no cookies.", widget: string, required: false }
+          - { name: "introuvable", label: "introuvable — Page not found", widget: string, required: false }
+          - { name: "retour", label: "retour — Back to home", widget: string, required: false }
+          - { name: "langue", label: "langue — Français", widget: string, required: false }
+          - { name: "cocher_toutes", label: "cocher_toutes — features in this category", widget: string, required: false }
+          - { name: "installer", label: "installer — Install the site", widget: string, required: false }
+          - { name: "video", label: "video — The video (1 min)", widget: string, required: false }
+          - { name: "rechercher", label: "rechercher — Search a feature", widget: string, required: false }
+          - { name: "recherche_aide", label: "recherche_aide — What do you want on your site? e.g. booking, map, game, paym…", widget: string, required: false }
+          - { name: "facultatif", label: "facultatif — optional", widget: string, required: false }
+          - { name: "charte", label: "charte — Visual style (colours, fonts, look)", widget: string, required: false }
+          - { name: "charte_reprendre", label: "charte_reprendre — Keep the one from my current site", widget: string, required: false }
+          - { name: "charte_nouvelle", label: "charte_nouvelle — Suggest a new visual style", widget: string, required: false }
+          - { name: "logo", label: "logo — Logo", widget: string, required: false }
+          - { name: "logo_reprendre", label: "logo_reprendre — Keep my current logo", widget: string, required: false }
+          - { name: "logo_nouveau", label: "logo_nouveau — Suggest a new logo", widget: string, required: false }
+          - { name: "siteananse", label: "siteananse — Ananse website", widget: string, required: false }

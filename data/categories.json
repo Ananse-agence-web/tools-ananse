@@ -1,14 +1,76 @@
-[
-  { "id": "contact",  "emoji": "📬", "fr": "Être contacté",               "en": "Get contacted" },
-  { "id": "reseaux",  "emoji": "📸", "fr": "Réseaux sociaux et vidéo",    "en": "Social media & video" },
-  { "id": "valeur",   "emoji": "🖼️", "fr": "Mettre en valeur",            "en": "Show off" },
-  { "id": "contenu",  "emoji": "📝", "fr": "Contenu",                     "en": "Content" },
-  { "id": "agenda",   "emoji": "📅", "fr": "Agenda",                      "en": "Calendar" },
-  { "id": "vendre",   "emoji": "🛒", "fr": "Vendre et encaisser",         "en": "Sell & get paid" },
-  { "id": "jeux",     "emoji": "🎮", "fr": "Jeux",                        "en": "Games" },
-  { "id": "resto",    "emoji": "🍔", "fr": "Restaurants et food trucks",  "en": "Restaurants & food trucks" },
-  { "id": "immo",     "emoji": "🏢", "fr": "Agences immobilières",        "en": "Estate agencies" },
-  { "id": "bailleur", "emoji": "🔑", "fr": "Propriétaires bailleurs",     "en": "Landlords" },
-  { "id": "asso",     "emoji": "🤝", "fr": "Associations",                "en": "Non-profits & clubs" },
-  { "id": "outils",   "emoji": "🧰", "fr": "Pour tout le monde",          "en": "For everyone" }
-]
+{
+  "categories": [
+    {
+      "id": "contact",
+      "emoji": "📬",
+      "fr": "Être contacté",
+      "en": "Get contacted"
+    },
+    {
+      "id": "reseaux",
+      "emoji": "📸",
+      "fr": "Réseaux sociaux et vidéo",
+      "en": "Social media & video"
+    },
+    {
+      "id": "valeur",
+      "emoji": "🖼️",
+      "fr": "Mettre en valeur",
+      "en": "Show off"
+    },
+    {
+      "id": "contenu",
+      "emoji": "📝",
+      "fr": "Contenu",
+      "en": "Content"
+    },
+    {
+      "id": "agenda",
+      "emoji": "📅",
+      "fr": "Agenda",
+      "en": "Calendar"
+    },
+    {
+      "id": "vendre",
+      "emoji": "🛒",
+      "fr": "Vendre et encaisser",
+      "en": "Sell & get paid"
+    },
+    {
+      "id": "jeux",
+      "emoji": "🎮",
+      "fr": "Jeux",
+      "en": "Games"
+    },
+    {
+      "id": "resto",
+      "emoji": "🍔",
+      "fr": "Restaurants et food trucks",
+      "en": "Restaurants & food trucks"
+    },
+    {
+      "id": "immo",
+      "emoji": "🏢",
+      "fr": "Agences immobilières",
+      "en": "Estate agencies"
+    },
+    {
+      "id": "bailleur",
+      "emoji": "🔑",
+      "fr": "Propriétaires bailleurs",
+      "en": "Landlords"
+    },
+    {
+      "id": "asso",
+      "emoji": "🤝",
+      "fr": "Associations",
+      "en": "Non-profits & clubs"
+    },
+    {
+      "id": "outils",
+      "emoji": "🧰",
+      "fr": "Pour tout le monde",
+      "en": "For everyone"
+    }
+  ]
+}

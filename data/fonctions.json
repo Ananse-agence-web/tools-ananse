@@ -1,1316 +1,1318 @@
-[
-  {
-    "id": "email",
-    "cat": "contact",
-    "metiers": [
-      "tous"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un bouton « Écrivez-nous »",
-      "accroche": "Un clic et la messagerie du visiteur s'ouvre, avec l'objet déjà rempli.",
-      "texte": "Le plus simple et le plus fiable : aucun service extérieur, rien à configurer. Le message arrive directement dans votre boîte."
+{
+  "fonctions": [
+    {
+      "id": "email",
+      "cat": "contact",
+      "metiers": [
+        "tous"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un bouton « Écrivez-nous »",
+        "accroche": "Un clic et la messagerie du visiteur s'ouvre, avec l'objet déjà rempli.",
+        "texte": "Le plus simple et le plus fiable : aucun service extérieur, rien à configurer. Le message arrive directement dans votre boîte."
+      },
+      "en": {
+        "titre": "An “Email us” button",
+        "accroche": "One click opens the visitor's email app, subject already filled in.",
+        "texte": "The simplest, most reliable option: no outside service, nothing to set up. Messages land straight in your inbox."
+      }
     },
-    "en": {
-      "titre": "An “Email us” button",
-      "accroche": "One click opens the visitor's email app, subject already filled in.",
-      "texte": "The simplest, most reliable option: no outside service, nothing to set up. Messages land straight in your inbox."
-    }
-  },
-  {
-    "id": "formulaire",
-    "cat": "contact",
-    "metiers": [
-      "tous"
-    ],
-    "services": "Web3Forms, Formspree",
-    "cookies": false,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Un formulaire de contact",
-      "accroche": "Le visiteur remplit quelques champs, vous recevez un e-mail propre.",
-      "texte": "Idéal pour les visiteurs qui n'ont pas de messagerie configurée. Un service spécialisé transmet le message et bloque les robots."
+    {
+      "id": "formulaire",
+      "cat": "contact",
+      "metiers": [
+        "tous"
+      ],
+      "services": "Web3Forms, Formspree",
+      "cookies": false,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Un formulaire de contact",
+        "accroche": "Le visiteur remplit quelques champs, vous recevez un e-mail propre.",
+        "texte": "Idéal pour les visiteurs qui n'ont pas de messagerie configurée. Un service spécialisé transmet le message et bloque les robots."
+      },
+      "en": {
+        "titre": "A contact form",
+        "accroche": "Visitors fill in a few fields, you get a tidy email.",
+        "texte": "Great for visitors with no email app set up. A dedicated service forwards the message and blocks spam bots."
+      }
     },
-    "en": {
-      "titre": "A contact form",
-      "accroche": "Visitors fill in a few fields, you get a tidy email.",
-      "texte": "Great for visitors with no email app set up. A dedicated service forwards the message and blocks spam bots."
-    }
-  },
-  {
-    "id": "appel-whatsapp",
-    "cat": "contact",
-    "metiers": [
-      "tous"
-    ],
-    "services": "WhatsApp",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Appeler ou écrire sur WhatsApp",
-      "accroche": "Sur téléphone, un bouton lance l'appel ou ouvre la conversation.",
-      "texte": "Vos clients vous joignent en une seconde, sans recopier de numéro. Le message WhatsApp peut même être pré-rempli."
+    {
+      "id": "appel-whatsapp",
+      "cat": "contact",
+      "metiers": [
+        "tous"
+      ],
+      "services": "WhatsApp",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Appeler ou écrire sur WhatsApp",
+        "accroche": "Sur téléphone, un bouton lance l'appel ou ouvre la conversation.",
+        "texte": "Vos clients vous joignent en une seconde, sans recopier de numéro. Le message WhatsApp peut même être pré-rempli."
+      },
+      "en": {
+        "titre": "Call or WhatsApp in one tap",
+        "accroche": "On a phone, a button starts the call or opens the chat.",
+        "texte": "Customers reach you in a second, without copying a number. The WhatsApp message can even be pre-filled."
+      }
     },
-    "en": {
-      "titre": "Call or WhatsApp in one tap",
-      "accroche": "On a phone, a button starts the call or opens the chat.",
-      "texte": "Customers reach you in a second, without copying a number. The WhatsApp message can even be pre-filled."
-    }
-  },
-  {
-    "id": "rendez-vous",
-    "cat": "contact",
-    "metiers": [
-      "commerce",
-      "immobilier",
-      "bailleur",
-      "association"
-    ],
-    "services": "Calendly, Cal.com, Google Agenda",
-    "cookies": true,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Une prise de rendez-vous en ligne",
-      "accroche": "Le client choisit lui-même un créneau libre, 24 h sur 24.",
-      "texte": "Fini les allers-retours au téléphone : vos disponibilités s'affichent, le client réserve, vous recevez la confirmation."
+    {
+      "id": "rendez-vous",
+      "cat": "contact",
+      "metiers": [
+        "commerce",
+        "immobilier",
+        "bailleur",
+        "association"
+      ],
+      "services": "Calendly, Cal.com, Google Agenda",
+      "cookies": true,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Une prise de rendez-vous en ligne",
+        "accroche": "Le client choisit lui-même un créneau libre, 24 h sur 24.",
+        "texte": "Fini les allers-retours au téléphone : vos disponibilités s'affichent, le client réserve, vous recevez la confirmation."
+      },
+      "en": {
+        "titre": "Online appointment booking",
+        "accroche": "Customers pick a free slot themselves, day or night.",
+        "texte": "No more phone tag: your availability is shown, the customer books, you get the confirmation."
+      }
     },
-    "en": {
-      "titre": "Online appointment booking",
-      "accroche": "Customers pick a free slot themselves, day or night.",
-      "texte": "No more phone tag: your availability is shown, the customer books, you get the confirmation."
-    }
-  },
-  {
-    "id": "instagram",
-    "cat": "reseaux",
-    "metiers": [
-      "restaurant",
-      "commerce",
-      "association",
-      "immobilier"
-    ],
-    "services": "Instagram",
-    "cookies": true,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Vos photos Instagram",
-      "accroche": "Vos dernières publications s'affichent sur le site, sans rien faire.",
-      "texte": "Vous publiez sur Instagram comme d'habitude, le site montre les nouveautés. Il reste vivant sans effort."
+    {
+      "id": "instagram",
+      "cat": "reseaux",
+      "metiers": [
+        "restaurant",
+        "commerce",
+        "association",
+        "immobilier"
+      ],
+      "services": "Instagram",
+      "cookies": true,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Vos photos Instagram",
+        "accroche": "Vos dernières publications s'affichent sur le site, sans rien faire.",
+        "texte": "Vous publiez sur Instagram comme d'habitude, le site montre les nouveautés. Il reste vivant sans effort."
+      },
+      "en": {
+        "titre": "Your Instagram photos",
+        "accroche": "Your latest posts appear on the site, hands-free.",
+        "texte": "Post on Instagram as usual and the site shows what's new. It stays alive with zero effort."
+      }
     },
-    "en": {
-      "titre": "Your Instagram photos",
-      "accroche": "Your latest posts appear on the site, hands-free.",
-      "texte": "Post on Instagram as usual and the site shows what's new. It stays alive with zero effort."
-    }
-  },
-  {
-    "id": "facebook-posts",
-    "cat": "reseaux",
-    "metiers": [
-      "tous"
-    ],
-    "services": "Facebook",
-    "cookies": true,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Vos posts Facebook",
-      "accroche": "Une publication ou le fil de votre page, directement sur le site.",
-      "texte": "Vos annonces Facebook (fermeture, nouveauté, événement) sont aussi visibles par ceux qui n'ont pas de compte."
+    {
+      "id": "facebook-posts",
+      "cat": "reseaux",
+      "metiers": [
+        "tous"
+      ],
+      "services": "Facebook",
+      "cookies": true,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Vos posts Facebook",
+        "accroche": "Une publication ou le fil de votre page, directement sur le site.",
+        "texte": "Vos annonces Facebook (fermeture, nouveauté, événement) sont aussi visibles par ceux qui n'ont pas de compte."
+      },
+      "en": {
+        "titre": "Your Facebook posts",
+        "accroche": "A post or your page's feed, right on the site.",
+        "texte": "Your Facebook news (closures, new products, events) is visible to people without an account too."
+      }
     },
-    "en": {
-      "titre": "Your Facebook posts",
-      "accroche": "A post or your page's feed, right on the site.",
-      "texte": "Your Facebook news (closures, new products, events) is visible to people without an account too."
-    }
-  },
-  {
-    "id": "facebook-videos",
-    "cat": "reseaux",
-    "metiers": [
-      "restaurant",
-      "commerce",
-      "association"
-    ],
-    "services": "Facebook",
-    "cookies": true,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Vos vidéos Facebook",
-      "accroche": "La vidéo publiée sur votre page, lisible sur le site.",
-      "texte": "Pas besoin de la mettre en ligne deux fois : la vidéo reste sur Facebook et se lit sur votre site."
+    {
+      "id": "facebook-videos",
+      "cat": "reseaux",
+      "metiers": [
+        "restaurant",
+        "commerce",
+        "association"
+      ],
+      "services": "Facebook",
+      "cookies": true,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Vos vidéos Facebook",
+        "accroche": "La vidéo publiée sur votre page, lisible sur le site.",
+        "texte": "Pas besoin de la mettre en ligne deux fois : la vidéo reste sur Facebook et se lit sur votre site."
+      },
+      "en": {
+        "titre": "Your Facebook videos",
+        "accroche": "The video from your page, playable on the site.",
+        "texte": "No need to upload twice: the video stays on Facebook and plays on your site."
+      }
     },
-    "en": {
-      "titre": "Your Facebook videos",
-      "accroche": "The video from your page, playable on the site.",
-      "texte": "No need to upload twice: the video stays on Facebook and plays on your site."
-    }
-  },
-  {
-    "id": "x-posts",
-    "cat": "reseaux",
-    "metiers": [
-      "association",
-      "commerce",
-      "immobilier"
-    ],
-    "services": "X (ex-Twitter)",
-    "cookies": true,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Vos posts X (Twitter)",
-      "accroche": "Un message ou votre fil X affiché sur le site.",
-      "texte": "Pratique pour les annonces rapides et les réactions à l'actualité."
+    {
+      "id": "x-posts",
+      "cat": "reseaux",
+      "metiers": [
+        "association",
+        "commerce",
+        "immobilier"
+      ],
+      "services": "X (ex-Twitter)",
+      "cookies": true,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Vos posts X (Twitter)",
+        "accroche": "Un message ou votre fil X affiché sur le site.",
+        "texte": "Pratique pour les annonces rapides et les réactions à l'actualité."
+      },
+      "en": {
+        "titre": "Your X (Twitter) posts",
+        "accroche": "A post or your X timeline shown on the site.",
+        "texte": "Handy for quick announcements and reacting to the news."
+      }
     },
-    "en": {
-      "titre": "Your X (Twitter) posts",
-      "accroche": "A post or your X timeline shown on the site.",
-      "texte": "Handy for quick announcements and reacting to the news."
-    }
-  },
-  {
-    "id": "videos",
-    "cat": "reseaux",
-    "metiers": [
-      "tous"
-    ],
-    "services": "YouTube, Vimeo",
-    "cookies": true,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Vos vidéos YouTube ou Vimeo",
-      "accroche": "Une vidéo qui ne se charge qu'au clic : le site reste rapide.",
-      "texte": "On affiche une simple image ; le lecteur ne se charge que si le visiteur clique. Plus rapide, et pas de cookie avant le clic."
+    {
+      "id": "videos",
+      "cat": "reseaux",
+      "metiers": [
+        "tous"
+      ],
+      "services": "YouTube, Vimeo",
+      "cookies": true,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Vos vidéos YouTube ou Vimeo",
+        "accroche": "Une vidéo qui ne se charge qu'au clic : le site reste rapide.",
+        "texte": "On affiche une simple image ; le lecteur ne se charge que si le visiteur clique. Plus rapide, et pas de cookie avant le clic."
+      },
+      "en": {
+        "titre": "Your YouTube or Vimeo videos",
+        "accroche": "A video that only loads on click, so the site stays fast.",
+        "texte": "We show a plain picture; the player only loads when the visitor clicks. Faster, and no cookies before the click."
+      }
     },
-    "en": {
-      "titre": "Your YouTube or Vimeo videos",
-      "accroche": "A video that only loads on click, so the site stays fast.",
-      "texte": "We show a plain picture; the player only loads when the visitor clicks. Faster, and no cookies before the click."
-    }
-  },
-  {
-    "id": "video-presentation",
-    "cat": "reseaux",
-    "metiers": [
-      "tous"
-    ],
-    "services": "Voix de synthèse (IA)",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Une vidéo de présentation avec voix IA",
-      "accroche": "Une visite guidée de votre site en vidéo, commentée par une voix de synthèse.",
-      "texte": "Pour l'accueil du site, les réseaux sociaux ou un écran en boutique. On filme la navigation, une voix naturelle la commente, en français, en anglais ou dans d'autres langues."
+    {
+      "id": "video-presentation",
+      "cat": "reseaux",
+      "metiers": [
+        "tous"
+      ],
+      "services": "Voix de synthèse (IA)",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Une vidéo de présentation avec voix IA",
+        "accroche": "Une visite guidée de votre site en vidéo, commentée par une voix de synthèse.",
+        "texte": "Pour l'accueil du site, les réseaux sociaux ou un écran en boutique. On filme la navigation, une voix naturelle la commente, en français, en anglais ou dans d'autres langues."
+      },
+      "en": {
+        "titre": "A presentation video with an AI voice",
+        "accroche": "A guided video tour of your site, narrated by a synthetic voice.",
+        "texte": "For your home page, social media or a screen in your shop. We record the navigation and a natural voice narrates it, in English, French or other languages."
+      }
     },
-    "en": {
-      "titre": "A presentation video with an AI voice",
-      "accroche": "A guided video tour of your site, narrated by a synthetic voice.",
-      "texte": "For your home page, social media or a screen in your shop. We record the navigation and a natural voice narrates it, in English, French or other languages."
-    }
-  },
-  {
-    "id": "partage",
-    "cat": "reseaux",
-    "metiers": [
-      "tous"
-    ],
-    "services": "Facebook, X, LinkedIn, WhatsApp, e-mail",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Des boutons de partage",
-      "accroche": "Vos visiteurs partagent une page en un clic.",
-      "texte": "Des liens simples, sans traceur : le réseau n'est contacté que si le visiteur clique."
+    {
+      "id": "partage",
+      "cat": "reseaux",
+      "metiers": [
+        "tous"
+      ],
+      "services": "Facebook, X, LinkedIn, WhatsApp, e-mail",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Des boutons de partage",
+        "accroche": "Vos visiteurs partagent une page en un clic.",
+        "texte": "Des liens simples, sans traceur : le réseau n'est contacté que si le visiteur clique."
+      },
+      "en": {
+        "titre": "Share buttons",
+        "accroche": "Visitors share a page in one click.",
+        "texte": "Plain links, no trackers: the network is only contacted if the visitor clicks."
+      }
     },
-    "en": {
-      "titre": "Share buttons",
-      "accroche": "Visitors share a page in one click.",
-      "texte": "Plain links, no trackers: the network is only contacted if the visitor clicks."
-    }
-  },
-  {
-    "id": "galerie",
-    "cat": "valeur",
-    "metiers": [
-      "tous"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Une galerie photos plein écran",
-      "accroche": "Les photos s'agrandissent au clic et défilent au doigt.",
-      "texte": "Vos plats, vos réalisations, votre logement : en grand, nets, et chargés seulement quand on les regarde."
+    {
+      "id": "galerie",
+      "cat": "valeur",
+      "metiers": [
+        "tous"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Une galerie photos plein écran",
+        "accroche": "Les photos s'agrandissent au clic et défilent au doigt.",
+        "texte": "Vos plats, vos réalisations, votre logement : en grand, nets, et chargés seulement quand on les regarde."
+      },
+      "en": {
+        "titre": "A full-screen photo gallery",
+        "accroche": "Photos enlarge on click and swipe with a finger.",
+        "texte": "Your dishes, your work, your rental: big, sharp, and only loaded when someone looks."
+      }
     },
-    "en": {
-      "titre": "A full-screen photo gallery",
-      "accroche": "Photos enlarge on click and swipe with a finger.",
-      "texte": "Your dishes, your work, your rental: big, sharp, and only loaded when someone looks."
-    }
-  },
-  {
-    "id": "avant-apres",
-    "cat": "valeur",
-    "metiers": [
-      "commerce",
-      "immobilier",
-      "bailleur"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un avant / après à glisser",
-      "accroche": "On fait glisser le curseur pour voir la transformation.",
-      "texte": "Parfait pour une rénovation, un relooking, un jardin, une coupe de cheveux… L'effet « waouh » garanti."
+    {
+      "id": "avant-apres",
+      "cat": "valeur",
+      "metiers": [
+        "commerce",
+        "immobilier",
+        "bailleur"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un avant / après à glisser",
+        "accroche": "On fait glisser le curseur pour voir la transformation.",
+        "texte": "Parfait pour une rénovation, un relooking, un jardin, une coupe de cheveux… L'effet « waouh » garanti."
+      },
+      "en": {
+        "titre": "A before / after slider",
+        "accroche": "Drag the handle to reveal the transformation.",
+        "texte": "Perfect for a renovation, a makeover, a garden, a haircut… Guaranteed “wow” effect."
+      }
     },
-    "en": {
-      "titre": "A before / after slider",
-      "accroche": "Drag the handle to reveal the transformation.",
-      "texte": "Perfect for a renovation, a makeover, a garden, a haircut… Guaranteed “wow” effect."
-    }
-  },
-  {
-    "id": "avis",
-    "cat": "valeur",
-    "metiers": [
-      "restaurant",
-      "commerce",
-      "immobilier",
-      "bailleur"
-    ],
-    "services": "Google Avis, Trustpilot, ou vos propres avis",
-    "cookies": true,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Des avis clients",
-      "accroche": "Vos meilleurs avis, bien en vue, avec les étoiles.",
-      "texte": "On reprend vos avis Google ou Trustpilot, ou on affiche ceux que vous choisissez. Rien ne rassure plus un nouveau client."
+    {
+      "id": "avis",
+      "cat": "valeur",
+      "metiers": [
+        "restaurant",
+        "commerce",
+        "immobilier",
+        "bailleur"
+      ],
+      "services": "Google Avis, Trustpilot, ou vos propres avis",
+      "cookies": true,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Des avis clients",
+        "accroche": "Vos meilleurs avis, bien en vue, avec les étoiles.",
+        "texte": "On reprend vos avis Google ou Trustpilot, ou on affiche ceux que vous choisissez. Rien ne rassure plus un nouveau client."
+      },
+      "en": {
+        "titre": "Customer reviews",
+        "accroche": "Your best reviews, front and centre, with stars.",
+        "texte": "We pull in your Google or Trustpilot reviews, or show the ones you pick. Nothing reassures a new customer more."
+      }
     },
-    "en": {
-      "titre": "Customer reviews",
-      "accroche": "Your best reviews, front and centre, with stars.",
-      "texte": "We pull in your Google or Trustpilot reviews, or show the ones you pick. Nothing reassures a new customer more."
-    }
-  },
-  {
-    "id": "carte",
-    "cat": "valeur",
-    "metiers": [
-      "tous"
-    ],
-    "services": "Google Maps ou OpenStreetMap",
-    "cookies": true,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Une carte pour vous trouver",
-      "accroche": "Votre adresse sur une carte, et l'itinéraire en un clic.",
-      "texte": "OpenStreetMap est libre et sans cookie ; Google Maps est plus connu. La carte ne se charge qu'au clic."
+    {
+      "id": "carte",
+      "cat": "valeur",
+      "metiers": [
+        "tous"
+      ],
+      "services": "Google Maps ou OpenStreetMap",
+      "cookies": true,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Une carte pour vous trouver",
+        "accroche": "Votre adresse sur une carte, et l'itinéraire en un clic.",
+        "texte": "OpenStreetMap est libre et sans cookie ; Google Maps est plus connu. La carte ne se charge qu'au clic."
+      },
+      "en": {
+        "titre": "A map to find you",
+        "accroche": "Your address on a map, directions in one click.",
+        "texte": "OpenStreetMap is free and cookie-less; Google Maps is better known. The map only loads on click."
+      }
     },
-    "en": {
-      "titre": "A map to find you",
-      "accroche": "Your address on a map, directions in one click.",
-      "texte": "OpenStreetMap is free and cookie-less; Google Maps is better known. The map only loads on click."
-    }
-  },
-  {
-    "id": "faq",
-    "cat": "valeur",
-    "metiers": [
-      "tous"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Une FAQ qui se déplie",
-      "accroche": "Les questions fréquentes, la réponse s'ouvre au clic.",
-      "texte": "Moins d'appels pour les mêmes questions, et Google adore ces pages."
+    {
+      "id": "faq",
+      "cat": "valeur",
+      "metiers": [
+        "tous"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Une FAQ qui se déplie",
+        "accroche": "Les questions fréquentes, la réponse s'ouvre au clic.",
+        "texte": "Moins d'appels pour les mêmes questions, et Google adore ces pages."
+      },
+      "en": {
+        "titre": "A fold-out FAQ",
+        "accroche": "Frequent questions; the answer opens on click.",
+        "texte": "Fewer calls about the same things, and Google loves these pages."
+      }
     },
-    "en": {
-      "titre": "A fold-out FAQ",
-      "accroche": "Frequent questions; the answer opens on click.",
-      "texte": "Fewer calls about the same things, and Google loves these pages."
-    }
-  },
-  {
-    "id": "blog",
-    "cat": "contenu",
-    "metiers": [
-      "tous"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un blog ou des actualités",
-      "accroche": "Vos nouvelles, vos conseils, vos coulisses.",
-      "texte": "Chaque article est une nouvelle porte d'entrée depuis Google. Vous écrivez, on s'occupe du reste."
+    {
+      "id": "blog",
+      "cat": "contenu",
+      "metiers": [
+        "tous"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un blog ou des actualités",
+        "accroche": "Vos nouvelles, vos conseils, vos coulisses.",
+        "texte": "Chaque article est une nouvelle porte d'entrée depuis Google. Vous écrivez, on s'occupe du reste."
+      },
+      "en": {
+        "titre": "A blog or news page",
+        "accroche": "Your news, your tips, behind the scenes.",
+        "texte": "Every article is a new way in from Google. You write, we handle the rest."
+      }
     },
-    "en": {
-      "titre": "A blog or news page",
-      "accroche": "Your news, your tips, behind the scenes.",
-      "texte": "Every article is a new way in from Google. You write, we handle the rest."
-    }
-  },
-  {
-    "id": "multilingue",
-    "cat": "contenu",
-    "metiers": [
-      "restaurant",
-      "bailleur",
-      "commerce",
-      "immobilier"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un site en plusieurs langues",
-      "accroche": "Français, anglais, et autant de langues que vous voulez.",
-      "texte": "Les touristes et les clients étrangers lisent votre site dans leur langue. Ce site-ci en est la preuve : essayez le bouton EN."
+    {
+      "id": "multilingue",
+      "cat": "contenu",
+      "metiers": [
+        "restaurant",
+        "bailleur",
+        "commerce",
+        "immobilier"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un site en plusieurs langues",
+        "accroche": "Français, anglais, et autant de langues que vous voulez.",
+        "texte": "Les touristes et les clients étrangers lisent votre site dans leur langue. Ce site-ci en est la preuve : essayez le bouton EN."
+      },
+      "en": {
+        "titre": "A multilingual site",
+        "accroche": "French, English, and as many languages as you like.",
+        "texte": "Tourists and foreign customers read your site in their own language. This very site proves it: try the FR button."
+      }
     },
-    "en": {
-      "titre": "A multilingual site",
-      "accroche": "French, English, and as many languages as you like.",
-      "texte": "Tourists and foreign customers read your site in their own language. This very site proves it: try the FR button."
-    }
-  },
-  {
-    "id": "recherche",
-    "cat": "contenu",
-    "metiers": [
-      "immobilier",
-      "association",
-      "commerce"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Une recherche dans le site",
-      "accroche": "On tape un mot, les bonnes pages apparaissent aussitôt.",
-      "texte": "Utile dès que le site a beaucoup de pages. Tout se passe dans le navigateur, sans service extérieur."
+    {
+      "id": "recherche",
+      "cat": "contenu",
+      "metiers": [
+        "immobilier",
+        "association",
+        "commerce"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Une recherche dans le site",
+        "accroche": "On tape un mot, les bonnes pages apparaissent aussitôt.",
+        "texte": "Utile dès que le site a beaucoup de pages. Tout se passe dans le navigateur, sans service extérieur."
+      },
+      "en": {
+        "titre": "On-site search",
+        "accroche": "Type a word, the right pages appear instantly.",
+        "texte": "Useful as soon as the site has lots of pages. It all runs in the browser, no outside service."
+      }
     },
-    "en": {
-      "titre": "On-site search",
-      "accroche": "Type a word, the right pages appear instantly.",
-      "texte": "Useful as soon as the site has lots of pages. It all runs in the browser, no outside service."
-    }
-  },
-  {
-    "id": "documents",
-    "cat": "contenu",
-    "metiers": [
-      "restaurant",
-      "association",
-      "immobilier",
-      "commerce"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Des documents à télécharger",
-      "accroche": "Menu, tarifs, brochure, règlement : en PDF, un clic.",
-      "texte": "Vos clients gardent vos documents sur leur téléphone ou les impriment."
+    {
+      "id": "documents",
+      "cat": "contenu",
+      "metiers": [
+        "restaurant",
+        "association",
+        "immobilier",
+        "commerce"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Des documents à télécharger",
+        "accroche": "Menu, tarifs, brochure, règlement : en PDF, un clic.",
+        "texte": "Vos clients gardent vos documents sur leur téléphone ou les impriment."
+      },
+      "en": {
+        "titre": "Downloadable documents",
+        "accroche": "Menu, prices, brochure, rules: one-click PDF.",
+        "texte": "Customers keep your documents on their phone or print them."
+      }
     },
-    "en": {
-      "titre": "Downloadable documents",
-      "accroche": "Menu, prices, brochure, rules: one-click PDF.",
-      "texte": "Customers keep your documents on their phone or print them."
-    }
-  },
-  {
-    "id": "pdf",
-    "cat": "contenu",
-    "metiers": [
-      "commerce",
-      "immobilier",
-      "bailleur",
-      "association"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un PDF créé sur place",
-      "accroche": "Devis, bon de commande, attestation : rempli par le visiteur, prêt à imprimer.",
-      "texte": "Le PDF est fabriqué dans le navigateur, avec les informations saisies. Rien n'est envoyé nulle part."
+    {
+      "id": "pdf",
+      "cat": "contenu",
+      "metiers": [
+        "commerce",
+        "immobilier",
+        "bailleur",
+        "association"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un PDF créé sur place",
+        "accroche": "Devis, bon de commande, attestation : rempli par le visiteur, prêt à imprimer.",
+        "texte": "Le PDF est fabriqué dans le navigateur, avec les informations saisies. Rien n'est envoyé nulle part."
+      },
+      "en": {
+        "titre": "A PDF made on the spot",
+        "accroche": "Quote, order form, certificate: filled in by the visitor, ready to print.",
+        "texte": "The PDF is built in the browser from what was typed. Nothing is sent anywhere."
+      }
     },
-    "en": {
-      "titre": "A PDF made on the spot",
-      "accroche": "Quote, order form, certificate: filled in by the visitor, ready to print.",
-      "texte": "The PDF is built in the browser from what was typed. Nothing is sent anywhere."
-    }
-  },
-  {
-    "id": "disponibilites",
-    "cat": "agenda",
-    "metiers": [
-      "bailleur",
-      "commerce",
-      "restaurant"
-    ],
-    "services": "Google Agenda, Airbnb, Booking",
-    "cookies": false,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Un calendrier des disponibilités",
-      "accroche": "Les jours libres et réservés, visibles d'un coup d'œil.",
-      "texte": "Pour un gîte, une salle, un food truck… Le calendrier peut se synchroniser avec Airbnb, Booking ou Google Agenda."
+    {
+      "id": "disponibilites",
+      "cat": "agenda",
+      "metiers": [
+        "bailleur",
+        "commerce",
+        "restaurant"
+      ],
+      "services": "Google Agenda, Airbnb, Booking",
+      "cookies": false,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Un calendrier des disponibilités",
+        "accroche": "Les jours libres et réservés, visibles d'un coup d'œil.",
+        "texte": "Pour un gîte, une salle, un food truck… Le calendrier peut se synchroniser avec Airbnb, Booking ou Google Agenda."
+      },
+      "en": {
+        "titre": "An availability calendar",
+        "accroche": "Free and booked days at a glance.",
+        "texte": "For a holiday rental, a venue, a food truck… It can sync with Airbnb, Booking or Google Calendar."
+      }
     },
-    "en": {
-      "titre": "An availability calendar",
-      "accroche": "Free and booked days at a glance.",
-      "texte": "For a holiday rental, a venue, a food truck… It can sync with Airbnb, Booking or Google Calendar."
-    }
-  },
-  {
-    "id": "ajouter-agenda",
-    "cat": "agenda",
-    "metiers": [
-      "association",
-      "restaurant",
-      "commerce"
-    ],
-    "services": "Google Agenda, iPhone, Android, Outlook",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "« Ajouter à mon agenda »",
-      "accroche": "Le visiteur place votre événement dans son propre agenda.",
-      "texte": "Soirée, atelier, rendez-vous : un clic et c'est dans son Google Agenda, son iPhone, son Android ou Outlook. Il ne l'oubliera pas."
+    {
+      "id": "ajouter-agenda",
+      "cat": "agenda",
+      "metiers": [
+        "association",
+        "restaurant",
+        "commerce"
+      ],
+      "services": "Google Agenda, iPhone, Android, Outlook",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "« Ajouter à mon agenda »",
+        "accroche": "Le visiteur place votre événement dans son propre agenda.",
+        "texte": "Soirée, atelier, rendez-vous : un clic et c'est dans son Google Agenda, son iPhone, son Android ou Outlook. Il ne l'oubliera pas."
+      },
+      "en": {
+        "titre": "“Add to my calendar”",
+        "accroche": "Visitors drop your event into their own calendar.",
+        "texte": "Party, workshop, appointment: one click and it's in their Google Calendar, iPhone, Android or Outlook. They won't forget."
+      }
     },
-    "en": {
-      "titre": "“Add to my calendar”",
-      "accroche": "Visitors drop your event into their own calendar.",
-      "texte": "Party, workshop, appointment: one click and it's in their Google Calendar, iPhone, Android or Outlook. They won't forget."
-    }
-  },
-  {
-    "id": "paiement",
-    "cat": "vendre",
-    "metiers": [
-      "tous"
-    ],
-    "services": "Stripe, PayPal, SumUp",
-    "cookies": true,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Un paiement en ligne",
-      "accroche": "Acompte, bon cadeau, cotisation : payés en ligne, en sécurité.",
-      "texte": "Stripe pour la carte bancaire, Apple Pay et Google Pay ; PayPal, que tout le monde connaît ; SumUp pour un lien de paiement tout simple. La banque gère la sécurité, pas le site."
+    {
+      "id": "paiement",
+      "cat": "vendre",
+      "metiers": [
+        "tous"
+      ],
+      "services": "Stripe, PayPal, SumUp",
+      "cookies": true,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Un paiement en ligne",
+        "accroche": "Acompte, bon cadeau, cotisation : payés en ligne, en sécurité.",
+        "texte": "Stripe pour la carte bancaire, Apple Pay et Google Pay ; PayPal, que tout le monde connaît ; SumUp pour un lien de paiement tout simple. La banque gère la sécurité, pas le site."
+      },
+      "en": {
+        "titre": "Online payment",
+        "accroche": "Deposits, gift cards, fees: paid online, safely.",
+        "texte": "Stripe for cards, Apple Pay and Google Pay; PayPal, which everyone knows; SumUp for a simple payment link. The payment provider handles security, not the site."
+      }
     },
-    "en": {
-      "titre": "Online payment",
-      "accroche": "Deposits, gift cards, fees: paid online, safely.",
-      "texte": "Stripe for cards, Apple Pay and Google Pay; PayPal, which everyone knows; SumUp for a simple payment link. The payment provider handles security, not the site."
-    }
-  },
-  {
-    "id": "boutique",
-    "cat": "vendre",
-    "metiers": [
-      "commerce",
-      "restaurant",
-      "association"
-    ],
-    "services": "Stripe, Snipcart, Shopify",
-    "cookies": true,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Une petite boutique",
-      "accroche": "Quelques produits, un panier, un paiement.",
-      "texte": "Pas besoin d'une grosse boutique : pour une dizaine de produits, un site statique et un service de paiement suffisent."
+    {
+      "id": "boutique",
+      "cat": "vendre",
+      "metiers": [
+        "commerce",
+        "restaurant",
+        "association"
+      ],
+      "services": "Stripe, Snipcart, Shopify",
+      "cookies": true,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Une petite boutique",
+        "accroche": "Quelques produits, un panier, un paiement.",
+        "texte": "Pas besoin d'une grosse boutique : pour une dizaine de produits, un site statique et un service de paiement suffisent."
+      },
+      "en": {
+        "titre": "A small shop",
+        "accroche": "A few products, a basket, a checkout.",
+        "texte": "No need for a big online store: for a dozen products, a static site and a payment service are enough."
+      }
     },
-    "en": {
-      "titre": "A small shop",
-      "accroche": "A few products, a basket, a checkout.",
-      "texte": "No need for a big online store: for a dozen products, a static site and a payment service are enough."
-    }
-  },
-  {
-    "id": "quiz",
-    "cat": "jeux",
-    "metiers": [
-      "tous"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un quiz",
-      "accroche": "Quelques questions ludiques sur votre métier ou votre ville.",
-      "texte": "Les visiteurs restent plus longtemps, jouent, partagent leur score… et se souviennent de vous."
+    {
+      "id": "quiz",
+      "cat": "jeux",
+      "metiers": [
+        "tous"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un quiz",
+        "accroche": "Quelques questions ludiques sur votre métier ou votre ville.",
+        "texte": "Les visiteurs restent plus longtemps, jouent, partagent leur score… et se souviennent de vous."
+      },
+      "en": {
+        "titre": "A quiz",
+        "accroche": "A few fun questions about your trade or your town.",
+        "texte": "Visitors stay longer, play, share their score… and remember you."
+      }
     },
-    "en": {
-      "titre": "A quiz",
-      "accroche": "A few fun questions about your trade or your town.",
-      "texte": "Visitors stay longer, play, share their score… and remember you."
-    }
-  },
-  {
-    "id": "memory",
-    "cat": "jeux",
-    "metiers": [
-      "restaurant",
-      "commerce",
-      "association"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un jeu de mémoire",
-      "accroche": "Retrouver les paires, avec vos produits en images.",
-      "texte": "Un classique qui plaît aux enfants comme aux grands. Parfait pour une page « jeux » ou une animation."
+    {
+      "id": "memory",
+      "cat": "jeux",
+      "metiers": [
+        "restaurant",
+        "commerce",
+        "association"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un jeu de mémoire",
+        "accroche": "Retrouver les paires, avec vos produits en images.",
+        "texte": "Un classique qui plaît aux enfants comme aux grands. Parfait pour une page « jeux » ou une animation."
+      },
+      "en": {
+        "titre": "A memory game",
+        "accroche": "Find the pairs, featuring your products.",
+        "texte": "A classic loved by kids and grown-ups alike. Perfect for a games page or a promotion."
+      }
     },
-    "en": {
-      "titre": "A memory game",
-      "accroche": "Find the pairs, featuring your products.",
-      "texte": "A classic loved by kids and grown-ups alike. Perfect for a games page or a promotion."
-    }
-  },
-  {
-    "id": "roue-grattage",
-    "cat": "jeux",
-    "metiers": [
-      "restaurant",
-      "commerce"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Une roue ou un ticket à gratter",
-      "accroche": "Le visiteur tente sa chance et gagne une réduction.",
-      "texte": "Idéal pour une ouverture, les soldes ou un anniversaire. Le code gagné se présente en caisse."
+    {
+      "id": "roue-grattage",
+      "cat": "jeux",
+      "metiers": [
+        "restaurant",
+        "commerce"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Une roue ou un ticket à gratter",
+        "accroche": "Le visiteur tente sa chance et gagne une réduction.",
+        "texte": "Idéal pour une ouverture, les soldes ou un anniversaire. Le code gagné se présente en caisse."
+      },
+      "en": {
+        "titre": "A prize wheel or scratch card",
+        "accroche": "Visitors try their luck and win a discount.",
+        "texte": "Great for an opening, a sale or an anniversary. The code is shown at the till."
+      }
     },
-    "en": {
-      "titre": "A prize wheel or scratch card",
-      "accroche": "Visitors try their luck and win a discount.",
-      "texte": "Great for an opening, a sale or an anniversary. The code is shown at the till."
-    }
-  },
-  {
-    "id": "arcade",
-    "cat": "jeux",
-    "metiers": [
-      "restaurant",
-      "commerce",
-      "association"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un mini-jeu d'arcade",
-      "accroche": "Un petit jeu à l'image de votre marque.",
-      "texte": "Votre mascotte, vos produits, vos couleurs. On peut même organiser un concours du meilleur score."
+    {
+      "id": "arcade",
+      "cat": "jeux",
+      "metiers": [
+        "restaurant",
+        "commerce",
+        "association"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un mini-jeu d'arcade",
+        "accroche": "Un petit jeu à l'image de votre marque.",
+        "texte": "Votre mascotte, vos produits, vos couleurs. On peut même organiser un concours du meilleur score."
+      },
+      "en": {
+        "titre": "A mini arcade game",
+        "accroche": "A little game in your brand's image.",
+        "texte": "Your mascot, your products, your colours. You can even run a high-score contest."
+      }
     },
-    "en": {
-      "titre": "A mini arcade game",
-      "accroche": "A little game in your brand's image.",
-      "texte": "Your mascot, your products, your colours. You can even run a high-score contest."
-    }
-  },
-  {
-    "id": "menu-du-jour",
-    "cat": "resto",
-    "metiers": [
-      "restaurant"
-    ],
-    "services": "Google Sheets",
-    "cookies": false,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Un menu du jour modifiable par vous",
-      "accroche": "Vous changez une case dans un tableau, le site se met à jour.",
-      "texte": "Pas de logiciel à apprendre : vous remplissez un tableau Google Sheets sur votre téléphone, le menu du site suit."
+    {
+      "id": "menu-du-jour",
+      "cat": "resto",
+      "metiers": [
+        "restaurant"
+      ],
+      "services": "Google Sheets",
+      "cookies": false,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Un menu du jour modifiable par vous",
+        "accroche": "Vous changez une case dans un tableau, le site se met à jour.",
+        "texte": "Pas de logiciel à apprendre : vous remplissez un tableau Google Sheets sur votre téléphone, le menu du site suit."
+      },
+      "en": {
+        "titre": "A daily menu you update yourself",
+        "accroche": "Change a cell in a spreadsheet, the site updates.",
+        "texte": "No software to learn: fill in a Google Sheets table on your phone and the site's menu follows."
+      }
     },
-    "en": {
-      "titre": "A daily menu you update yourself",
-      "accroche": "Change a cell in a spreadsheet, the site updates.",
-      "texte": "No software to learn: fill in a Google Sheets table on your phone and the site's menu follows."
-    }
-  },
-  {
-    "id": "qr-code",
-    "cat": "resto",
-    "metiers": [
-      "restaurant",
-      "commerce",
-      "association"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un QR code qui ouvre le menu",
-      "accroche": "Posé sur la table ou la vitrine, il mène droit au bon endroit.",
-      "texte": "Un menu toujours à jour sans réimprimer, une vitrine qui parle même quand c'est fermé."
+    {
+      "id": "qr-code",
+      "cat": "resto",
+      "metiers": [
+        "restaurant",
+        "commerce",
+        "association"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un QR code qui ouvre le menu",
+        "accroche": "Posé sur la table ou la vitrine, il mène droit au bon endroit.",
+        "texte": "Un menu toujours à jour sans réimprimer, une vitrine qui parle même quand c'est fermé."
+      },
+      "en": {
+        "titre": "A QR code that opens the menu",
+        "accroche": "On the table or the window, it leads straight to the right page.",
+        "texte": "An always up-to-date menu with no reprinting, a shop window that talks even when you're closed."
+      }
     },
-    "en": {
-      "titre": "A QR code that opens the menu",
-      "accroche": "On the table or the window, it leads straight to the right page.",
-      "texte": "An always up-to-date menu with no reprinting, a shop window that talks even when you're closed."
-    }
-  },
-  {
-    "id": "allergenes",
-    "cat": "resto",
-    "metiers": [
-      "restaurant"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un filtre allergènes",
-      "accroche": "On coche ce qu'on ne mange pas, les plats concernés disparaissent.",
-      "texte": "Les clients allergiques ou végétariens choisissent en confiance, et vous répondez à l'obligation d'information."
+    {
+      "id": "allergenes",
+      "cat": "resto",
+      "metiers": [
+        "restaurant"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un filtre allergènes",
+        "accroche": "On coche ce qu'on ne mange pas, les plats concernés disparaissent.",
+        "texte": "Les clients allergiques ou végétariens choisissent en confiance, et vous répondez à l'obligation d'information."
+      },
+      "en": {
+        "titre": "An allergen filter",
+        "accroche": "Tick what you can't eat, matching dishes disappear.",
+        "texte": "Allergic or vegetarian customers choose with confidence, and you meet your information duty."
+      }
     },
-    "en": {
-      "titre": "An allergen filter",
-      "accroche": "Tick what you can't eat, matching dishes disappear.",
-      "texte": "Allergic or vegetarian customers choose with confidence, and you meet your information duty."
-    }
-  },
-  {
-    "id": "ouvert-maintenant",
-    "cat": "resto",
-    "metiers": [
-      "restaurant",
-      "commerce"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "« Ouvert maintenant » ou « Fermé »",
-      "accroche": "Le site dit tout seul si vous êtes ouvert, d'après vos horaires.",
-      "texte": "Plus de déplacement pour rien. Jours fériés et congés compris."
+    {
+      "id": "ouvert-maintenant",
+      "cat": "resto",
+      "metiers": [
+        "restaurant",
+        "commerce"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "« Ouvert maintenant » ou « Fermé »",
+        "accroche": "Le site dit tout seul si vous êtes ouvert, d'après vos horaires.",
+        "texte": "Plus de déplacement pour rien. Jours fériés et congés compris."
+      },
+      "en": {
+        "titre": "“Open now” or “Closed”",
+        "accroche": "The site tells people if you're open, from your opening hours.",
+        "texte": "No more wasted trips. Bank holidays and time off included."
+      }
     },
-    "en": {
-      "titre": "“Open now” or “Closed”",
-      "accroche": "The site tells people if you're open, from your opening hours.",
-      "texte": "No more wasted trips. Bank holidays and time off included."
-    }
-  },
-  {
-    "id": "food-truck",
-    "cat": "resto",
-    "metiers": [
-      "restaurant"
-    ],
-    "services": "OpenStreetMap ou Google Maps",
-    "cookies": true,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Où est le food truck cette semaine ?",
-      "accroche": "Le planning de vos emplacements, avec la carte.",
-      "texte": "Vos habitués savent où vous trouver chaque jour, et le jour même est mis en avant."
+    {
+      "id": "food-truck",
+      "cat": "resto",
+      "metiers": [
+        "restaurant"
+      ],
+      "services": "OpenStreetMap ou Google Maps",
+      "cookies": true,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Où est le food truck cette semaine ?",
+        "accroche": "Le planning de vos emplacements, avec la carte.",
+        "texte": "Vos habitués savent où vous trouver chaque jour, et le jour même est mis en avant."
+      },
+      "en": {
+        "titre": "Where's the food truck this week?",
+        "accroche": "Your weekly spots, with a map.",
+        "texte": "Regulars know where to find you each day, and today's spot is highlighted."
+      }
     },
-    "en": {
-      "titre": "Where's the food truck this week?",
-      "accroche": "Your weekly spots, with a map.",
-      "texte": "Regulars know where to find you each day, and today's spot is highlighted."
-    }
-  },
-  {
-    "id": "a-emporter",
-    "cat": "resto",
-    "metiers": [
-      "restaurant"
-    ],
-    "services": "WhatsApp, formulaire",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "La commande à emporter",
-      "accroche": "Le client compose sa commande, elle vous arrive sur WhatsApp.",
-      "texte": "Pas de commission de plateforme : la commande arrive toute rédigée, vous confirmez l'heure de retrait."
+    {
+      "id": "a-emporter",
+      "cat": "resto",
+      "metiers": [
+        "restaurant"
+      ],
+      "services": "WhatsApp, formulaire",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "La commande à emporter",
+        "accroche": "Le client compose sa commande, elle vous arrive sur WhatsApp.",
+        "texte": "Pas de commission de plateforme : la commande arrive toute rédigée, vous confirmez l'heure de retrait."
+      },
+      "en": {
+        "titre": "Takeaway ordering",
+        "accroche": "Customers build their order, it reaches you on WhatsApp.",
+        "texte": "No platform commission: the order arrives fully written, you confirm the pick-up time."
+      }
     },
-    "en": {
-      "titre": "Takeaway ordering",
-      "accroche": "Customers build their order, it reaches you on WhatsApp.",
-      "texte": "No platform commission: the order arrives fully written, you confirm the pick-up time."
-    }
-  },
-  {
-    "id": "reservation-table",
-    "cat": "resto",
-    "metiers": [
-      "restaurant"
-    ],
-    "services": "TheFork, Zenchef",
-    "cookies": true,
-    "demo": "simulee",
-    "fr": {
-      "titre": "La réservation de table",
-      "accroche": "Date, heure, nombre de couverts : réservé.",
-      "texte": "Soit avec votre outil de réservation existant (TheFork, Zenchef), soit avec une simple demande par e-mail."
+    {
+      "id": "reservation-table",
+      "cat": "resto",
+      "metiers": [
+        "restaurant"
+      ],
+      "services": "TheFork, Zenchef",
+      "cookies": true,
+      "demo": "simulee",
+      "fr": {
+        "titre": "La réservation de table",
+        "accroche": "Date, heure, nombre de couverts : réservé.",
+        "texte": "Soit avec votre outil de réservation existant (TheFork, Zenchef), soit avec une simple demande par e-mail."
+      },
+      "en": {
+        "titre": "Table booking",
+        "accroche": "Date, time, number of guests: booked.",
+        "texte": "Either with your existing booking tool (TheFork, Zenchef), or a simple email request."
+      }
     },
-    "en": {
-      "titre": "Table booking",
-      "accroche": "Date, time, number of guests: booked.",
-      "texte": "Either with your existing booking tool (TheFork, Zenchef), or a simple email request."
-    }
-  },
-  {
-    "id": "livraison",
-    "cat": "resto",
-    "metiers": [
-      "restaurant"
-    ],
-    "services": "Uber Eats, Deliveroo",
-    "cookies": false,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Des liens vers la livraison",
-      "accroche": "Vos pages Uber Eats et Deliveroo, à portée de clic.",
-      "texte": "Le client choisit son application préférée et commande directement chez vous."
+    {
+      "id": "livraison",
+      "cat": "resto",
+      "metiers": [
+        "restaurant"
+      ],
+      "services": "Uber Eats, Deliveroo",
+      "cookies": false,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Des liens vers la livraison",
+        "accroche": "Vos pages Uber Eats et Deliveroo, à portée de clic.",
+        "texte": "Le client choisit son application préférée et commande directement chez vous."
+      },
+      "en": {
+        "titre": "Delivery app links",
+        "accroche": "Your Uber Eats and Deliveroo pages, one click away.",
+        "texte": "Customers pick their favourite app and order from you directly."
+      }
     },
-    "en": {
-      "titre": "Delivery app links",
-      "accroche": "Your Uber Eats and Deliveroo pages, one click away.",
-      "texte": "Customers pick their favourite app and order from you directly."
-    }
-  },
-  {
-    "id": "caisse",
-    "cat": "resto",
-    "metiers": [
-      "restaurant",
-      "commerce"
-    ],
-    "services": "SumUp ou Stripe Terminal (carte, en option)",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Une mini caisse",
-      "accroche": "Touchez les produits, le ticket se remplit, la monnaie à rendre se calcule.",
-      "texte": "Idéale pour un food truck, un marché ou une buvette : elle marche sur tablette ou téléphone, même sans réseau, et fait le total de la journée."
+    {
+      "id": "caisse",
+      "cat": "resto",
+      "metiers": [
+        "restaurant",
+        "commerce"
+      ],
+      "services": "SumUp ou Stripe Terminal (carte, en option)",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Une mini caisse",
+        "accroche": "Touchez les produits, le ticket se remplit, la monnaie à rendre se calcule.",
+        "texte": "Idéale pour un food truck, un marché ou une buvette : elle marche sur tablette ou téléphone, même sans réseau, et fait le total de la journée."
+      },
+      "en": {
+        "titre": "A mini till",
+        "accroche": "Tap the products, the ticket fills up, the change is worked out.",
+        "texte": "Ideal for a food truck, a market stall or a bar: it runs on a tablet or phone, even offline, and totals up the day."
+      }
     },
-    "en": {
-      "titre": "A mini till",
-      "accroche": "Tap the products, the ticket fills up, the change is worked out.",
-      "texte": "Ideal for a food truck, a market stall or a bar: it runs on a tablet or phone, even offline, and totals up the day."
-    }
-  },
-  {
-    "id": "annonces",
-    "cat": "immo",
-    "metiers": [
-      "immobilier",
-      "bailleur"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Des annonces avec filtres",
-      "accroche": "Prix, surface, ville : on trie les biens en direct.",
-      "texte": "Vos biens bien présentés, et le visiteur trouve vite ce qui lui correspond."
+    {
+      "id": "annonces",
+      "cat": "immo",
+      "metiers": [
+        "immobilier",
+        "bailleur"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Des annonces avec filtres",
+        "accroche": "Prix, surface, ville : on trie les biens en direct.",
+        "texte": "Vos biens bien présentés, et le visiteur trouve vite ce qui lui correspond."
+      },
+      "en": {
+        "titre": "Listings with filters",
+        "accroche": "Price, size, town: filter properties live.",
+        "texte": "Your properties nicely presented, and visitors quickly find the right one."
+      }
     },
-    "en": {
-      "titre": "Listings with filters",
-      "accroche": "Price, size, town: filter properties live.",
-      "texte": "Your properties nicely presented, and visitors quickly find the right one."
-    }
-  },
-  {
-    "id": "visite-360",
-    "cat": "immo",
-    "metiers": [
-      "immobilier",
-      "bailleur",
-      "commerce",
-      "restaurant"
-    ],
-    "services": "Pannellum, Google Street View, Matterport",
-    "cookies": true,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Une visite virtuelle à 360°",
-      "accroche": "On fait tourner la pièce au doigt, comme si on y était.",
-      "texte": "Une vraie photo 360° de votre commerce ou de votre logement, ou vos vues Google Street View. Moins de visites inutiles, des clients déjà conquis."
+    {
+      "id": "visite-360",
+      "cat": "immo",
+      "metiers": [
+        "immobilier",
+        "bailleur",
+        "commerce",
+        "restaurant"
+      ],
+      "services": "Pannellum, Google Street View, Matterport",
+      "cookies": true,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Une visite virtuelle à 360°",
+        "accroche": "On fait tourner la pièce au doigt, comme si on y était.",
+        "texte": "Une vraie photo 360° de votre commerce ou de votre logement, ou vos vues Google Street View. Moins de visites inutiles, des clients déjà conquis."
+      },
+      "en": {
+        "titre": "A 360° virtual tour",
+        "accroche": "Spin the room with your finger, as if you were there.",
+        "texte": "A real 360° photo of your shop or your property, or your Google Street View imagery. Fewer pointless visits, customers already won over."
+      }
     },
-    "en": {
-      "titre": "A 360° virtual tour",
-      "accroche": "Spin the room with your finger, as if you were there.",
-      "texte": "A real 360° photo of your shop or your property, or your Google Street View imagery. Fewer pointless visits, customers already won over."
-    }
-  },
-  {
-    "id": "simulateur-pret",
-    "cat": "immo",
-    "metiers": [
-      "immobilier"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un simulateur de prêt et de frais de notaire",
-      "accroche": "Mensualité et frais estimés, en direct.",
-      "texte": "Le visiteur sait tout de suite ce qu'il peut s'offrir, et vous contacte avec un projet concret."
+    {
+      "id": "simulateur-pret",
+      "cat": "immo",
+      "metiers": [
+        "immobilier"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un simulateur de prêt et de frais de notaire",
+        "accroche": "Mensualité et frais estimés, en direct.",
+        "texte": "Le visiteur sait tout de suite ce qu'il peut s'offrir, et vous contacte avec un projet concret."
+      },
+      "en": {
+        "titre": "A mortgage and fees calculator",
+        "accroche": "Monthly payment and estimated fees, live.",
+        "texte": "Visitors know right away what they can afford, and contact you with a real project."
+      }
     },
-    "en": {
-      "titre": "A mortgage and fees calculator",
-      "accroche": "Monthly payment and estimated fees, live.",
-      "texte": "Visitors know right away what they can afford, and contact you with a real project."
-    }
-  },
-  {
-    "id": "estimation",
-    "cat": "immo",
-    "metiers": [
-      "immobilier"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Une demande d'estimation",
-      "accroche": "Le propriétaire décrit son bien et reçoit une première fourchette.",
-      "texte": "Le meilleur moyen de trouver des mandats : une fourchette tout de suite, et vous rappelez pour affiner."
+    {
+      "id": "estimation",
+      "cat": "immo",
+      "metiers": [
+        "immobilier"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Une demande d'estimation",
+        "accroche": "Le propriétaire décrit son bien et reçoit une première fourchette.",
+        "texte": "Le meilleur moyen de trouver des mandats : une fourchette tout de suite, et vous rappelez pour affiner."
+      },
+      "en": {
+        "titre": "A valuation request",
+        "accroche": "Owners describe their home and get a first estimate.",
+        "texte": "The best way to win listings: a ballpark now, and you call back to refine it."
+      }
     },
-    "en": {
-      "titre": "A valuation request",
-      "accroche": "Owners describe their home and get a first estimate.",
-      "texte": "The best way to win listings: a ballpark now, and you call back to refine it."
-    }
-  },
-  {
-    "id": "favoris",
-    "cat": "immo",
-    "metiers": [
-      "immobilier",
-      "commerce"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Mes favoris, sans compte",
-      "accroche": "Un cœur sur les biens préférés, retrouvés à la prochaine visite.",
-      "texte": "Pas de compte à créer : les favoris restent dans le navigateur du visiteur."
+    {
+      "id": "favoris",
+      "cat": "immo",
+      "metiers": [
+        "immobilier",
+        "commerce"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Mes favoris, sans compte",
+        "accroche": "Un cœur sur les biens préférés, retrouvés à la prochaine visite.",
+        "texte": "Pas de compte à créer : les favoris restent dans le navigateur du visiteur."
+      },
+      "en": {
+        "titre": "Favourites, no account needed",
+        "accroche": "Heart the ones you like, find them on your next visit.",
+        "texte": "No account to create: favourites stay in the visitor's browser."
+      }
     },
-    "en": {
-      "titre": "Favourites, no account needed",
-      "accroche": "Heart the ones you like, find them on your next visit.",
-      "texte": "No account to create: favourites stay in the visitor's browser."
-    }
-  },
-  {
-    "id": "rentabilite",
-    "cat": "bailleur",
-    "metiers": [
-      "bailleur",
-      "immobilier"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un calcul de rentabilité",
-      "accroche": "Prix, loyer, charges : le rendement s'affiche.",
-      "texte": "Pour convaincre un investisseur, ou pour y voir clair avant d'acheter."
+    {
+      "id": "rentabilite",
+      "cat": "bailleur",
+      "metiers": [
+        "bailleur",
+        "immobilier"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un calcul de rentabilité",
+        "accroche": "Prix, loyer, charges : le rendement s'affiche.",
+        "texte": "Pour convaincre un investisseur, ou pour y voir clair avant d'acheter."
+      },
+      "en": {
+        "titre": "A rental yield calculator",
+        "accroche": "Price, rent, costs: the yield appears.",
+        "texte": "To convince an investor, or to see clearly before buying."
+      }
     },
-    "en": {
-      "titre": "A rental yield calculator",
-      "accroche": "Price, rent, costs: the yield appears.",
-      "texte": "To convince an investor, or to see clearly before buying."
-    }
-  },
-  {
-    "id": "revision-loyer",
-    "cat": "bailleur",
-    "metiers": [
-      "bailleur"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "La révision du loyer (IRL)",
-      "accroche": "Le nouveau loyer calculé avec l'indice de référence.",
-      "texte": "Plus d'erreur de calcul : on saisit les indices, le nouveau loyer est prêt, avec un courrier PDF clair pour le locataire."
+    {
+      "id": "revision-loyer",
+      "cat": "bailleur",
+      "metiers": [
+        "bailleur"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "La révision du loyer (IRL)",
+        "accroche": "Le nouveau loyer calculé avec l'indice de référence.",
+        "texte": "Plus d'erreur de calcul : on saisit les indices, le nouveau loyer est prêt, avec un courrier PDF clair pour le locataire."
+      },
+      "en": {
+        "titre": "Rent review (French IRL index)",
+        "accroche": "The new rent calculated from the reference index.",
+        "texte": "No more maths mistakes: enter the indices, the new rent is ready, with a clear PDF letter for the tenant."
+      }
     },
-    "en": {
-      "titre": "Rent review (French IRL index)",
-      "accroche": "The new rent calculated from the reference index.",
-      "texte": "No more maths mistakes: enter the indices, the new rent is ready, with a clear PDF letter for the tenant."
-    }
-  },
-  {
-    "id": "quittance",
-    "cat": "bailleur",
-    "metiers": [
-      "bailleur"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Une quittance de loyer en PDF",
-      "accroche": "Remplie en 30 secondes, téléchargée aussitôt.",
-      "texte": "Nous avons déjà une appli dédiée : Quittance Tranquille. La même chose peut vivre sur votre site."
+    {
+      "id": "quittance",
+      "cat": "bailleur",
+      "metiers": [
+        "bailleur"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Une quittance de loyer en PDF",
+        "accroche": "Remplie en 30 secondes, téléchargée aussitôt.",
+        "texte": "Nous avons déjà une appli dédiée : Quittance Tranquille. La même chose peut vivre sur votre site."
+      },
+      "en": {
+        "titre": "A rent receipt as a PDF",
+        "accroche": "Filled in 30 seconds, downloaded at once.",
+        "texte": "We already have a dedicated app, Quittance Tranquille. The same can live on your site."
+      }
     },
-    "en": {
-      "titre": "A rent receipt as a PDF",
-      "accroche": "Filled in 30 seconds, downloaded at once.",
-      "texte": "We already have a dedicated app, Quittance Tranquille. The same can live on your site."
-    }
-  },
-  {
-    "id": "etat-des-lieux",
-    "cat": "bailleur",
-    "metiers": [
-      "bailleur",
-      "immobilier"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un état des lieux sur téléphone",
-      "accroche": "Pièce par pièce, même sans réseau dans le logement.",
-      "texte": "Nous avons déjà une appli dédiée : État des lieux hors ligne. Tout reste sur le téléphone."
+    {
+      "id": "etat-des-lieux",
+      "cat": "bailleur",
+      "metiers": [
+        "bailleur",
+        "immobilier"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un état des lieux sur téléphone",
+        "accroche": "Pièce par pièce, même sans réseau dans le logement.",
+        "texte": "Nous avons déjà une appli dédiée : État des lieux hors ligne. Tout reste sur le téléphone."
+      },
+      "en": {
+        "titre": "A move-in inspection on your phone",
+        "accroche": "Room by room, even with no signal in the flat.",
+        "texte": "We already have a dedicated app, État des lieux hors ligne. Everything stays on the phone."
+      }
     },
-    "en": {
-      "titre": "A move-in inspection on your phone",
-      "accroche": "Room by room, even with no signal in the flat.",
-      "texte": "We already have a dedicated app, État des lieux hors ligne. Everything stays on the phone."
-    }
-  },
-  {
-    "id": "dossier-locataire",
-    "cat": "bailleur",
-    "metiers": [
-      "bailleur",
-      "immobilier"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "La liste du dossier locataire",
-      "accroche": "Les pièces à fournir, à cocher au fur et à mesure.",
-      "texte": "Les candidats arrivent avec un dossier complet, conforme à la liste autorisée."
+    {
+      "id": "dossier-locataire",
+      "cat": "bailleur",
+      "metiers": [
+        "bailleur",
+        "immobilier"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "La liste du dossier locataire",
+        "accroche": "Les pièces à fournir, à cocher au fur et à mesure.",
+        "texte": "Les candidats arrivent avec un dossier complet, conforme à la liste autorisée."
+      },
+      "en": {
+        "titre": "A tenant file checklist",
+        "accroche": "The documents to provide, ticked off as you go.",
+        "texte": "Applicants turn up with a complete file, matching the legal list."
+      }
     },
-    "en": {
-      "titre": "A tenant file checklist",
-      "accroche": "The documents to provide, ticked off as you go.",
-      "texte": "Applicants turn up with a complete file, matching the legal list."
-    }
-  },
-  {
-    "id": "adhesion-dons",
-    "cat": "asso",
-    "metiers": [
-      "association"
-    ],
-    "services": "HelloAsso",
-    "cookies": true,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Adhésion et dons en ligne",
-      "accroche": "Cotiser ou donner en deux clics, reçu fiscal compris.",
-      "texte": "HelloAsso est gratuit pour les associations. On l'intègre joliment à votre site."
+    {
+      "id": "adhesion-dons",
+      "cat": "asso",
+      "metiers": [
+        "association"
+      ],
+      "services": "HelloAsso",
+      "cookies": true,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Adhésion et dons en ligne",
+        "accroche": "Cotiser ou donner en deux clics, reçu fiscal compris.",
+        "texte": "HelloAsso est gratuit pour les associations. On l'intègre joliment à votre site."
+      },
+      "en": {
+        "titre": "Online membership & donations",
+        "accroche": "Join or donate in two clicks, tax receipt included.",
+        "texte": "HelloAsso is free for French non-profits. We blend it nicely into your site."
+      }
     },
-    "en": {
-      "titre": "Online membership & donations",
-      "accroche": "Join or donate in two clicks, tax receipt included.",
-      "texte": "HelloAsso is free for French non-profits. We blend it nicely into your site."
-    }
-  },
-  {
-    "id": "evenements",
-    "cat": "asso",
-    "metiers": [
-      "association",
-      "restaurant",
-      "commerce"
-    ],
-    "services": "Google Agenda, iPhone, Android, Outlook",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "L'agenda des événements",
-      "accroche": "Les prochaines dates, chacune ajoutable à son agenda.",
-      "texte": "Assemblée générale, tournoi, concert, soirée à thème : tout le monde a les dates, et les passées s'archivent seules."
+    {
+      "id": "evenements",
+      "cat": "asso",
+      "metiers": [
+        "association",
+        "restaurant",
+        "commerce"
+      ],
+      "services": "Google Agenda, iPhone, Android, Outlook",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "L'agenda des événements",
+        "accroche": "Les prochaines dates, chacune ajoutable à son agenda.",
+        "texte": "Assemblée générale, tournoi, concert, soirée à thème : tout le monde a les dates, et les passées s'archivent seules."
+      },
+      "en": {
+        "titre": "An events calendar",
+        "accroche": "Upcoming dates, each one addable to your own calendar.",
+        "texte": "AGM, tournament, gig, theme night: everyone has the dates, and past ones archive themselves."
+      }
     },
-    "en": {
-      "titre": "An events calendar",
-      "accroche": "Upcoming dates, each one addable to your own calendar.",
-      "texte": "AGM, tournament, gig, theme night: everyone has the dates, and past ones archive themselves."
-    }
-  },
-  {
-    "id": "benevoles",
-    "cat": "asso",
-    "metiers": [
-      "association"
-    ],
-    "services": "Tally, Framaforms",
-    "cookies": false,
-    "demo": "simulee",
-    "fr": {
-      "titre": "L'inscription des bénévoles",
-      "accroche": "Chacun choisit son créneau et sa mission.",
-      "texte": "Fini les tableaux qui circulent par e-mail : les bénévoles s'inscrivent, vous voyez qui fait quoi."
+    {
+      "id": "benevoles",
+      "cat": "asso",
+      "metiers": [
+        "association"
+      ],
+      "services": "Tally, Framaforms",
+      "cookies": false,
+      "demo": "simulee",
+      "fr": {
+        "titre": "L'inscription des bénévoles",
+        "accroche": "Chacun choisit son créneau et sa mission.",
+        "texte": "Fini les tableaux qui circulent par e-mail : les bénévoles s'inscrivent, vous voyez qui fait quoi."
+      },
+      "en": {
+        "titre": "Volunteer sign-up",
+        "accroche": "Everyone picks their slot and task.",
+        "texte": "No more spreadsheets flying around by email: volunteers sign up, you see who does what."
+      }
     },
-    "en": {
-      "titre": "Volunteer sign-up",
-      "accroche": "Everyone picks their slot and task.",
-      "texte": "No more spreadsheets flying around by email: volunteers sign up, you see who does what."
-    }
-  },
-  {
-    "id": "sondage",
-    "cat": "asso",
-    "metiers": [
-      "association"
-    ],
-    "services": "Tally, Framaforms",
-    "cookies": false,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Un sondage ou un vote",
-      "accroche": "Une question, des choix, les résultats en direct.",
-      "texte": "Choisir la date de la fête, le nouveau logo, le prochain voyage : tout le monde donne son avis."
+    {
+      "id": "sondage",
+      "cat": "asso",
+      "metiers": [
+        "association"
+      ],
+      "services": "Tally, Framaforms",
+      "cookies": false,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Un sondage ou un vote",
+        "accroche": "Une question, des choix, les résultats en direct.",
+        "texte": "Choisir la date de la fête, le nouveau logo, le prochain voyage : tout le monde donne son avis."
+      },
+      "en": {
+        "titre": "A poll or a vote",
+        "accroche": "One question, a few choices, live results.",
+        "texte": "Pick the party date, the new logo, the next trip: everyone has a say."
+      }
     },
-    "en": {
-      "titre": "A poll or a vote",
-      "accroche": "One question, a few choices, live results.",
-      "texte": "Pick the party date, the new logo, the next trip: everyone has a say."
-    }
-  },
-  {
-    "id": "espace-membres",
-    "cat": "asso",
-    "metiers": [
-      "association"
-    ],
-    "services": "StatiCrypt, Cloudflare Access",
-    "cookies": false,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Un espace réservé aux membres",
-      "accroche": "Des pages protégées par un mot de passe.",
-      "texte": "Comptes rendus, documents internes, annuaire : visibles seulement par les membres."
+    {
+      "id": "espace-membres",
+      "cat": "asso",
+      "metiers": [
+        "association"
+      ],
+      "services": "StatiCrypt, Cloudflare Access",
+      "cookies": false,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Un espace réservé aux membres",
+        "accroche": "Des pages protégées par un mot de passe.",
+        "texte": "Comptes rendus, documents internes, annuaire : visibles seulement par les membres."
+      },
+      "en": {
+        "titre": "A members-only area",
+        "accroche": "Password-protected pages.",
+        "texte": "Minutes, internal documents, directory: only visible to members."
+      }
     },
-    "en": {
-      "titre": "A members-only area",
-      "accroche": "Password-protected pages.",
-      "texte": "Minutes, internal documents, directory: only visible to members."
-    }
-  },
-  {
-    "id": "newsletter",
-    "cat": "outils",
-    "metiers": [
-      "tous"
-    ],
-    "services": "Brevo, Mailchimp",
-    "cookies": false,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Une lettre d'information",
-      "accroche": "Les visiteurs s'inscrivent, vous leur écrivez quand vous voulez.",
-      "texte": "Nouveautés, promos, événements : une liste de contacts qui vous appartient, pas à un réseau social."
+    {
+      "id": "newsletter",
+      "cat": "outils",
+      "metiers": [
+        "tous"
+      ],
+      "services": "Brevo, Mailchimp",
+      "cookies": false,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Une lettre d'information",
+        "accroche": "Les visiteurs s'inscrivent, vous leur écrivez quand vous voulez.",
+        "texte": "Nouveautés, promos, événements : une liste de contacts qui vous appartient, pas à un réseau social."
+      },
+      "en": {
+        "titre": "A newsletter",
+        "accroche": "Visitors sign up, you write to them whenever you like.",
+        "texte": "News, offers, events: a contact list you own, not a social network."
+      }
     },
-    "en": {
-      "titre": "A newsletter",
-      "accroche": "Visitors sign up, you write to them whenever you like.",
-      "texte": "News, offers, events: a contact list you own, not a social network."
-    }
-  },
-  {
-    "id": "chat",
-    "cat": "outils",
-    "metiers": [
-      "commerce",
-      "immobilier"
-    ],
-    "services": "Crisp, Tawk.to",
-    "cookies": true,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Une discussion en direct",
-      "accroche": "Une bulle en bas de l'écran pour vous poser une question.",
-      "texte": "Vous répondez depuis votre téléphone. Quand vous êtes absent, le message vous attend."
+    {
+      "id": "chat",
+      "cat": "outils",
+      "metiers": [
+        "commerce",
+        "immobilier"
+      ],
+      "services": "Crisp, Tawk.to",
+      "cookies": true,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Une discussion en direct",
+        "accroche": "Une bulle en bas de l'écran pour vous poser une question.",
+        "texte": "Vous répondez depuis votre téléphone. Quand vous êtes absent, le message vous attend."
+      },
+      "en": {
+        "titre": "Live chat",
+        "accroche": "A bubble at the bottom of the screen to ask you something.",
+        "texte": "You reply from your phone. When you're away, the message waits for you."
+      }
     },
-    "en": {
-      "titre": "Live chat",
-      "accroche": "A bubble at the bottom of the screen to ask you something.",
-      "texte": "You reply from your phone. When you're away, the message waits for you."
-    }
-  },
-  {
-    "id": "statistiques",
-    "cat": "outils",
-    "metiers": [
-      "tous"
-    ],
-    "services": "Plausible, GoatCounter",
-    "cookies": false,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Des statistiques de visites sans cookie",
-      "accroche": "Combien de visiteurs, quelles pages, d'où ils viennent.",
-      "texte": "Des chiffres utiles sans espionner personne, donc sans bandeau cookies."
+    {
+      "id": "statistiques",
+      "cat": "outils",
+      "metiers": [
+        "tous"
+      ],
+      "services": "Plausible, GoatCounter",
+      "cookies": false,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Des statistiques de visites sans cookie",
+        "accroche": "Combien de visiteurs, quelles pages, d'où ils viennent.",
+        "texte": "Des chiffres utiles sans espionner personne, donc sans bandeau cookies."
+      },
+      "en": {
+        "titre": "Cookie-free visitor stats",
+        "accroche": "How many visitors, which pages, where they come from.",
+        "texte": "Useful numbers without spying on anyone, so no cookie banner."
+      }
     },
-    "en": {
-      "titre": "Cookie-free visitor stats",
-      "accroche": "How many visitors, which pages, where they come from.",
-      "texte": "Useful numbers without spying on anyone, so no cookie banner."
-    }
-  },
-  {
-    "id": "compte-a-rebours",
-    "cat": "outils",
-    "metiers": [
-      "tous"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un compte à rebours",
-      "accroche": "Jours, heures, minutes avant l'ouverture, la promo ou l'événement.",
-      "texte": "Rien de tel pour créer l'attente."
+    {
+      "id": "compte-a-rebours",
+      "cat": "outils",
+      "metiers": [
+        "tous"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un compte à rebours",
+        "accroche": "Jours, heures, minutes avant l'ouverture, la promo ou l'événement.",
+        "texte": "Rien de tel pour créer l'attente."
+      },
+      "en": {
+        "titre": "A countdown",
+        "accroche": "Days, hours, minutes until the opening, the sale or the event.",
+        "texte": "Nothing like it to build anticipation."
+      }
     },
-    "en": {
-      "titre": "A countdown",
-      "accroche": "Days, hours, minutes until the opening, the sale or the event.",
-      "texte": "Nothing like it to build anticipation."
-    }
-  },
-  {
-    "id": "bandeau",
-    "cat": "outils",
-    "metiers": [
-      "tous"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un bandeau d'annonce",
-      "accroche": "Fermeture exceptionnelle, nouveauté : en haut de toutes les pages.",
-      "texte": "Impossible à rater, et le visiteur peut le fermer."
+    {
+      "id": "bandeau",
+      "cat": "outils",
+      "metiers": [
+        "tous"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un bandeau d'annonce",
+        "accroche": "Fermeture exceptionnelle, nouveauté : en haut de toutes les pages.",
+        "texte": "Impossible à rater, et le visiteur peut le fermer."
+      },
+      "en": {
+        "titre": "An announcement bar",
+        "accroche": "Unexpected closure, something new: on top of every page.",
+        "texte": "Impossible to miss, and visitors can close it."
+      }
     },
-    "en": {
-      "titre": "An announcement bar",
-      "accroche": "Unexpected closure, something new: on top of every page.",
-      "texte": "Impossible to miss, and visitors can close it."
-    }
-  },
-  {
-    "id": "bon-cadeau",
-    "cat": "outils",
-    "metiers": [
-      "restaurant",
-      "commerce"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un bon cadeau en PDF",
-      "accroche": "Personnalisé avec le nom et le message, prêt à offrir.",
-      "texte": "Associé au paiement en ligne, c'est une vente de plus, même quand la boutique est fermée."
+    {
+      "id": "bon-cadeau",
+      "cat": "outils",
+      "metiers": [
+        "restaurant",
+        "commerce"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un bon cadeau en PDF",
+        "accroche": "Personnalisé avec le nom et le message, prêt à offrir.",
+        "texte": "Associé au paiement en ligne, c'est une vente de plus, même quand la boutique est fermée."
+      },
+      "en": {
+        "titre": "A gift voucher as a PDF",
+        "accroche": "Personalised with a name and message, ready to give.",
+        "texte": "Combined with online payment, it's one more sale, even when the shop is closed."
+      }
     },
-    "en": {
-      "titre": "A gift voucher as a PDF",
-      "accroche": "Personalised with a name and message, ready to give.",
-      "texte": "Combined with online payment, it's one more sale, even when the shop is closed."
-    }
-  },
-  {
-    "id": "estimation-devis",
-    "cat": "outils",
-    "metiers": [
-      "commerce"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Une estimation de prix en quelques clics",
-      "accroche": "Le client coche ses options, le prix indicatif s'affiche.",
-      "texte": "Les demandes que vous recevez sont déjà qualifiées. Ce site en est un exemple : cochez des fonctions, demandez votre devis."
+    {
+      "id": "estimation-devis",
+      "cat": "outils",
+      "metiers": [
+        "commerce"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Une estimation de prix en quelques clics",
+        "accroche": "Le client coche ses options, le prix indicatif s'affiche.",
+        "texte": "Les demandes que vous recevez sont déjà qualifiées. Ce site en est un exemple : cochez des fonctions, demandez votre devis."
+      },
+      "en": {
+        "titre": "A price estimate in a few clicks",
+        "accroche": "Customers tick their options, an indicative price appears.",
+        "texte": "The enquiries you get are already qualified. This site is an example: tick features, ask for your quote."
+      }
     },
-    "en": {
-      "titre": "A price estimate in a few clicks",
-      "accroche": "Customers tick their options, an indicative price appears.",
-      "texte": "The enquiries you get are already qualified. This site is an example: tick features, ask for your quote."
-    }
-  },
-  {
-    "id": "textes-modifiables",
-    "cat": "outils",
-    "metiers": [
-      "tous"
-    ],
-    "services": "Pages CMS, Decap CMS",
-    "cookies": false,
-    "demo": "simulee",
-    "fr": {
-      "titre": "Des textes modifiables par vous",
-      "accroche": "Changez un texte ou une photo sans nous appeler.",
-      "texte": "Une petite interface simple, accessible depuis votre téléphone. Le site se met à jour tout seul."
+    {
+      "id": "textes-modifiables",
+      "cat": "outils",
+      "metiers": [
+        "tous"
+      ],
+      "services": "Pages CMS, Decap CMS",
+      "cookies": false,
+      "demo": "simulee",
+      "fr": {
+        "titre": "Des textes modifiables par vous",
+        "accroche": "Changez un texte ou une photo sans nous appeler.",
+        "texte": "Une petite interface simple, accessible depuis votre téléphone. Le site se met à jour tout seul."
+      },
+      "en": {
+        "titre": "Text you can edit yourself",
+        "accroche": "Change a text or a photo without calling us.",
+        "texte": "A simple little interface, usable from your phone. The site updates itself."
+      }
     },
-    "en": {
-      "titre": "Text you can edit yourself",
-      "accroche": "Change a text or a photo without calling us.",
-      "texte": "A simple little interface, usable from your phone. The site updates itself."
-    }
-  },
-  {
-    "id": "podcast",
-    "cat": "outils",
-    "metiers": [
-      "association",
-      "commerce"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Un podcast ou un lecteur audio",
-      "accroche": "Vos émissions, interviews ou ambiances, à écouter sur le site.",
-      "texte": "Un lecteur aux couleurs du site, qui ne charge le son qu'au clic."
+    {
+      "id": "podcast",
+      "cat": "outils",
+      "metiers": [
+        "association",
+        "commerce"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Un podcast ou un lecteur audio",
+        "accroche": "Vos émissions, interviews ou ambiances, à écouter sur le site.",
+        "texte": "Un lecteur aux couleurs du site, qui ne charge le son qu'au clic."
+      },
+      "en": {
+        "titre": "A podcast or audio player",
+        "accroche": "Your shows, interviews or sounds, playable on the site.",
+        "texte": "A player in your site's colours, which only loads the audio on click."
+      }
     },
-    "en": {
-      "titre": "A podcast or audio player",
-      "accroche": "Your shows, interviews or sounds, playable on the site.",
-      "texte": "A player in your site's colours, which only loads the audio on click."
+    {
+      "id": "frise",
+      "cat": "outils",
+      "metiers": [
+        "tous"
+      ],
+      "services": "",
+      "cookies": false,
+      "demo": "reelle",
+      "fr": {
+        "titre": "Une frise « notre histoire »",
+        "accroche": "Les grandes dates de votre aventure, en images.",
+        "texte": "Les clients aiment savoir qui est derrière. Une frise le raconte en un coup d'œil."
+      },
+      "en": {
+        "titre": "An “our story” timeline",
+        "accroche": "The key dates of your journey, in pictures.",
+        "texte": "Customers like knowing who's behind it. A timeline tells it at a glance."
+      }
     }
-  },
-  {
-    "id": "frise",
-    "cat": "outils",
-    "metiers": [
-      "tous"
-    ],
-    "services": "",
-    "cookies": false,
-    "demo": "reelle",
-    "fr": {
-      "titre": "Une frise « notre histoire »",
-      "accroche": "Les grandes dates de votre aventure, en images.",
-      "texte": "Les clients aiment savoir qui est derrière. Une frise le raconte en un coup d'œil."
-    },
-    "en": {
-      "titre": "An “our story” timeline",
-      "accroche": "The key dates of your journey, in pictures.",
-      "texte": "Customers like knowing who's behind it. A timeline tells it at a glance."
-    }
-  }
-]
+  ]
+}

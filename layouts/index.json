@@ -2,10 +2,10 @@
 {{- $lang := site.Language.Lang -}}
 {{- $liste := slice -}}
 {{- range (where site.RegularPages "Section" "demos").ByWeight -}}
-  {{- $f := index (where site.Data.fonctions "id" .Params.fonction) 0 -}}
-  {{- $c := index (where site.Data.categories "id" $f.cat) 0 -}}
+  {{- $f := index (where site.Data.fonctions.fonctions "id" .Params.fonction) 0 -}}
+  {{- $c := index (where site.Data.categories.categories "id" $f.cat) 0 -}}
   {{- $m := slice -}}
-  {{- range .Params.metiers }}{{ with index (where site.Data.metiers "id" .) 0 }}{{ $m = $m | append (index . $lang) }}{{ end }}{{ end -}}
+  {{- range .Params.metiers }}{{ with index (where site.Data.metiers.metiers "id" .) 0 }}{{ $m = $m | append (index . $lang) }}{{ end }}{{ end -}}
   {{- $liste = $liste | append (dict "id" $f.id "titre" .Title "accroche" .Description "texte" (index (index $f $lang) "texte") "services" $f.services "cat" (index $c $lang) "catId" $c.id "emoji" $c.emoji "metiers" $m "url" .RelPermalink "etoile" $f.cookies) -}}
 {{- end -}}
 {{- $liste | jsonify -}}

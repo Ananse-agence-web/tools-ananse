@@ -8,11 +8,12 @@ Hugo extended **0.121.1**, sans framework ni police externe, **sans cookie ni tr
 
 | Quoi | Fichier |
 |---|---|
-| Liste des fonctions (textes FR/EN, catégorie, métiers, services, cookies) | `data/fonctions.json` |
+| Titres et accroches des démos (FR/EN) | `content/demos/<id>.fr.md` / `.en.md` |
+| Fiches des fonctions (texte détaillé FR/EN, catégorie, métiers, services, cookies) | `data/fonctions.json` |
 | Catégories et métiers | `data/categories.json`, `data/metiers.json` |
 | Démo d'une fonction | `layouts/partials/demos/<id>.html` + `assets/js/demos/<id>.js` |
 | Textes de l'interface | `i18n/fr.toml`, `i18n/en.toml` |
-| E-mail qui reçoit les devis | `hugo.toml` (`params.email`) |
+| E-mail qui reçoit les devis | `data/infos.yaml` |
 | Couleurs (5 palettes, clair/sombre) | `assets/css/main.css` (haut du fichier) |
 | Sélection, e-mail de devis, thème | `assets/js/main.js` |
 | PDF, agenda, QR code | `assets/js/libs/` |
@@ -21,9 +22,13 @@ Après avoir ajouté ou modifié une fonction dans `data/fonctions.json` :
 
     node outils/pages.mjs
 
-Ce script recrée les pages de `content/`. Il faut ensuite écrire la démo (`partials/demos/<id>.html`).
+Ce script recrée les pages de `content/` en **gardant les titres et accroches déjà présents** (modifiés dans le CMS) ; `titre`/`accroche` du JSON ne servent qu'aux nouvelles fonctions. Il faut ensuite écrire la démo (`partials/demos/<id>.html`).
 
-Chaque push sur `main` publie le site sur GitHub Pages (`.github/workflows/hugo.yml`).
+Chaque push sur `main` publie le site sur Cloudflare Pages.
+
+## Administration (Decap CMS)
+
+https://tools.ananse.fr/admin/ : titres et accroches des démos (FR/EN), fiches détaillées, catégories, métiers, textes de l'interface (FR/EN) et e-mail des devis. Connexion GitHub via le service commun de www.ananse.fr.
 
 ## Vidéo de présentation
 

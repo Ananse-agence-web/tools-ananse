@@ -1,7 +1,7 @@
 {{- /* Démos regroupées par catégorie. Paramètre : collection de pages. */ -}}
 {{- $pages := . -}}
 {{- $lang := site.Language.Lang -}}
-{{- range site.Data.categories }}
+{{- range site.Data.categories.categories }}
   {{- $c := . }}
   {{- with where $pages "Params.cat" $c.id }}
   <section class="categorie" aria-labelledby="h-{{ $c.id }}">

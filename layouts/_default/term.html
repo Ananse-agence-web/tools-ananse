@@ -1,13 +1,13 @@
 {{ define "main" }}
-{{- $m := index (where site.Data.metiers "id" .Data.Term) 0 }}
+{{- $m := index (where site.Data.metiers.metiers "id" .Data.Term) 0 }}
 <div class="conteneur page">
   <p class="fil"><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a> › <a href="{{ "metiers/" | relLangURL }}">{{ T "parmetier" }}</a></p>
   <h1><span aria-hidden="true">{{ $m.emoji }}</span> {{ .Title }}</h1>
   <p class="section__intro">{{ len .Pages }} {{ T "demos" }}</p>
   <ul class="puces-metiers">
     {{- $ici := .Data.Term }}
-    {{- range site.Data.metiers }}{{ if ne .id $ici }}
-    {{- with site.GetPage (printf "/metiers/%s" .id) }}<li><a href="{{ .RelPermalink }}">{{ (index (where site.Data.metiers "id" .Data.Term) 0).emoji }} {{ .Title }}</a></li>{{ end }}
+    {{- range site.Data.metiers.metiers }}{{ if ne .id $ici }}
+    {{- with site.GetPage (printf "/metiers/%s" .id) }}<li><a href="{{ .RelPermalink }}">{{ (index (where site.Data.metiers.metiers "id" .Data.Term) 0).emoji }} {{ .Title }}</a></li>{{ end }}
     {{- end }}{{ end }}
   </ul>
   {{ partial "grille.html" .Pages }}

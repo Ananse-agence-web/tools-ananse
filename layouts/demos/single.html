@@ -3,7 +3,7 @@
 {{- $lang := site.Language.Lang }}
 {{- $en := eq $lang "en" }}
 {{- $id := $f.id }}
-{{- $c := index (where site.Data.categories "id" $f.cat) 0 }}
+{{- $c := index (where site.Data.categories.categories "id" $f.cat) 0 }}
 <article class="conteneur page fiche" data-fonction="{{ $id }}">
   <p class="fil"><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a> › <a href="{{ site.Home.RelPermalink }}#h-{{ $c.id }}">{{ $c.emoji }} {{ index $c $lang }}</a></p>
   <h1>{{ .Title }}{{ if $f.cookies }}<span class="etoile">*</span>{{ end }}</h1>

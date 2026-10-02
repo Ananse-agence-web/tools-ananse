@@ -24,7 +24,7 @@
   <link rel="apple-touch-icon" href="{{ "icons/icone-192.png" | relURL }}">
   <link rel="manifest" href="{{ "manifest.webmanifest" | relURL }}">
 </head>
-<body data-racine="{{ "" | relURL }}" data-email="{{ site.Params.email }}" data-index="{{ "index.json" | relLangURL }}">
+<body data-racine="{{ "" | relURL }}" data-email="{{ site.Data.infos.email }}" data-index="{{ "index.json" | relLangURL }}">
   <a class="evitement" href="#contenu">{{ T "allercontenu" }}</a>
   {{ partial "entete.html" . }}
   <main id="contenu">

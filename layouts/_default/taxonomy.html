@@ -3,7 +3,7 @@
   <h1>{{ .Title }}</h1>
   <ul class="puces-metiers puces-metiers--grandes">
     {{- range .Pages }}
-    <li><a href="{{ .RelPermalink }}"><span aria-hidden="true">{{ (index (where site.Data.metiers "id" .Data.Term) 0).emoji }}</span> {{ .Title }} <small>{{ len .Pages }}</small></a></li>
+    <li><a href="{{ .RelPermalink }}"><span aria-hidden="true">{{ (index (where site.Data.metiers.metiers "id" .Data.Term) 0).emoji }}</span> {{ .Title }} <small>{{ len .Pages }}</small></a></li>
     {{- end }}
   </ul>
 </div>

@@ -11,8 +11,7 @@ enableRobotsTXT = true
   unsafe = false
 
 [params]
-  # Adresse officielle qui reçoit les demandes de devis
-  email = "Ananse.Agence.Web@gmail.com"
+  # E-mail qui reçoit les demandes de devis : data/infos.yaml (modifiable dans /admin/)
   ananse = "https://www.ananse.fr/"
 
 [languages]
