@@ -26,9 +26,9 @@
       "metiers": [
         "tous"
       ],
-      "services": "Web3Forms, Formspree",
+      "services": "Web3Forms",
       "cookies": false,
-      "demo": "simulee",
+      "demo": "reelle",
       "fr": {
         "titre": "Un formulaire de contact",
         "accroche": "Le visiteur remplit quelques champs, vous recevez un e-mail propre.",

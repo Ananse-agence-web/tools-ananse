@@ -1,4 +1,5 @@
-# Coordonnées (modifiables dans /admin/, rubrique « Infos »)
+# Coordonnées et clés publiques (modifiables dans /admin/, rubrique « Textes du site et infos »)
 email: Ananse.Agence.Web@gmail.com
 telephone: ""
 siret: ""
+web3forms: "b074367f-39d6-436d-bf3d-54cc80d82902"

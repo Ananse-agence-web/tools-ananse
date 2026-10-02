@@ -115,6 +115,7 @@ collections:
           - { name: email, label: "E-mail qui reçoit les demandes de devis", widget: string }
           - { name: telephone, label: Téléphone, widget: string, required: false }
           - { name: siret, label: SIRET, widget: string, required: false }
+          - { name: web3forms, label: "Clé Web3Forms (formulaire de la démo « formulaire » ; vide = démo simulée)", widget: string, required: false, hint: "Clé publique : elle est visible dans le code de la page, c'est normal." }
       - name: fr
         label: "Textes de l'interface — français"
         file: i18n/fr.toml

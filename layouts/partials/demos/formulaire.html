@@ -1,5 +1,21 @@
 {{ $en := .en }}
+{{- /* Vrai formulaire Web3Forms si la clé est renseignée (data/infos.yaml, modifiable dans /admin/), sinon démo simulée. */ -}}
 <div style="max-width:520px">
+  {{- with site.Data.infos.web3forms }}
+  <form class="formulaire" action="https://api.web3forms.com/submit" method="POST" data-web3forms>
+    <input type="hidden" name="access_key" value="{{ . }}">
+    <input type="hidden" name="subject" value="{{ cond $en "Message from the tools.ananse.fr demo" "Message depuis la démo tools.ananse.fr" }}">
+    <input type="hidden" name="from_name" value="tools.ananse.fr">
+    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+    <label>{{ cond $en "Your name" "Votre nom" }}<input name="name" required autocomplete="name"></label>
+    <label>{{ cond $en "Your email" "Votre e-mail" }}<input name="email" type="email" required autocomplete="email"></label>
+    <label>{{ cond $en "Your message" "Votre message" }}<textarea name="message" rows="3" required></textarea></label>
+    <p><button class="bouton" type="submit">{{ cond $en "Send" "Envoyer" }}</button></p>
+    <p class="d-message"><small>{{ cond $en "This form really works: your message is sent to Ananse." "Ce formulaire fonctionne pour de vrai : votre message arrive chez Ananse." }}</small></p>
+  </form>
+  <p class="d-message" data-w3f-ok hidden>✅ {{ cond $en "Thanks! Your message has been sent to Ananse. We'll reply within 24 working hours." "Merci ! Votre message a bien été envoyé à Ananse. Réponse sous 24 h ouvrées." }}</p>
+  <p class="d-message" data-w3f-err hidden>⚠️ {{ cond $en "Sending failed. Please try again or email us directly." "L'envoi a échoué. Réessayez, ou écrivez-nous directement par e-mail." }} <a href="mailto:{{ site.Data.infos.email }}">{{ site.Data.infos.email }}</a></p>
+  {{- else }}
   <form class="formulaire" data-demo-form>
     <label>{{ cond $en "Your name" "Votre nom" }}<input name="nom" required></label>
     <label>{{ cond $en "Your email" "Votre e-mail" }}<input name="email" type="email" required></label>
@@ -7,4 +23,5 @@
     <p><button class="bouton" type="submit">{{ cond $en "Send" "Envoyer" }}</button></p>
   </form>
   <p class="d-message" data-demo-ok hidden>✅ {{ cond $en "Thanks! On your site, this message would now be in your inbox. (Demo: nothing was sent.)" "Merci ! Sur votre site, ce message serait maintenant dans votre boîte e-mail. (Démo : rien n'a été envoyé.)" }}</p>
+  {{- end }}
 </div>
