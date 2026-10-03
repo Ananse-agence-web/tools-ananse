@@ -1,4 +1,13 @@
 {{ $en := .en }}
+<figure class="video-cms">
+  <video controls preload="none" playsinline poster="{{ "video/cms-fr.jpg" | relURL }}">
+    <source src="{{ "video/cms-fr.mp4" | relURL }}" type="video/mp4">
+    <track kind="subtitles" srclang="fr" label="Français" src="{{ "video/cms-fr.vtt" | relURL }}"{{ if not $en }} default{{ end }}>
+    <track kind="subtitles" srclang="en" label="English" src="{{ "video/cms-en.vtt" | relURL }}"{{ if $en }} default{{ end }}>
+  </video>
+  <figcaption class="d-doux">{{ cond $en "Real example (55 s, voice in French): the owner changes their phone number and e-mail in the management area of their site, clicks “Publish”, and the site is updated about a minute later. Every site made by Ananse gives you this control over your own information and your own site." "Exemple réel (55 s) : le propriétaire change son téléphone et son e-mail dans l'espace de gestion de son site, clique sur « Publier », et le site est à jour une minute plus tard. Tous les sites réalisés par Ananse vous donnent la main sur vos informations et sur votre site." }}</figcaption>
+</figure>
+<p class="d-doux" style="margin-top:28px">{{ cond $en "Try it yourself below:" "À vous d'essayer ci-dessous :" }}</p>
 <div class="d-colonnes">
   <div class="d-carte" style="background:var(--fond-2)">
     <p class="d-doux" style="margin-top:0">✏️ {{ cond $en "Your editing screen (simulated)" "Votre écran de modification (simulé)" }}</p>
@@ -16,3 +25,4 @@
     <p data-apercu-texte></p>
   </div>
 </div>
+<style>.video-cms{margin:0 0 8px}.video-cms video{width:100%;max-width:960px;aspect-ratio:16/9;border-radius:14px;background:#000;display:block}.video-cms figcaption{max-width:960px}</style>
